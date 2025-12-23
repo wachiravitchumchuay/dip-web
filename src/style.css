@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-app-bg: #ffffff;
+  --color-app-text: #000000;
+}
+
+:root[data-theme='yellow-black'] {
+  --color-app-bg: #000000;
+  --color-app-text: #ffd500;
+}
+
+:root[data-theme='black-yellow'] {
+  --color-app-bg: #ffd500;
+  --color-app-text: #000000;
+}
+
+:root[data-theme='black-white'] {
+  --color-app-bg: #ffffff;
+  --color-app-text: #000000;
+}
+
+:root[data-theme='white-black'] {
+  --color-app-bg: #000000;
+  --color-app-text: #ffffff;
+}
+
+:root[data-theme='white-red'] {
+  --color-app-bg: #a50f19;
+  --color-app-text: #ffffff;
+}
+
+:root[data-theme='red-white'] {
+  --color-app-bg: #ffffff;
+  --color-app-text: #a50f19;
+}
+
+.border-separator-gray {
+  border-color: #d9d9d9;
+}
+
+.text-custom-red {
+  color: #b21f29;
+}
+
+.custom-gray-bg {
+  background-color: #FAFAFA;
+}
+
+.custom-red-bg {
+  background-color: #b21f29;
+}
