@@ -23,7 +23,9 @@ const NotImplementedForm = defineAsyncComponent(
 )
 
 const formRegistry: Partial<Record<DatasetKey, Component>> = {
-  'dataset-02': defineAsyncComponent(() => import('@/components/search/forms/InventionPatentForm.vue')),
+  'dataset-02': defineAsyncComponent(
+    () => import('@/components/search/forms/InventionPatentForm.vue'),
+  ),
 }
 
 const FormComponent = computed<Component>(() => {

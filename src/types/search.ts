@@ -40,8 +40,18 @@ export function isDatasetKey(v: unknown): v is DatasetKey {
   return (
     typeof v === 'string' &&
     [
-      'dataset-01', 'dataset-02', 'dataset-03', 'dataset-04', 'dataset-05', 'dataset-06',
-      'dataset-07', 'dataset-08', 'dataset-09', 'dataset-10', 'dataset-11', 'dataset-12',
+      'dataset-01',
+      'dataset-02',
+      'dataset-03',
+      'dataset-04',
+      'dataset-05',
+      'dataset-06',
+      'dataset-07',
+      'dataset-08',
+      'dataset-09',
+      'dataset-10',
+      'dataset-11',
+      'dataset-12',
     ].includes(v)
   )
 }

@@ -11,7 +11,7 @@
 
       <div class="mt-[18px] text-[44px] font-semibold leading-[1.15] text-[#333]">
         เพื่อความปลอดภัยของข้อมูล<br />
-        
+
         กรุณาเข้าสู่ระบบก่อนดาวน์โหลด
       </div>
 
