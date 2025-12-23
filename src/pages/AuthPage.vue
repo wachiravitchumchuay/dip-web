@@ -52,7 +52,7 @@
                   <span
                     class="flex h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-[6px] bg-white/10"
                   >
-                    <img src="/TH-Flag.png" class="h-[22px] w-[22px] object-contain" alt="ThaiID" />
+                    <img src="/th-flag.png" class="h-[22px] w-[22px] object-contain" alt="ThaiID" />
                   </span>
                   เข้าสู่ระบบด้วย ThaiID
                 </button>

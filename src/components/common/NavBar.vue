@@ -4,7 +4,7 @@
       <div class="flex justify-between">
         <div class="flex items-center">
           <div>
-            <img width="270" height="42" src="/DIP-Logo.png" />
+            <img width="270" height="42" src="/dip-logo.png" />
           </div>
         </div>
 
@@ -25,7 +25,7 @@
           <div class="px-3">
             <div class="flex items-center gap-2">
               <div class="h-[24px] w-[24px] overflow-hidden rounded-full">
-                <img src="/TH-Flag.png" class="h-full w-full object-cover" alt="TH logo" />
+                <img src="/th-flag.png" class="h-full w-full object-cover" alt="TH logo" />
               </div>
               <div>ไทย</div>
             </div>

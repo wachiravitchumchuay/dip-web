@@ -4,7 +4,7 @@
       <div class="flex w-full h-full items-center justify-between">
         <div class="flex-col w-1/2">
           <div class="pb-[12px]">
-            <img width="215" height="26" src="/DIP-Logo.png" alt="DIP Logo" />
+            <img width="215" height="26" src="/dip-logo.png" alt="DIP Logo" />
           </div>
 
           <div class="flex">
