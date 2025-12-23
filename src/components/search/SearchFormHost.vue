@@ -19,13 +19,11 @@ const route = useRoute()
 const datasetKey = computed<DatasetKey | null>(() => parseDatasetKey(route.query.dataset))
 
 const NotImplementedForm = defineAsyncComponent(
-  () => import('@/components/search/forms/NotImplementedFormComponent.vue'),
+  () => import('@/components/search/forms/NotImplementedForm.vue'),
 )
 
 const formRegistry: Partial<Record<DatasetKey, Component>> = {
-  'dataset-01': defineAsyncComponent(() => import('@/components/search/forms/Dataset01Form.vue')),
-  'dataset-02': defineAsyncComponent(() => import('@/components/search/forms/Dataset02FormComponent.vue')),
-  'dataset-08': defineAsyncComponent(() => import('@/components/search/forms/Dataset08Form.vue')),
+  'dataset-02': defineAsyncComponent(() => import('@/components/search/forms/InventionPatentForm.vue')),
 }
 
 const FormComponent = computed<Component>(() => {

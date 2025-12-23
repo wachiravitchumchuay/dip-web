@@ -15,8 +15,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import NavBar from '@/components/common/NavBarComponent.vue'
-import Footer from '@/components/common/FooterComponent.vue'
+import NavBar from '@/components/common/NavBar.vue'
+import Footer from '@/components/common/Footer.vue'
 import LoadingOverlay from '@/components/ui/LoadingOverlay.vue'
 import { useLoading } from '@/stores/loading'
 

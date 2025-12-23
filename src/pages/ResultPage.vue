@@ -27,11 +27,11 @@
 </template>
 
 <script setup lang="ts">
-import HeroBannerComponent from '@/components/common/HeroBannerComponent.vue'
-import SearchSummaryBar from '@/components/result/SearchSummaryBarComponent.vue'
-import ResultToolbar from '@/components/result/ResultToolbarComponent.vue'
-import FilterPanel from '@/components/result/FilterPanelComponent.vue'
-import ResultList from '@/components/result/ResultListComponent.vue'
+import HeroBannerComponent from '@/components/common/HeroBanner.vue'
+import SearchSummaryBar from '@/components/result/SearchSummaryBar.vue'
+import ResultToolbar from '@/components/result/ResultToolbar.vue'
+import FilterPanel from '@/components/result/FilterPanel.vue'
+import ResultList from '@/components/result/ResultList.vue'
 import { useLoading } from '@/stores/loading'
 import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'

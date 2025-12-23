@@ -98,9 +98,9 @@
 </template>
 
 <script setup lang="ts">
-import RequireLoginDialog from '@/components/ui/dialogs/RequireLoginDialog.vue'
-import EmailDownloadDialog from '@/components/ui/dialogs/EmailDownloadDialog.vue'
-import DownloadRequestedDialog from '@/components/ui/dialogs/DownloadRequestedDialog.vue'
+import RequireLoginDialog from '@/components/result/dialogs/RequireLoginDialog.vue'
+import EmailDownloadDialog from '@/components/result/dialogs/EmailDownloadDialog.vue'
+import DownloadRequestedDialog from '@/components/result/dialogs/DownloadRequestedDialog.vue'
 
 defineProps<{
   activeTab: string

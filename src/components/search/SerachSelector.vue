@@ -82,7 +82,7 @@
 </template>
 
 <script setup lang="ts">
-import SearchSelectorCard from '@/components/search/SearchSelectorCardComponent.vue'
+import SearchSelectorCard from '@/components/search/SearchSelectorCard.vue'
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { parseDatasetKey } from '@/types/search'
