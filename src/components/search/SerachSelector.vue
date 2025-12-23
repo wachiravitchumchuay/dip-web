@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-[33px]">
+  <div class="w-full py-[33px]">
     <div class="">เลือกชุดข้อมูลเพื่อค้นหา</div>
 
     <div
@@ -78,7 +78,7 @@
         @click="selectDataset('dataset-12')"
       />
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

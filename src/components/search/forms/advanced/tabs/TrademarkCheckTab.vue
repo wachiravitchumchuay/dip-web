@@ -1,16 +1,12 @@
 <template>
-  <section class="w-full">
-    <div class="rounded-[12px] border border-[#D9D9D9] bg-white p-[16px]">
-      <div
-        class="rounded-[10px] border border-[#E08A8A] bg-[#F8D7DA] px-[12px] py-[10px] text-[#B21F29]"
-      >
+  <div class="w-full">
+    <div class="border border-[#D9D9D9] bg-white p-[16px]">
+      <div class="border border-[#E08A8A] bg-[#F8D7DA] px-[12px] py-[10px] text-[#B21F29]">
         หมายเหตุ: กรณีเครื่องหมายการค้าประกอบด้วยคำ
         โปรดตรวจสอบความเหมือนคล้ายด้วยวิธีตรวจสอบความเหมือนคล้ายของเครื่องหมายอีกครั้ง
       </div>
 
-      <div
-        class="mt-[16px] rounded-[12px] border border-dashed border-[#D9D9D9] bg-white px-[16px] py-[26px]"
-      >
+      <div class="mt-[16px] border border-dashed border-[#D9D9D9] bg-white px-[16px] py-[26px]">
         <input
           ref="fileInput"
           type="file"
@@ -41,24 +37,16 @@
       </div>
 
       <div class="mt-[16px] flex items-center justify-between">
-        <button
-          type="button"
-          class="h-[44px] rounded-[10px] bg-[#F5A623] px-[18px] text-black"
-          @click="onClear"
-        >
+        <button type="button" class="h-[44px] bg-[#F5A623] px-[18px] text-black" @click="onClear">
           ล้างเงื่อนไข
         </button>
 
-        <button
-          type="button"
-          class="h-[44px] rounded-[10px] bg-[#1B8A6B] px-[18px] text-white"
-          @click="onSubmit"
-        >
+        <button type="button" class="h-[44px] bg-[#1B8A6B] px-[18px] text-white" @click="onSubmit">
           ค้นหาข้อมูล
         </button>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

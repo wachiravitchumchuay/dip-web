@@ -1,9 +1,9 @@
 <template>
-  <section class="w-full rounded-[12px] border border-[#D9D9D9] p-[12px]">
-    <div class="flex flex-wrap gap-[8px] rounded-[8px] bg-[#E6E6E6] p-[8px]">
+  <div class="w-full border border-[#D9D9D9] p-[12px]">
+    <div class="flex flex-wrap gap-[8px] bg-[#E6E6E6] p-[8px]">
       <button
         type="button"
-        class="h-[40px] rounded-[8px] px-[12px]"
+        class="h-[40px] px-[12px]"
         :class="tab === 'basic' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
         @click="setTab('basic')"
       >
@@ -12,7 +12,7 @@
 
       <button
         type="button"
-        class="h-[40px] rounded-[8px] px-[12px]"
+        class="h-[40px] px-[12px]"
         :class="tab === 'similarity' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
         @click="setTab('similarity')"
       >
@@ -21,7 +21,7 @@
 
       <button
         type="button"
-        class="h-[40px] rounded-[8px] px-[12px]"
+        class="h-[40px] px-[12px]"
         :class="tab === 'trademark-check' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
         @click="setTab('trademark-check')"
       >
@@ -30,7 +30,7 @@
 
       <button
         type="button"
-        class="h-[40px] rounded-[8px] px-[12px]"
+        class="h-[40px] px-[12px]"
         :class="tab === 'high-patent' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
         @click="setTab('high-patent')"
       >
@@ -39,7 +39,7 @@
 
       <button
         type="button"
-        class="h-[40px] rounded-[8px] px-[12px]"
+        class="h-[40px] px-[12px]"
         :class="tab === 'thai-copyright' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
         @click="setTab('thai-copyright')"
       >
@@ -47,7 +47,7 @@
       </button>
     </div>
 
-    <div class="mt-[12px] rounded-[12px] bg-[#F3F3F3] p-[12px]">
+    <div class="mt-[12px] bg-[#F3F3F3] p-[12px]">
       <component
         :is="ActiveTabComponent"
         :keyword="keyword"
@@ -55,7 +55,7 @@
         @clear="emit('clear')"
       />
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

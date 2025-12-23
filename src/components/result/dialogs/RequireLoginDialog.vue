@@ -17,12 +17,12 @@
 
       <button
         type="button"
-        class="mt-[42px] flex h-[90px] w-[520px] items-center justify-center gap-[14px] rounded-[18px] bg-[#A50F19] font-semibold text-white"
+        class="mt-[42px] flex h-[90px] w-[520px] items-center justify-center gap-[14px] bg-[#A50F19] font-semibold text-white"
         @click="emit('go-login')"
       >
         ไปยังหน้าเข้าสู่ระบบ
         <span
-          class="inline-flex h-[30px] w-[30px] items-center justify-center rounded-[8px] border-2 border-white"
+          class="inline-flex h-[30px] w-[30px] items-center justify-center border-2 border-white"
         >
           <svg
             viewBox="0 0 24 24"

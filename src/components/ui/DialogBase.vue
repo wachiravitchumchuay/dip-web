@@ -8,7 +8,7 @@
     >
       <div class="absolute inset-0 bg-black/30" @click="emit('close')" />
 
-      <div class="relative w-full max-w-[980px] rounded-[28px] bg-white p-[32px] shadow-xl">
+      <div class="relative w-full max-w-[980px] bg-white p-[32px] shadow-xl">
         <button
           v-if="showClose"
           type="button"

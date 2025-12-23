@@ -1,5 +1,5 @@
 <template>
-  <aside class="w-/12 rounded-[12px] bg-[#F3F3F3] p-[12px] text-18">
+  <div class="w-/12 bg-[#F3F3F3] p-[12px] text-18">
     <div class="flex items-center justify-between">
       <div class="font-semibold">กรองการค้นหา</div>
       <button type="button" class="text-[#666666]" @click="$emit('clear')">ล้างการกรอง</button>
@@ -10,14 +10,14 @@
         v-for="x in items"
         :key="x"
         type="button"
-        class="flex h-[48px] w-full items-center justify-between rounded-[10px] border border-[#D9D9D9] bg-white px-[12px]"
+        class="flex h-[48px] w-full items-center justify-between border border-[#D9D9D9] bg-white px-[12px]"
         @click="$emit('apply', x)"
       >
         <span>{{ x }}</span>
         <span class="text-[#999999]">›</span>
       </button>
     </div>
-  </aside>
+  </div>
 </template>
 
 <script setup lang="ts">

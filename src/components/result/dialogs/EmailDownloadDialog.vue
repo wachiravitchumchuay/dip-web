@@ -28,13 +28,13 @@
           <input
             v-model="email"
             type="email"
-            class="h-[86px] w-full rounded-[14px] border border-[#D9D9D9] px-[18px] outline-none"
+            class="h-[86px] w-full border border-[#D9D9D9] px-[18px] outline-none"
             placeholder="กรอกที่อยู่อีเมล"
           />
 
           <button
             type="button"
-            class="h-[86px] w-[220px] rounded-[14px] bg-[#A50F19] font-semibold text-white"
+            class="h-[86px] w-[220px] bg-[#A50F19] font-semibold text-white"
             @click="emit('send', email)"
           >
             ส่งอีเมล

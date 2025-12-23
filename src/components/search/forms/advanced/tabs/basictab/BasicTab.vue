@@ -19,7 +19,7 @@
     <div class="mt-[12px] flex flex-wrap justify-between gap-[12px]">
       <button
         type="button"
-        class="inline-flex h-[44px] items-center gap-[8px] rounded-[10px] border border-[#D9D9D9] bg-white px-[14px]"
+        class="inline-flex h-[44px] items-center gap-[8px] border border-[#D9D9D9] bg-white px-[14px]"
         @click="addGroup"
       >
         <span
@@ -30,17 +30,13 @@
       </button>
 
       <div class="flex items-center gap-[12px]">
-        <button
-          type="button"
-          class="h-[44px] rounded-[10px] bg-[#F5A623] px-[18px] text-black"
-          @click="onClear"
-        >
+        <button type="button" class="h-[44px] bg-[#F5A623] px-[18px] text-black" @click="onClear">
           ล้างเงื่อนไข
         </button>
 
         <button
           type="button"
-          class="h-[44px] rounded-[10px] bg-[#1B8A6B] px-[18px] text-white"
+          class="h-[44px] bg-[#1B8A6B] px-[18px] text-white"
           @click="emit('submit', buildPayload())"
         >
           ค้นหาข้อมูล

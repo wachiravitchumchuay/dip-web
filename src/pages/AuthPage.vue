@@ -14,8 +14,8 @@
       <div
         class="relative mx-auto flex min-h-screen max-w-[1200px] items-center justify-center px-4"
       >
-        <section
-          class="flex w-full max-w-[980px] overflow-hidden rounded-[16px] bg-white shadow-[0_24px_80px_rgba(0,0,0,0.18)]"
+        <div
+          class="flex w-full max-w-[980px] overflow-hidden bg-white shadow-[0_24px_80px_rgba(0,0,0,0.18)]"
         >
           <!-- Left (1/2) -->
           <div class="w-1/2 bg-[#7D1B1E] text-white">
@@ -46,11 +46,11 @@
               <div class="mt-[22px] flex justify-center">
                 <button
                   type="button"
-                  class="flex h-[52px] w-[320px] items-center justify-center gap-[10px] rounded-[10px] bg-[#1E40AF] px-[16px] font-semibold text-white"
+                  class="flex h-[52px] w-[320px] items-center justify-center gap-[10px] bg-[#1E40AF] px-[16px] font-semibold text-white"
                   @click="onThaiIdLogin"
                 >
                   <span
-                    class="flex h-[32px] w-[32px] items-center justify-center overflow-hidden rounded-[6px] bg-white/10"
+                    class="flex h-[32px] w-[32px] items-center justify-center overflow-hidden bg-white/10"
                   >
                     <img src="/th-flag.png" class="h-[22px] w-[22px] object-contain" alt="ThaiID" />
                   </span>
@@ -84,7 +84,7 @@
               <div class="mt-auto" />
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </div>
   </main>

@@ -11,6 +11,14 @@ footer {
   font-family: "Prompt";
 }
 
+div {
+  border-radius: 12px;
+}
+
+button {
+  border-radius: 12px;
+}
+
 .text-16 {
   font-size: 1em;
 }

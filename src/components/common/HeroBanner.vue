@@ -3,9 +3,9 @@
     <div class="text-custom-red py-5 text-32">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา (IP SEARCH)</div>
 
     <div class="relative w-full">
-      <img src="/Banner.png" class="h-[200px] w-full rounded-[16px]" alt="Banner" />
+      <img src="/Banner.png" class="h-[200px] w-full rounded-2xl" alt="Banner" />
 
-      <div class="absolute inset-0 flex items-center pl-[97px] text-white">
+      <div class="absolute inset-0 flex items-center pl-[97px] text-white ">
         <div class="flex-col">
           <div class="text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
           <div class="text-18">

@@ -4,7 +4,7 @@
     <div class="flex gap-[8px]">
       <button
         type="button"
-        class="h-[40px] rounded-[8px] border border-[#D9D9D9] px-[12px]"
+        class="h-[40px] border border-[#D9D9D9] px-[12px]"
         :class="
           mode === 'keyword'
             ? 'bg-[#FFF3F3] text-[#B21F29] border-[#B21F29]'
@@ -17,7 +17,7 @@
 
       <button
         type="button"
-        class="h-[40px] rounded-[8px] border border-[#D9D9D9] px-[12px]"
+        class="h-[40px] border border-[#D9D9D9] px-[12px]"
         :class="
           mode === 'image' ? 'bg-[#FFF3F3] text-[#B21F29] border-[#B21F29]' : 'bg-white text-black'
         "
@@ -28,7 +28,7 @@
     </div>
 
     <!-- form area -->
-    <div class="mt-[12px] rounded-[12px] bg-white p-[12px]">
+    <div class="mt-[12px] bg-white p-[12px]">
       <!-- เพิ่มเงื่อนไข -->
       <div class="flex items-center gap-[8px] text-18">
         <div class="font-semibold">เงื่อนไขคำ</div>
@@ -51,7 +51,7 @@
           <div class="relative">
             <select
               v-model="keywordCondition"
-              class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
+              class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
             >
               <option value="" disabled>เลือกเงื่อนไขคำค้นหา</option>
               <option value="contains">มีคำว่า</option>
@@ -86,7 +86,7 @@
           <input
             v-model="keywordValue"
             type="text"
-            class="h-[44px] w-full rounded-[10px] border border-[#D9D9D9] bg-white px-[12px]"
+            class="h-[44px] w-full border border-[#D9D9D9] bg-white px-[12px]"
             placeholder="กรอกคำเหมือนคล้าย"
           />
         </div>
@@ -107,7 +107,7 @@
           <div class="relative">
             <select
               v-model="soundCondition"
-              class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
+              class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
             >
               <option value="" disabled>เลือกเงื่อนไขคำคล้าย</option>
               <option value="contains">มีคำว่า</option>
@@ -132,7 +132,7 @@
           <input
             v-model="soundValue"
             type="text"
-            class="h-[44px] w-full rounded-[10px] border border-[#D9D9D9] bg-white px-[12px]"
+            class="h-[44px] w-full border border-[#D9D9D9] bg-white px-[12px]"
             placeholder="กรอกเสียงคำพ้องแต่ละพยางค์"
           />
         </div>
@@ -153,7 +153,7 @@
           <div class="relative">
             <select
               v-model="textCondition"
-              class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
+              class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
             >
               <option value="" disabled>เลือกอักษรแรก</option>
               <option value="contains">มีคำว่า</option>
@@ -178,7 +178,7 @@
           <div class="relative">
             <select
               v-model="phoneticCondition"
-              class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
+              class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
             >
               <option value="" disabled>เลือกเสียงท้าย</option>
               <option value="contains">มีคำว่า</option>
@@ -203,7 +203,7 @@
           <div class="relative">
             <select
               v-model="soundMatch"
-              class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
+              class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[12px] pr-[40px]"
             >
               <option value="" disabled>เลือกเสียงคำค้นหา</option>
               <option value="thai">ไทย</option>
@@ -238,7 +238,7 @@
           <div class="mb-[6px]">อักษรแรก</div>
           <div class="grid grid-cols-12 gap-[8px]">
             <label
-              class="col-span-9 flex h-[44px] items-center gap-[8px] rounded-[10px] border border-[#D9D9D9] px-[12px]"
+              class="col-span-9 flex h-[44px] items-center gap-[8px] border border-[#D9D9D9] px-[12px]"
             >
               <input v-model="typeText" type="checkbox" class="h-[16px] w-[16px]" />
               <span class="">เสียงคน</span>
@@ -247,7 +247,7 @@
             <div class="col-span-3 relative">
               <select
                 v-model="typeTextJoin"
-                class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[10px] pr-[34px]"
+                class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[10px] pr-[34px]"
               >
                 <option value="and">และ</option>
                 <option value="or">หรือ</option>
@@ -271,7 +271,7 @@
           <div class="mb-[6px]">อักษรแรก</div>
           <div class="grid grid-cols-12 gap-[8px]">
             <label
-              class="col-span-9 flex h-[44px] items-center gap-[8px] rounded-[10px] border border-[#D9D9D9] px-[12px]"
+              class="col-span-9 flex h-[44px] items-center gap-[8px] border border-[#D9D9D9] px-[12px]"
             >
               <input v-model="typeSound" type="checkbox" class="h-[16px] w-[16px]" />
               <span class="">เสียงสัตว์</span>
@@ -280,7 +280,7 @@
             <div class="col-span-3 relative">
               <select
                 v-model="typeSoundJoin"
-                class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[10px] pr-[34px]"
+                class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[10px] pr-[34px]"
               >
                 <option value="and">และ</option>
                 <option value="or">หรือ</option>
@@ -304,7 +304,7 @@
           <div class="mb-[6px]">อักษรแรก</div>
           <div class="grid grid-cols-12 gap-[8px]">
             <label
-              class="col-span-9 flex h-[44px] items-center gap-[8px] rounded-[10px] border border-[#D9D9D9] px-[12px]"
+              class="col-span-9 flex h-[44px] items-center gap-[8px] border border-[#D9D9D9] px-[12px]"
             >
               <input v-model="typeMusic" type="checkbox" class="h-[16px] w-[16px]" />
               <span class="">เสียงดนตรี / ประกอบดนตรี</span>
@@ -313,7 +313,7 @@
             <div class="col-span-3 relative">
               <select
                 v-model="typeMusicJoin"
-                class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[10px] pr-[34px]"
+                class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[10px] pr-[34px]"
               >
                 <option value="and">และ</option>
                 <option value="or">หรือ</option>
@@ -337,7 +337,7 @@
           <div class="mb-[6px]">อักษรแรก</div>
           <div class="grid grid-cols-12 gap-[8px]">
             <label
-              class="col-span-9 flex h-[44px] items-center gap-[8px] rounded-[10px] border border-[#D9D9D9] px-[12px]"
+              class="col-span-9 flex h-[44px] items-center gap-[8px] border border-[#D9D9D9] px-[12px]"
             >
               <input v-model="typeOther" type="checkbox" class="h-[16px] w-[16px]" />
               <span class="">เสียงอื่นๆ</span>
@@ -346,7 +346,7 @@
             <div class="col-span-3 relative">
               <select
                 v-model="typeOtherJoin"
-                class="h-[44px] w-full appearance-none rounded-[10px] border border-[#D9D9D9] bg-white px-[10px] pr-[34px]"
+                class="h-[44px] w-full appearance-none border border-[#D9D9D9] bg-white px-[10px] pr-[34px]"
               >
                 <option value="and">และ</option>
                 <option value="or">หรือ</option>
@@ -377,27 +377,20 @@
       </div>
 
       <div class="mt-[12px]">
-        <button
-          type="button"
-          class="h-[44px] rounded-[10px] border border-[#D9D9D9] bg-white px-[14px]"
-        >
+        <button type="button" class="h-[44px] border border-[#D9D9D9] bg-white px-[14px]">
           + เพิ่มกลุ่มเงื่อนไข
         </button>
       </div>
 
       <!-- actions -->
       <div class="mt-[18px] flex items-center justify-between">
-        <button
-          type="button"
-          class="h-[44px] rounded-[10px] bg-[#F5A623] px-[18px] text-black"
-          @click="onClear()"
-        >
+        <button type="button" class="h-[44px] bg-[#F5A623] px-[18px] text-black" @click="onClear()">
           ล้างเงื่อนไข
         </button>
 
         <button
           type="button"
-          class="h-[44px] rounded-[10px] bg-[#1E8E6E] px-[18px] text-white"
+          class="h-[44px] bg-[#1E8E6E] px-[18px] text-white"
           @click="onSubmit()"
         >
           ค้นหาข้อมูล

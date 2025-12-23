@@ -1,10 +1,7 @@
 <template>
-  <section
-    v-if="datasetKey"
-    class="mt-[16px] w-full rounded-[12px] border border-[#D9D9D9] p-[16px]"
-  >
+  <div v-if="datasetKey" class="mt-[16px] w-full border border-[#D9D9D9] p-[16px]">
     <component :is="FormComponent" :dataset-key="datasetKey" />
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">

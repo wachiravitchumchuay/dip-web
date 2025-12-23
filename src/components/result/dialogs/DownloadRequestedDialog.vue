@@ -24,7 +24,7 @@
 
       <button
         type="button"
-        class="mt-[46px] h-[90px] w-[420px] rounded-[18px] bg-[#1B8A6B] font-semibold text-white"
+        class="mt-[46px] h-[90px] w-[420px] bg-[#1B8A6B] font-semibold text-white"
         @click="emit('close')"
       >
         ปิดหน้าต่างนี้

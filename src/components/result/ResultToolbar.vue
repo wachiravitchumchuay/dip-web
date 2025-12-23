@@ -1,12 +1,12 @@
 <template>
-  <section class="w-full rounded-[12px] border border-[#D9D9D9] bg-white p-[16px] text-18">
+  <div class="w-full border border-[#D9D9D9] bg-white p-[16px] text-18">
     <div class="font-semibold">ผลการค้นหา</div>
 
     <div class="mt-[12px] flex flex-wrap items-center justify-between gap-[12px]">
       <div class="flex flex-wrap items-center gap-[8px]">
         <button
           type="button"
-          class="h-[40px] rounded-[10px] border px-[14px]"
+          class="h-[40px] border px-[14px]"
           :class="
             activeTab === 'all'
               ? 'border-[#B21F29] bg-[#FCE8EA] text-[#B21F29]'
@@ -19,7 +19,7 @@
 
         <button
           type="button"
-          class="h-[40px] rounded-[10px] border border-[#B21F29] bg-[#FCE8EA] px-[14px] text-[#B21F29]"
+          class="h-[40px] border border-[#B21F29] bg-[#FCE8EA] px-[14px] text-[#B21F29]"
           @click="$emit('update:activeTab', 'dataset')"
         >
           สิทธิบัตรการประดิษฐ์ (219)
@@ -27,9 +27,7 @@
       </div>
 
       <div class="flex items-center gap-[8px]">
-        <button type="button" class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px]">
-          ย่อการแสดง
-        </button>
+        <button type="button" class="h-[40px] border border-[#D9D9D9] px-[14px]">ย่อการแสดง</button>
       </div>
     </div>
 
@@ -37,7 +35,7 @@
       <div class="flex flex-wrap gap-[8px]">
         <button
           type="button"
-          class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px]"
+          class="h-[40px] border border-[#D9D9D9] px-[14px]"
           @click="$emit('update:sort', 'date')"
         >
           เรียงตามวันที่
@@ -45,7 +43,7 @@
 
         <button
           type="button"
-          class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px]"
+          class="h-[40px] border border-[#D9D9D9] px-[14px]"
           @click="$emit('update:sort', 'name')"
         >
           เรียงตามตัวอักษร
@@ -53,7 +51,7 @@
       </div>
 
       <div class="flex items-center gap-[8px]">
-        <div class="flex overflow-hidden rounded-[10px] border border-[#D9D9D9]">
+        <div class="flex overflow-hidden border border-[#D9D9D9]">
           <button
             type="button"
             class="h-[40px] w-[44px]"
@@ -76,7 +74,7 @@
 
         <button
           type="button"
-          class="h-[40px] rounded-[10px] bg-[#F16522] px-[14px] text-white"
+          class="h-[40px] bg-[#F16522] px-[14px] text-white"
           @click="$emit('download')"
         >
           ดาวน์โหลด
@@ -91,7 +89,7 @@
     <RequireLoginDialog :open="open1" @close="open1 = false" @go-login="goLogin" />
     <EmailDownloadDialog :open="open2" @close="open2 = false" @send="onSendEmail" />
     <DownloadRequestedDialog :open="open3" @close="open3 = false" />
-  </section>
+  </div>
 </template>
 
 <script setup lang="ts">
