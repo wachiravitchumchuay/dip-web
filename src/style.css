@@ -1,5 +1,65 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: "Anuphan";
+  src: url("./assets/fonts/anuphan/Anuphan-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("./assets/fonts/anuphan/Anuphan-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("./assets/fonts/anuphan/Anuphan-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("./assets/fonts/anuphan/Anuphan-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("./assets/fonts/anuphan/Anuphan-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("./assets/fonts/anuphan/Anuphan-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Anuphan";
+  src: url("./assets/fonts/anuphan/Anuphan-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: "Anuphan";
+}
+
 @theme {
   --color-app-bg: #ffffff;
   --color-app-text: #000000;
