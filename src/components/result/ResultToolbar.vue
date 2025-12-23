@@ -1,12 +1,12 @@
 <template>
-  <section class="w-full rounded-[12px] border border-[#D9D9D9] bg-white p-[16px] text-[18px]">
-    <div class="text-[24px] font-semibold">ผลการค้นหา</div>
+  <section class="w-full rounded-[12px] border border-[#D9D9D9] bg-white p-[16px] text-18">
+    <div class="font-semibold">ผลการค้นหา</div>
 
     <div class="mt-[12px] flex flex-wrap items-center justify-between gap-[12px]">
       <div class="flex flex-wrap items-center gap-[8px]">
         <button
           type="button"
-          class="h-[40px] rounded-[10px] border px-[14px] text-[16px]"
+          class="h-[40px] rounded-[10px] border px-[14px]"
           :class="
             activeTab === 'all'
               ? 'border-[#B21F29] bg-[#FCE8EA] text-[#B21F29]'
@@ -19,7 +19,7 @@
 
         <button
           type="button"
-          class="h-[40px] rounded-[10px] border border-[#B21F29] bg-[#FCE8EA] px-[14px] text-[16px] text-[#B21F29]"
+          class="h-[40px] rounded-[10px] border border-[#B21F29] bg-[#FCE8EA] px-[14px] text-[#B21F29]"
           @click="$emit('update:activeTab', 'dataset')"
         >
           สิทธิบัตรการประดิษฐ์ (219)
@@ -27,10 +27,7 @@
       </div>
 
       <div class="flex items-center gap-[8px]">
-        <button
-          type="button"
-          class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px] text-[16px]"
-        >
+        <button type="button" class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px]">
           ย่อการแสดง
         </button>
       </div>
@@ -40,7 +37,7 @@
       <div class="flex flex-wrap gap-[8px]">
         <button
           type="button"
-          class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px] text-[16px]"
+          class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px]"
           @click="$emit('update:sort', 'date')"
         >
           เรียงตามวันที่
@@ -48,7 +45,7 @@
 
         <button
           type="button"
-          class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px] text-[16px]"
+          class="h-[40px] rounded-[10px] border border-[#D9D9D9] px-[14px]"
           @click="$emit('update:sort', 'name')"
         >
           เรียงตามตัวอักษร
@@ -79,7 +76,7 @@
 
         <button
           type="button"
-          class="h-[40px] rounded-[10px] bg-[#F16522] px-[14px] text-[16px] text-white"
+          class="h-[40px] rounded-[10px] bg-[#F16522] px-[14px] text-white"
           @click="$emit('download')"
         >
           ดาวน์โหลด

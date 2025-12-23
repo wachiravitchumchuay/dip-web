@@ -1,6 +1,6 @@
 <template>
-  <footer class="w-full text-[18px] text-[16px] mt-[60px]">
-    <div class="w-full h-[182px] px-23 custom-gray-bg">
+  <footer class="w-full text-18 mt-[60px">
+    <div class="w-full h-[182px] px-20 custom-gray-bg">
       <div class="flex w-full h-full items-center justify-between">
         <div class="flex-col w-1/2">
           <div class="pb-[12px]">
@@ -31,7 +31,7 @@
             </div>
             <div class="flex-col">
               <div>สายด่วน/ติดต่อสอบถาม</div>
-              <div class="text-[32px] font-SemiBold">1368</div>
+              <div class="text-32 font-semibold">1368</div>
             </div>
           </div>
           <div class="flex">

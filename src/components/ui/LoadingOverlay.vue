@@ -6,7 +6,7 @@
         <div class="h-[2px] w-[420px] overflow-hidden rounded bg-[#D9D9D9]">
           <div class="h-full w-[35%] bg-[#B21F29]" />
         </div>
-        <div class="text-[16px] font-semibold text-[#B21F29]">TRADE MARKS CHECKER</div>
+        <div class="font-semibold text-[#B21F29]">TRADE MARKS CHECKER</div>
       </div>
     </div>
   </div>

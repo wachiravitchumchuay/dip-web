@@ -1,6 +1,6 @@
 <template>
-  <nav class="w-full h-20 bg-app-bg text-[18px] border-b border-separator-gray">
-    <div class="px-23 py-5">
+  <nav class="w-full h-20 bg-app-bg text-18 border-b border-separator-gray">
+    <div class="px-20 py-5">
       <div class="flex justify-between">
         <div class="flex items-center">
           <div>

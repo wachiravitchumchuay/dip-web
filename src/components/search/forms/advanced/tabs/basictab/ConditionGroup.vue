@@ -2,12 +2,12 @@
 <template>
   <section class="rounded-[12px] bg-[#F3F3F3] p-[12px]">
     <div class="flex items-center justify-between">
-      <div class="text-[18px] font-semibold">กลุ่มเงื่อนไขที่ {{ index + 1 }}</div>
+      <div class="text-18 font-semibold">กลุ่มเงื่อนไขที่ {{ index + 1 }}</div>
 
       <button
         v-if="canRemoveGroup"
         type="button"
-        class="inline-flex items-center gap-[8px] text-[16px] text-[#C0272D]"
+        class="inline-flex items-center gap-[8px] text-[#C0272D]"
         @click="emit('remove-group')"
       >
         <span class="inline-flex h-[20px] w-[20px] items-center justify-center">🗑️</span>
@@ -18,7 +18,7 @@
     <div class="mt-[12px]">
       <button
         type="button"
-        class="h-[44px] w-[110px] rounded-[10px] bg-[#1B8A6B] px-[12px] text-[16px] text-white"
+        class="h-[44px] w-[110px] rounded-[10px] bg-[#1B8A6B] px-[12px] text-white"
         @click="emit('toggle-join')"
       >
         {{ joinLabel }}
@@ -32,10 +32,10 @@
         class="grid gap-[12px] md:grid-cols-[1fr_1fr_auto] md:items-end"
       >
         <div>
-          <div class="mb-[6px] text-[16px]">เงื่อนไข</div>
+          <div class="mb-[6px]">เงื่อนไข</div>
           <select
             :value="rule.condition"
-            class="h-[44px] w-full rounded-[10px] border border-[#D9D9D9] px-[12px] text-[16px] outline-none"
+            class="h-[44px] w-full rounded-[10px] border border-[#D9D9D9] px-[12px] outline-none"
             @change="onChangeCondition(rule.id, ($event.target as HTMLSelectElement).value)"
           >
             <option value="">เลือกเงื่อนไขหรือพิมพ์เพื่อค้นหา</option>
@@ -46,11 +46,11 @@
         </div>
 
         <div>
-          <div class="mb-[6px] text-[16px]">คำค้นหา</div>
+          <div class="mb-[6px]">คำค้นหา</div>
           <input
             :value="rule.value"
             type="text"
-            class="h-[44px] w-full rounded-[10px] border border-[#D9D9D9] px-[12px] text-[16px] outline-none"
+            class="h-[44px] w-full rounded-[10px] border border-[#D9D9D9] px-[12px] outline-none"
             placeholder="ใส่คำสำหรับการค้นหา"
             @input="onChangeValue(rule.id, ($event.target as HTMLInputElement).value)"
           />
@@ -59,7 +59,7 @@
         <div class="flex items-center gap-[8px]">
           <button
             type="button"
-            class="inline-flex h-[44px] items-center gap-[8px] rounded-[10px] border border-[#D9D9D9] bg-white px-[14px] text-[16px]"
+            class="inline-flex h-[44px] items-center gap-[8px] rounded-[10px] border border-[#D9D9D9] bg-white px-[14px]"
             @click="emit('add-rule')"
           >
             <span

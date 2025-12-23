@@ -1,7 +1,6 @@
 <template>
-  <main class="px-23">
+  <main>
     <HeroBannerComponent />
-
     <SearchSummaryBar dataset="สิทธิบัตรการประดิษฐ์" keyword="บ้าน" @edit="() => {}" />
 
     <div class="mt-[12px]">

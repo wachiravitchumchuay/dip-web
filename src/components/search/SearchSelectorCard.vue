@@ -10,7 +10,7 @@
         <img :src="iconSrc" class="h-[32px] w-[32px]" alt="" />
       </div>
 
-      <div class="text-[18px] leading-tight">{{ label }}</div>
+      <div class="text-18 leading-tight">{{ label }}</div>
     </div>
   </button>
 </template>

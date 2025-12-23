@@ -17,14 +17,14 @@
         </div>
       </div>
 
-      <div class="mt-[18px] text-[44px] font-semibold leading-[1.15] text-[#1B8A6B]">
+      <div class="mt-[18px] font-semibold leading-[1.15] text-[#1B8A6B]">
         รับคำขอดาวน์โหลดเรียบร้อยแล้ว<br />
         ข้อมูลจะถูกส่งไปยังอีเมลที่ท่านได้แจ้งไว้
       </div>
 
       <button
         type="button"
-        class="mt-[46px] h-[90px] w-[420px] rounded-[18px] bg-[#1B8A6B] text-[28px] font-semibold text-white"
+        class="mt-[46px] h-[90px] w-[420px] rounded-[18px] bg-[#1B8A6B] font-semibold text-white"
         @click="emit('close')"
       >
         ปิดหน้าต่างนี้

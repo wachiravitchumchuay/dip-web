@@ -16,36 +16,36 @@
         </svg>
       </div>
 
-      <div class="mt-[18px] text-center text-[44px] font-semibold leading-[1.15] text-[#333]">
+      <div class="mt-[18px] text-center font-semibold leading-[1.15] text-[#333]">
         ดาวน์โหลดผลการค้นหาเป็นเอกสารอ้างอิง<br />
         เพื่อใช้การจดทะเบียนเครื่องหมายการค้า
       </div>
 
       <div class="mt-[28px] w-full max-w-[860px]">
-        <div class="text-[28px] font-semibold text-[#333]">อีเมล</div>
+        <div class="font-semibold text-[#333]">อีเมล</div>
 
         <div class="mt-[10px] flex items-center gap-[14px]">
           <input
             v-model="email"
             type="email"
-            class="h-[86px] w-full rounded-[14px] border border-[#D9D9D9] px-[18px] text-[26px] outline-none"
+            class="h-[86px] w-full rounded-[14px] border border-[#D9D9D9] px-[18px] outline-none"
             placeholder="กรอกที่อยู่อีเมล"
           />
 
           <button
             type="button"
-            class="h-[86px] w-[220px] rounded-[14px] bg-[#A50F19] text-[28px] font-semibold text-white"
+            class="h-[86px] w-[220px] rounded-[14px] bg-[#A50F19] font-semibold text-white"
             @click="emit('send', email)"
           >
             ส่งอีเมล
           </button>
         </div>
 
-        <div class="mt-[22px] flex items-start gap-[12px] text-[22px] text-[#B21F29]">
+        <div class="mt-[22px] flex items-start gap-[12px] text-[#B21F29]">
           <div
             class="mt-[4px] flex h-[28px] w-[28px] items-center justify-center rounded-full border-2 border-[#B21F29]"
           >
-            <span class="text-[18px] font-semibold">!</span>
+            <span class="text-18 font-semibold">!</span>
           </div>
           <div>
             ระบบจะส่งข้อมูลการค้นหาไปยัง “อีเมล” ที่ระบุไว้ ภายใน 2 -15 นาที ซึ่งระยะเวลาในการส่ง
@@ -56,7 +56,7 @@
 
       <button
         type="button"
-        class="mt-[30px] text-[30px] font-semibold text-[#B21F29] underline"
+        class="mt-[30px] font-semibold text-[#B21F29] underline"
         @click="emit('close')"
       >
         ยกเลิกและปิดหน้าต่างนี้

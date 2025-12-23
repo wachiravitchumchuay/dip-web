@@ -2,7 +2,7 @@
   <section class="w-full">
     <div class="rounded-[12px] border border-[#D9D9D9] bg-white p-[16px]">
       <div
-        class="rounded-[10px] border border-[#E08A8A] bg-[#F8D7DA] px-[12px] py-[10px] text-[16px] text-[#B21F29]"
+        class="rounded-[10px] border border-[#E08A8A] bg-[#F8D7DA] px-[12px] py-[10px] text-[#B21F29]"
       >
         หมายเหตุ: กรณีเครื่องหมายการค้าประกอบด้วยคำ
         โปรดตรวจสอบความเหมือนคล้ายด้วยวิธีตรวจสอบความเหมือนคล้ายของเครื่องหมายอีกครั้ง
@@ -21,31 +21,29 @@
 
         <div class="flex flex-col items-center justify-center text-center">
           <div class="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#F8D7DA]">
-            <span class="text-[22px] text-[#B21F29]">＋</span>
+            <span class="text-[#B21F29]">＋</span>
           </div>
 
-          <div class="mt-[12px] text-[20px] text-black">
+          <div class="mt-[12px] text-black">
             ลากไฟล์ภาพมาวางที่นี่ หรือ
             <button type="button" class="text-[#B21F29] underline" @click="openFilePicker">
               เลือกไฟล์อัปโหลด
             </button>
           </div>
 
-          <div class="mt-[6px] text-[16px] text-black">
+          <div class="mt-[6px] text-black">
             นามสกุลของไฟล์แนะนำเป็น .JPG, .PNG, ขนาดไฟล์ไม่เกิน 10MB และขนาดรูปภาพไม่น้อยกว่า 250 x
             250 px
           </div>
 
-          <div v-if="fileName" class="mt-[12px] text-[16px] text-[#1B8A6B]">
-            ไฟล์ที่เลือก: {{ fileName }}
-          </div>
+          <div v-if="fileName" class="mt-[12px] text-[#1B8A6B]">ไฟล์ที่เลือก: {{ fileName }}</div>
         </div>
       </div>
 
       <div class="mt-[16px] flex items-center justify-between">
         <button
           type="button"
-          class="h-[44px] rounded-[10px] bg-[#F5A623] px-[18px] text-[16px] text-black"
+          class="h-[44px] rounded-[10px] bg-[#F5A623] px-[18px] text-black"
           @click="onClear"
         >
           ล้างเงื่อนไข
@@ -53,7 +51,7 @@
 
         <button
           type="button"
-          class="h-[44px] rounded-[10px] bg-[#1B8A6B] px-[18px] text-[16px] text-white"
+          class="h-[44px] rounded-[10px] bg-[#1B8A6B] px-[18px] text-white"
           @click="onSubmit"
         >
           ค้นหาข้อมูล

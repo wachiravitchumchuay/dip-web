@@ -1,6 +1,6 @@
 <template>
   <section class="w-full py-[33px]">
-    <div class="text-[24px]">เลือกชุดข้อมูลเพื่อค้นหา</div>
+    <div class="">เลือกชุดข้อมูลเพื่อค้นหา</div>
 
     <div
       class="mt-[8px] grid gap-[8px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6"

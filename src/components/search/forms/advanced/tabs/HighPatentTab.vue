@@ -1,5 +1,5 @@
 <template>
-  <div class="text-[16px]">High patent tab (placeholder)</div>
+  <div class="">High patent tab (placeholder)</div>
 </template>
 
 <script setup lang="ts">

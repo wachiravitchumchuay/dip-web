@@ -1,5 +1,5 @@
 <template>
-  <main class="px-23">
+  <main>
     <HeroBanner />
     <SerachSelector />
     <SearchFormHost />

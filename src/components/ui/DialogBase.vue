@@ -12,7 +12,7 @@
         <button
           v-if="showClose"
           type="button"
-          class="absolute right-[18px] top-[18px] text-[22px] leading-none text-[#111]"
+          class="absolute right-[18px] top-[18px] leading-none text-[#111]"
           aria-label="Close dialog"
           @click="emit('close')"
         >

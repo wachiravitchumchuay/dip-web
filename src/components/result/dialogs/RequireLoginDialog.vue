@@ -5,11 +5,11 @@
         <div
           class="flex h-[58px] w-[58px] items-center justify-center rounded-full border-[4px] border-[#B21F29]"
         >
-          <span class="text-[28px] font-semibold text-[#B21F29]">!</span>
+          <span class="font-semibold text-[#B21F29]">!</span>
         </div>
       </div>
 
-      <div class="mt-[18px] text-[44px] font-semibold leading-[1.15] text-[#333]">
+      <div class="mt-[18px] font-semibold leading-[1.15] text-[#333]">
         เพื่อความปลอดภัยของข้อมูล<br />
 
         กรุณาเข้าสู่ระบบก่อนดาวน์โหลด
@@ -17,7 +17,7 @@
 
       <button
         type="button"
-        class="mt-[42px] flex h-[90px] w-[520px] items-center justify-center gap-[14px] rounded-[18px] bg-[#A50F19] text-[28px] font-semibold text-white"
+        class="mt-[42px] flex h-[90px] w-[520px] items-center justify-center gap-[14px] rounded-[18px] bg-[#A50F19] font-semibold text-white"
         @click="emit('go-login')"
       >
         ไปยังหน้าเข้าสู่ระบบ
@@ -41,7 +41,7 @@
 
       <button
         type="button"
-        class="mt-[26px] text-[30px] font-semibold text-[#B21F29] underline"
+        class="mt-[26px] font-semibold text-[#B21F29] underline"
         @click="emit('close')"
       >
         ยกเลิกและปิดหน้าต่างนี้

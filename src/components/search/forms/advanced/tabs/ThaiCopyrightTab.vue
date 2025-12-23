@@ -1,5 +1,5 @@
 <template>
-  <div class="text-[16px]">Thai copyright tab (placeholder)</div>
+  <div class="">Thai copyright tab (placeholder)</div>
 </template>
 
 <script setup lang="ts">
