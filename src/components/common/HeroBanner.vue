@@ -5,7 +5,7 @@
     <div class="relative w-full">
       <img src="/Banner.png" class="h-[200px] w-full rounded-2xl" alt="Banner" />
 
-      <div class="absolute inset-0 flex items-center pl-[97px] text-white ">
+      <div class="absolute inset-0 flex items-center pl-[97px] text-white">
         <div class="flex-col">
           <div class="text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
           <div class="text-18">

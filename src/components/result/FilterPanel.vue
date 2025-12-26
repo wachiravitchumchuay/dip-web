@@ -10,7 +10,7 @@
         v-for="x in items"
         :key="x"
         type="button"
-        class="flex h-[48px] w-full items-center justify-between border border-[#D9D9D9] bg-white px-[12px]"
+        class="flex h-12 w-full items-center justify-between border border-[#D9D9D9] bg-white px-[12px]"
         @click="$emit('apply', x)"
       >
         <span>{{ x }}</span>

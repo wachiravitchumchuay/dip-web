@@ -1,28 +1,24 @@
 <template>
-  <div class="w-full border border-[#D9D9D9] p-[16px]">
+  <div class="w-full p-[16px]">
     <div class="text-18 font-semibold">ค้นหาด้วยคำ</div>
 
-    <div class="mt-[8px] flex flex-col gap-[8px] md:flex-row md:items-center">
+    <div class="mt-[8px] flex gap-4 items-center">
       <input
         v-model="keyword"
         type="text"
-        class="h-[44px] w-full border border-[#D9D9D9] px-[12px] outline-none"
+        class="app-input"
         placeholder="กรอกคำที่ต้องการค้นหาหรือเลือกไฟล์รูป"
       />
 
-      <button
-        type="button"
-        class="h-[44px] w-full bg-[#A50F19] px-[16px] text-white md:w-[140px]"
-        @click="onQuickSearch"
-      >
+      <button type="button" class="app-button bg-[#A50F19] text-white" @click="onQuickSearch">
         ค้นหาด้วยคำ
       </button>
     </div>
 
     <div class="mt-[12px]">
-      <button
+      <div
         type="button"
-        class="inline-flex h-[40px] items-center gap-[8px] border border-[#FE572F] bg-[#FFEFEB] px-[12px] text-[#FE572F]"
+        class="inline-flex h-[60px] items-center gap-[8px] border border-[#FE572F] bg-[#FFEFEB] px-[12px] text-[#FE572F]"
         @click="advancedOpen = !advancedOpen"
       >
         <span>กำหนดเงื่อนไขการค้นหา</span>
@@ -31,7 +27,7 @@
         >
           <span class="leading-none">{{ advancedOpen ? '▲' : '▼' }}</span>
         </span>
-      </button>
+      </div>
     </div>
 
     <div v-if="advancedOpen" class="mt-[12px]">

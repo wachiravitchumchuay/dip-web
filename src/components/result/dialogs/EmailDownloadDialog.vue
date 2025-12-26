@@ -4,7 +4,7 @@
       <div class="flex h-[84px] w-[84px] items-center justify-center rounded-full bg-[#F9DDE0]">
         <svg
           viewBox="0 0 24 24"
-          class="h-[44px] w-[44px]"
+          class="h-15 w-[44px]"
           fill="none"
           stroke="#B21F29"
           stroke-width="2"

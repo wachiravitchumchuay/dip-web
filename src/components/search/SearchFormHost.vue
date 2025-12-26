@@ -1,5 +1,5 @@
 <template>
-  <div v-if="datasetKey" class="mt-[16px] w-full border border-[#D9D9D9] p-[16px]">
+  <div v-if="datasetKey" class="mt-[16px] w-full border p-[16px]">
     <component :is="FormComponent" :dataset-key="datasetKey" />
   </div>
 </template>

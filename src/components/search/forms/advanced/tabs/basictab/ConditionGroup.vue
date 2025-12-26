@@ -18,7 +18,7 @@
     <div class="mt-[12px]">
       <button
         type="button"
-        class="h-[44px] w-[110px] bg-[#1B8A6B] px-[12px] text-white"
+        class="h-15 w-[110px] bg-[#1B8A6B] px-[12px] text-white"
         @click="emit('toggle-join')"
       >
         {{ joinLabel }}
@@ -35,7 +35,7 @@
           <div class="mb-[6px]">เงื่อนไข</div>
           <select
             :value="rule.condition"
-            class="h-[44px] w-full border border-[#D9D9D9] px-[12px] outline-none"
+            class="h-15 w-full border border-[#D9D9D9] px-[12px] outline-none"
             @change="onChangeCondition(rule.id, ($event.target as HTMLSelectElement).value)"
           >
             <option value="">เลือกเงื่อนไขหรือพิมพ์เพื่อค้นหา</option>
@@ -50,7 +50,7 @@
           <input
             :value="rule.value"
             type="text"
-            class="h-[44px] w-full border border-[#D9D9D9] px-[12px] outline-none"
+            class="h-15 w-full border border-[#D9D9D9] px-[12px] outline-none"
             placeholder="ใส่คำสำหรับการค้นหา"
             @input="onChangeValue(rule.id, ($event.target as HTMLInputElement).value)"
           />
@@ -59,7 +59,7 @@
         <div class="flex items-center gap-[8px]">
           <button
             type="button"
-            class="inline-flex h-[44px] items-center gap-[8px] border border-[#D9D9D9] bg-white px-[14px]"
+            class="inline-flex h-15 items-center gap-[8px] border border-[#D9D9D9] bg-white px-[14px]"
             @click="emit('add-rule')"
           >
             <span
@@ -72,7 +72,7 @@
           <button
             v-if="group.rules.length > 1"
             type="button"
-            class="inline-flex h-[44px] w-[44px] items-center justify-center border border-[#D9D9D9] bg-white"
+            class="inline-flex h-15 w-[44px] items-center justify-center border border-[#D9D9D9] bg-white"
             @click="emit('remove-rule', rule.id)"
             aria-label="ลบเงื่อนไข"
           >

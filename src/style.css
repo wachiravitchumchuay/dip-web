@@ -3,20 +3,48 @@
 
 
 html {
-  font-family: "Anuphan";
+  font-family: "Anuphan", sans-serif;
   font-size: 16px;
 }
 
 footer {
-  font-family: "Prompt";
+  font-family: "Prompt", sans-serif;
 }
 
 div {
   border-radius: 12px;
 }
 
-button {
+select {
   border-radius: 12px;
+  height: 60px;
+}
+
+.app-input {
+  border-width: 1px;
+  border-radius: 12px;
+  height: 60px;
+  max-height: 60px;
+  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-left: 24px;
+}
+
+.app-button {
+  border-radius: 12px;
+  height: 60px;
+  max-height: 60px;
+  flex: 0 1 160px;
+  width: 160px;
+  max-width: 160px;
+  min-width: 120px;
+}
+
+.app-button--fit {
+  flex: 0 0 auto;
+  width: max-content;
+  max-width: none;
 }
 
 .text-16 {
@@ -247,7 +275,7 @@ button {
   font-display: swap;
 }
 
-@theme {
+/* @theme {
   --color-app-bg: #ffffff;
   --color-app-text: #000000;
 }
@@ -280,4 +308,4 @@ button {
 :root[data-theme='red-white'] {
   --color-app-bg: #ffffff;
   --color-app-text: #a50f19;
-}
+} */

@@ -37,11 +37,11 @@
       </div>
 
       <div class="mt-[16px] flex items-center justify-between">
-        <button type="button" class="h-[44px] bg-[#F5A623] px-[18px] text-black" @click="onClear">
+        <button type="button" class="h-15 bg-[#F5A623] px-[18px] text-black" @click="onClear">
           ล้างเงื่อนไข
         </button>
 
-        <button type="button" class="h-[44px] bg-[#1B8A6B] px-[18px] text-white" @click="onSubmit">
+        <button type="button" class="h-15 bg-[#1B8A6B] px-[18px] text-white" @click="onSubmit">
           ค้นหาข้อมูล
         </button>
       </div>
