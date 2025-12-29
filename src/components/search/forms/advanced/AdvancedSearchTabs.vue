@@ -3,7 +3,7 @@
     <div class="flex flex-wrap gap-[8px] bg-[#E6E6E6] p-[8px]">
       <button
         type="button"
-        class="app-button-fit h-[48px]"
+        class="app-button-fit h-[48px] border-none"
         :class="tab === 'basic' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('basic')"
       >
@@ -12,7 +12,7 @@
 
       <button
         type="button"
-        class="app-button-fit h-[48px]"
+        class="app-button-fit h-[48px] border-none"
         :class="tab === 'similarity' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('similarity')"
       >
@@ -21,7 +21,7 @@
 
       <button
         type="button"
-        class="app-button-fit h-[48px]"
+        class="app-button-fit h-[48px] border-none"
         :class="tab === 'trademark-check' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('trademark-check')"
       >
@@ -30,7 +30,7 @@
 
       <button
         type="button"
-        class="app-button-fit h-[48px]"
+        class="app-button-fit h-[48px] border-none"
         :class="tab === 'high-patent' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('high-patent')"
       >
@@ -39,7 +39,7 @@
 
       <button
         type="button"
-        class="app-button-fit h-[48px]"
+        class="app-button-fit h-[48px] border-none"
         :class="tab === 'thai-copyright' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('thai-copyright')"
       >

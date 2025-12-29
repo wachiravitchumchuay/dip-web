@@ -1,7 +1,7 @@
 <template>
   <div
     class="h-max-[140px] w-full border border-[#B21F29] p-[8px] text-left items-start"
-    :class="selected ? 'custom-red-bg text-white' : 'bg-white text-custom-red'"
+    :class="selected ? 'app-bg-red text-white' : 'bg-white app-text-red'"
     @click="emit('click')"
   >
     <div class="flex flex-col gap-[8px] p-4">

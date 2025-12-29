@@ -1,6 +1,6 @@
 <template>
   <footer class="w-full text-18 mt-[60px]">
-    <div class="w-full h-[182px] px-20 custom-gray-bg">
+    <div class="w-full h-[182px] px-20 app-bg-gray-2">
       <div class="flex w-full h-full items-center justify-between">
         <div class="flex-col w-1/2">
           <div class="pb-[12px]">
@@ -25,7 +25,7 @@
         </div>
 
         <div class="flex justify-around w-1/2 px-[32px]">
-          <div class="flex text-custom-red">
+          <div class="flex app-text-red">
             <div classname="flex items-start">
               <img src="/phone.svg" width="24" height="24" class="mr-[12px]" alt="phone logo" />
             </div>
@@ -50,7 +50,7 @@
       </div>
     </div>
 
-    <div class="w-full h-[32px] custom-red-bg">
+    <div class="w-full h-[32px] app-bg-red">
       <div class="text-center text-white pt-1">
         ©2025 กรมทรัพย์สินทางปัญญา,กระทรวงพาณิชย์ | นโยบายการคุ้มครองข้อมูลส่วนบุคคล
       </div>

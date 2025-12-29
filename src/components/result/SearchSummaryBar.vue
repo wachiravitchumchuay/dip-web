@@ -1,21 +1,21 @@
 <template>
-  <div class="w-full border border-[#D9D9D9] bg-white p-[16px] text-18">
-    <div class="flex items-center justify-between gap-[12px]">
+  <div
+    class="flex items-center justify-between border app-border-gray-2 app-bg-gray-2 mt-[24px] p-[24px]"
+  >
+    <div>
+      <div class="font-semibold">เงื่อนไขในการค้นหา</div>
       <div>
-        <div class="font-semibold">เงื่อนไขในการค้นหา</div>
-        <div class="mt-[4px] text-[#666666]">
-          ค้นหาด้วย : {{ datasetLabel }}<span v-if="keyword">, {{ keyword }}</span>
-        </div>
+        ค้นหาด้วย : {{ datasetLabel }}<span v-if="keyword">, {{ keyword }}</span>
       </div>
-
-      <button
-        type="button"
-        class="h-[40px] border border-[#B21F29] px-[14px] text-[#B21F29]"
-        @click="$emit('edit')"
-      >
-        แก้ไขเงื่อนไขการค้นหา
-      </button>
     </div>
+
+    <button
+      type="button"
+      class="app-button-fit app-text-red app-bg-red-2 app-border-red"
+      @click="$emit('edit')"
+    >
+      แก้ไขเงื่อนไขการค้นหา
+    </button>
   </div>
 </template>
 

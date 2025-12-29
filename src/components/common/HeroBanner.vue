@@ -1,6 +1,6 @@
 <template>
   <header class="w-full">
-    <div class="text-custom-red py-5 text-32">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา (IP SEARCH)</div>
+    <div class="app-text-red py-5 text-32">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา (IP SEARCH)</div>
 
     <div class="relative w-full">
       <img src="/Banner.png" class="h-[200px] w-full rounded-2xl" alt="Banner" />

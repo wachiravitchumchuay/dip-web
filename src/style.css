@@ -47,7 +47,6 @@ div {
 .app-input::placeholder {
   color: #000000;
   opacity: 1;
-  /* important for Safari/Chrome where placeholder is semi-transparent */
 }
 
 .app-button {
@@ -68,6 +67,9 @@ div {
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 12px;
+  border-width: 1px;
+  max-height: 60px;
+  height: 60px;
 }
 
 .text-16 {
@@ -82,35 +84,49 @@ div {
   font-size: 2em;
 }
 
-.border-separator-gray {
-  border-color: #d9d9d9;
-}
-
-.text-custom-red {
+.app-text-red {
   color: #b21f29;
 }
 
-.custom-gray-bg {
-  background-color: #fafafa;
+.app-bg-yellow {
+  background-color: #f5af2d;
 }
 
-.custom-red-bg {
+.app-bg-red {
   background-color: #b21f29;
 }
 
-.app-yellow {
-  background-color: #f5af2d;
+.app-bg-red-2 {
+  background-color: #FFCDD1;
 }
-.app-green {
+
+.app-bg-green {
   background-color: #1d987c;
 }
 
-.app-dark-gray {
+.app-bg-gray {
   background-color: #e6e6e6;
 }
 
-.app-light-gray {
+.app-bg-gray-2 {
   background-color: #f4f4f4;
+}
+
+.app-bg-gray-3 {
+  background-color: #EBEBEB;
+}
+
+.app-border-gray {
+  border-color: #d9d9d9;
+}
+
+.app-border-gray-2 {
+  border-color: #A0A0A0;
+}
+
+.app-border-red {
+  border-color: #B21F29;
+
 }
 
 @font-face {

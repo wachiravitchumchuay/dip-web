@@ -1,7 +1,7 @@
 <!-- src/components/search/forms/advanced/tabs/SimilarityTab.vue -->
 <template>
   <div class="w-full">
-    <div class="space-y-[12px] app-light-gray p-[12px]">
+    <div class="space-y-[12px] app-bg-gray-2 p-[12px]">
       <ConditionGroup
         v-for="(g, idx) in groups"
         :key="g.id"
@@ -15,7 +15,7 @@
         @remove-group="removeGroup(g.id)"
       />
       <div>
-        <button type="button" class="app-button app-dark-gray border" @click="addGroup">
+        <button type="button" class="app-button app-bg-gray border" @click="addGroup">
           <span
             class="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full border border-[#D9D9D9]"
             >+</span
@@ -32,7 +32,7 @@
 
       <button
         type="button"
-        class="app-button app-green text-white"
+        class="app-button app-bg-green text-white"
         @click="emit('submit', buildPayload())"
       >
         ค้นหาข้อมูล

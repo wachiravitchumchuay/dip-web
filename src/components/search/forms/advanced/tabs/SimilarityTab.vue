@@ -29,7 +29,7 @@
     </div>
 
     <!-- form area -->
-    <div class="mt-[12px] app-light-gray p-[12px]">
+    <div class="mt-[12px] app-bg-gray-2 p-[12px]">
       <!-- เพิ่มเงื่อนไข -->
       <div>
         <div class="flex items-center gap-[8px] text-18">
@@ -259,17 +259,17 @@
         </div>
 
         <div class="mt-[12px]">
-          <button type="button" class="app-button border app-dark-gray">
-            + เพิ่มกลุ่มเงื่อนไข
-          </button>
+          <button type="button" class="app-button border app-bg-gray">+ เพิ่มกลุ่มเงื่อนไข</button>
         </div>
       </div>
     </div>
 
     <div class="mt-[18px] flex items-center justify-between">
-      <button type="button" class="app-button app-yellow" @click="onClear()">ล้างเงื่อนไข</button>
+      <button type="button" class="app-button app-bg-yellow" @click="onClear()">
+        ล้างเงื่อนไข
+      </button>
 
-      <button type="button" class="app-button app-green text-white" @click="onSubmit()">
+      <button type="button" class="app-button app-bg-green text-white" @click="onSubmit()">
         ค้นหาข้อมูล
       </button>
     </div>

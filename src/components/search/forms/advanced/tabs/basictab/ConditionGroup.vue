@@ -16,7 +16,7 @@
     </div>
 
     <div class="mt-[12px]">
-      <button type="button" class="app-button app-green text-white" @click="emit('toggle-join')">
+      <button type="button" class="app-button app-bg-green text-white" @click="emit('toggle-join')">
         {{ joinLabel }}
       </button>
     </div>

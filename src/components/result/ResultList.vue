@@ -2,9 +2,13 @@
   <div class="w-full">
     <div v-if="loading" class="border border-[#D9D9D9] bg-white p-[16px]">กำลังโหลด...</div>
     <div v-else>
-      ข้อมูล สิทธิบัตร/สิทธิบัตรออกแบบ/อนุสิทธิบัตร ที่ตรวจค้น เป็นข้อมูลที่ประกาศโฆษณาแล้วเท่านั้น
+      <div class="app-bg-gray-3 py-[16px] pl-[60px]">
+        ข้อมูล สิทธิบัตร/สิทธิบัตรออกแบบ/อนุสิทธิบัตร ที่ตรวจค้น
+        เป็นข้อมูลที่ประกาศโฆษณาแล้วเท่านั้น
+      </div>
+
       <div
-        class="grid gap-[12px]"
+        class="grid gap-[12px] mt-[12px]"
         :class="view === 'grid' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'"
       >
         <div v-for="item in items" :key="item.id" class="border border-[#D9D9D9] bg-white p-[16px]">
