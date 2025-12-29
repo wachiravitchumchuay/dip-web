@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full border border-[#D9D9D9] p-[12px]">
+  <div class="w-full">
     <div class="flex flex-wrap gap-[8px] bg-[#E6E6E6] p-[8px]">
       <button
         type="button"
-        class="app-button !h-[48px]"
-        :class="tab === 'basic' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
+        class="app-button--fit h-[48px]"
+        :class="tab === 'basic' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('basic')"
       >
         เงื่อนไขแบบทั่วไป
@@ -12,8 +12,8 @@
 
       <button
         type="button"
-        class="app-app-button app-button--fit !h-[48px] whitespace-nowrap px-4 !rounded-[12px]"
-        :class="tab === 'similarity' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
+        class="app-button--fit h-[48px]"
+        :class="tab === 'similarity' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('similarity')"
       >
         ตรวจสอบความเหมือนคล้ายของเครื่องหมาย
@@ -21,8 +21,8 @@
 
       <button
         type="button"
-        class="app-button !h-[48px]"
-        :class="tab === 'trademark-check' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
+        class="app-button--fit h-[48px]"
+        :class="tab === 'trademark-check' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('trademark-check')"
       >
         ตรวจสอบเครื่องหมายการค้า
@@ -30,8 +30,8 @@
 
       <button
         type="button"
-        class="app-button !h-[48px]"
-        :class="tab === 'high-patent' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
+        class="app-button--fit h-[48px]"
+        :class="tab === 'high-patent' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('high-patent')"
       >
         ค้นหาสิทธิบัตรขั้นสูง
@@ -39,15 +39,15 @@
 
       <button
         type="button"
-        class="app-button !h-[48px]"
-        :class="tab === 'thai-copyright' ? 'bg-[#A50F19] text-white' : 'bg-white text-black'"
+        class="app-button--fit h-[48px]"
+        :class="tab === 'thai-copyright' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('thai-copyright')"
       >
         สืบค้นสิทธิบัตรไทย
       </button>
     </div>
 
-    <div class="mt-[12px] bg-[#F3F3F3] p-[12px]">
+    <div class="mt-[12px] app-gray">
       <component
         :is="ActiveTabComponent"
         :keyword="keyword"

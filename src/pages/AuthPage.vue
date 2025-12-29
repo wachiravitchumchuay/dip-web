@@ -3,7 +3,7 @@
     <!-- Background -->
     <div class="relative min-h-screen w-full">
       <!-- background image / tint -->
-      <div class="absolute inset-0 bg-[#F3F3F3]" />
+      <div class="absolute inset-0 app-light-gray" />
       <div
         class="absolute inset-0 bg-cover bg-center opacity-40"
         style="background-image: url('/auth-bg.png')"

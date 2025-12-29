@@ -1,5 +1,5 @@
 <template>
-  <div class="w-/12 bg-[#F3F3F3] p-[12px] text-18">
+  <div class="w-/12 app-light-gray p-[12px] text-18">
     <div class="flex items-center justify-between">
       <div class="font-semibold">กรองการค้นหา</div>
       <button type="button" class="text-[#666666]" @click="$emit('clear')">ล้างการกรอง</button>

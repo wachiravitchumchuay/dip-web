@@ -1,6 +1,6 @@
 <!-- src/components/search/forms/advanced/tabs/ConditionGroup.vue -->
 <template>
-  <div class="bg-[#F3F3F3] p-[12px]">
+  <div class="">
     <div class="flex items-center justify-between">
       <div class="text-18 font-semibold">กลุ่มเงื่อนไขที่ {{ index + 1 }}</div>
 
@@ -16,11 +16,7 @@
     </div>
 
     <div class="mt-[12px]">
-      <button
-        type="button"
-        class="h-15 w-[110px] bg-[#1B8A6B] px-[12px] text-white"
-        @click="emit('toggle-join')"
-      >
+      <button type="button" class="app-button app-green text-white" @click="emit('toggle-join')">
         {{ joinLabel }}
       </button>
     </div>
@@ -32,10 +28,10 @@
         class="grid gap-[12px] md:grid-cols-[1fr_1fr_auto] md:items-end"
       >
         <div>
-          <div class="mb-[6px]">เงื่อนไข</div>
+          <div class="mb-[6px] relative">เงื่อนไข</div>
           <select
             :value="rule.condition"
-            class="h-15 w-full border border-[#D9D9D9] px-[12px] outline-none"
+            class="app-select appearance-none"
             @change="onChangeCondition(rule.id, ($event.target as HTMLSelectElement).value)"
           >
             <option value="">เลือกเงื่อนไขหรือพิมพ์เพื่อค้นหา</option>
@@ -43,25 +39,33 @@
             <option value="owner">เจ้าของ</option>
             <option value="number">เลขที่</option>
           </select>
+          <svg
+            class="pointer-events-none absolute top-1/2 -translate-y-1/2 right-4 h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
+              clip-rule="evenodd"
+            />
+          </svg>
         </div>
 
         <div>
-          <div class="mb-[6px]">คำค้นหา</div>
+          <div class="mb-[6px] text-black">คำค้นหา</div>
           <input
             :value="rule.value"
             type="text"
-            class="h-15 w-full border border-[#D9D9D9] px-[12px] outline-none"
+            class="app-input"
             placeholder="ใส่คำสำหรับการค้นหา"
             @input="onChangeValue(rule.id, ($event.target as HTMLInputElement).value)"
           />
         </div>
 
         <div class="flex items-center gap-[8px]">
-          <button
-            type="button"
-            class="inline-flex h-15 items-center gap-[8px] border border-[#D9D9D9] bg-white px-[14px]"
-            @click="emit('add-rule')"
-          >
+          <button type="button" class="app-button border-[1px]" @click="emit('add-rule')">
             <span
               class="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full border border-[#D9D9D9]"
               >+</span

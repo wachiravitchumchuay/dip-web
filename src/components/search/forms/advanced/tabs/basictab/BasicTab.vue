@@ -1,7 +1,7 @@
 <!-- src/components/search/forms/advanced/tabs/SimilarityTab.vue -->
 <template>
   <div class="w-full">
-    <div class="space-y-[12px]">
+    <div class="space-y-[12px] app-light-gray p-[12px]">
       <ConditionGroup
         v-for="(g, idx) in groups"
         :key="g.id"
@@ -14,34 +14,29 @@
         @update-rule="updateRule(g.id, $event.ruleId, $event.patch)"
         @remove-group="removeGroup(g.id)"
       />
-    </div>
-
-    <div class="mt-[12px] flex flex-wrap justify-between gap-[12px]">
-      <button
-        type="button"
-        class="inline-flex h-15 items-center gap-[8px] border border-[#D9D9D9] bg-white px-[14px]"
-        @click="addGroup"
-      >
-        <span
-          class="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full border border-[#D9D9D9]"
-          >+</span
-        >
-        <span>เพิ่มกลุ่มเงื่อนไข</span>
-      </button>
-
-      <div class="flex items-center gap-[12px]">
-        <button type="button" class="h-15 bg-[#F5A623] px-[18px] text-black" @click="onClear">
-          ล้างเงื่อนไข
-        </button>
-
-        <button
-          type="button"
-          class="h-15 bg-[#1B8A6B] px-[18px] text-white"
-          @click="emit('submit', buildPayload())"
-        >
-          ค้นหาข้อมูล
+      <div>
+        <button type="button" class="app-button app-dark-gray border-[1px]" @click="addGroup">
+          <span
+            class="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full border border-[#D9D9D9]"
+            >+</span
+          >
+          <span>เพิ่มกลุ่มเงื่อนไข</span>
         </button>
       </div>
+    </div>
+
+    <div class="flex items-center bg-white mt-[12px] flex justify-between">
+      <button type="button" class="app-button bg-[#F5A623] text-black" @click="onClear">
+        ล้างเงื่อนไข
+      </button>
+
+      <button
+        type="button"
+        class="app-button app-green text-white"
+        @click="emit('submit', buildPayload())"
+      >
+        ค้นหาข้อมูล
+      </button>
     </div>
   </div>
 </template>
