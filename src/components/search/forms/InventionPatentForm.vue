@@ -16,18 +16,24 @@
     </div>
 
     <div class="mt-[12px]">
-      <div
+      <button
         type="button"
-        class="inline-flex h-[60px] items-center gap-[8px] border border-[#FE572F] bg-[#FFEFEB] px-[12px] text-[#FE572F]"
+        class="app-button-fit app-border-orange app-bg-orange app-text-orange"
         @click="advancedOpen = !advancedOpen"
       >
-        <span>กำหนดเงื่อนไขการค้นหา</span>
-        <span
-          class="inline-flex h-[20px] w-[20px] items-center justify-center rounded-full border border-[#FE572F]"
-        >
-          <span class="leading-none">{{ advancedOpen ? '▲' : '▼' }}</span>
-        </span>
-      </div>
+        <div class="flex">
+          <div>กำหนดเงื่อนไขการค้นหา</div>
+          <div class="pl-[26px]">
+            <img
+              v-if="advancedOpen"
+              src="/circle-arrow-up-01.svg"
+              alt=""
+              class="h-[24px] w-[24px]"
+            />
+            <img v-else src="/circle-arrow-down-01-orange.svg" alt="" class="h-[24px] w-[24px]" />
+          </div>
+        </div>
+      </button>
     </div>
 
     <div v-if="advancedOpen" class="mt-[12px]">
