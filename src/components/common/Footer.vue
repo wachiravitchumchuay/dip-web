@@ -50,8 +50,8 @@
       </div>
     </div>
 
-    <div class="w-full h-[32px] app-bg-red">
-      <div class="text-center text-white pt-1">
+    <div class="w-full h-[32px] app-bg-red !rounded-none">
+      <div class="text-center text-white pt-1 rounded-none">
         ©2025 กรมทรัพย์สินทางปัญญา,กระทรวงพาณิชย์ | นโยบายการคุ้มครองข้อมูลส่วนบุคคล
       </div>
     </div>

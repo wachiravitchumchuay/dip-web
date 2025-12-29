@@ -1,43 +1,23 @@
 <template>
   <main class="min-h-screen w-full">
-    <!-- Background -->
     <div class="relative min-h-screen w-full">
-      <!-- background image / tint -->
-      <div class="absolute inset-0 app-bg-gray-2" />
       <div
         class="absolute inset-0 bg-cover bg-center opacity-40"
         style="background-image: url('/auth-bg.png')"
       />
-      <div class="absolute inset-0 bg-gradient-to-b from-white/70 to-white/70" />
-
-      <!-- Center card -->
       <div
         class="relative mx-auto flex min-h-screen max-w-[1200px] items-center justify-center px-4"
       >
         <div
           class="flex w-full max-w-[980px] overflow-hidden bg-white shadow-[0_24px_80px_rgba(0,0,0,0.18)]"
         >
-          <!-- Left (1/2) -->
-          <div class="w-1/2 bg-[#7D1B1E] text-white">
-            <div class="flex h-full flex-col p-[40px]">
-              <div class="text-[52px] font-bold leading-none">DIP</div>
-
-              <div class="mt-[10px] leading-tight opacity-90">
-                กรมทรัพย์สินทางปัญญา<br />
-                DEPARTMENT OF INTELLECTUAL PROPERTY
-              </div>
-
-              <div class="mt-[16px] font-semibold">TRADE MARKS CHECKER</div>
-
-              <div class="mt-auto h-[120px] opacity-30">
-                <!-- placeholder decoration -->
-              </div>
-            </div>
+          <div class="w-1/2">
+            <img src="/dip-auth.png" class="h-full w-full object-cover" alt="" />
           </div>
 
           <!-- Right (1/2) -->
           <div class="w-1/2">
-            <div class="flex h-full flex-col p-[40px]">
+            <div class="flex h-full flex-col px-[52px] pt-[60px]">
               <div class="text-center text-18 font-semibold text-[#333]">
                 เข้าสู่ระบบผ่านช่องทาง Digital ID
               </div>
@@ -46,38 +26,32 @@
               <div class="mt-[22px] flex justify-center">
                 <button
                   type="button"
-                  class="flex h-[52px] w-[320px] items-center justify-center gap-[10px] bg-[#1E40AF] px-[16px] font-semibold text-white"
-                  @click="onThaiIdLogin"
+                  class="flex h-[60px] w-[320px] items-center justify-center gap-[10px] bg-[#1548D4] px-[16px] text-white rounded-[8px]"
+                  @click="onThaIDLogin"
                 >
-                  <span
-                    class="flex h-[32px] w-[32px] items-center justify-center overflow-hidden bg-white/10"
-                  >
-                    <img src="/th-flag.png" class="h-[22px] w-[22px] object-contain" alt="ThaiID" />
-                  </span>
-                  เข้าสู่ระบบด้วย ThaiID
+                  <img src="/thaID-logo.png" class="h-[42px] w-[42px] object-contain" alt="ThaID" />
+                  เข้าสู่ระบบด้วย ThaID
                 </button>
               </div>
 
               <!-- Link under button -->
-              <div class="mt-[10px] text-center">
-                <a href="#" class="font-semibold text-[#2563EB] underline">
-                  วิธีลงทะเบียน ThaiID
-                </a>
+              <div class="mt-[36px] text-center">
+                <a href="#" class="font-semibold text-[#2563EB] underline"> วิธีลงทะเบียน ThaID </a>
               </div>
 
               <!-- Text blocks -->
-              <div class="mt-[18px] leading-relaxed text-[#444]">
-                <div class="font-semibold">การเข้าสู่ระบบด้วยแอปพลิเคชัน ThaiID</div>
-                <div>1. เลือก “เข้าสู่ระบบด้วย ThaiID”</div>
-                <div>2. ยืนยันตัวตนโดยใช้แอปพลิเคชัน ThaiID สแกน QR Code ที่แสดงบนเว็บไซต์</div>
+              <div class="mt-[24px] leading-relaxed text-[#444]">
+                <div>การเข้าสู่ระบบด้วยแอปพลิเคชัน ThaID</div>
+                <div>1. เลือก “เข้าสู่ระบบด้วย ThaID”</div>
+                <div>2. ยืนยันตัวตนโดยใช้แอปพลิเคชัน ThaID สแกน QR Code ที่แสดงบนเว็บไซต์</div>
               </div>
 
-              <div class="mt-[18px] leading-relaxed text-[#444]">
-                <div class="font-semibold">หากยังไม่มีแอปพลิเคชัน ThaiID ให้ทำดังนี้</div>
-                <div>1. ดาวน์โหลดแอปพลิเคชัน ThaiID จาก Play Store หรือ App Store</div>
+              <div class="mt-[36px] leading-relaxed text-[#444]">
+                <div>หากยังไม่มีแอปพลิเคชัน ThaID ให้ทำดังนี้</div>
+                <div>1. ดาวน์โหลดแอปพลิเคชัน ThaID จาก Play Store หรือ App Store</div>
                 <div>
-                  2. ลงทะเบียนการใช้งาน ThaiID ด้วยตนเองผ่านแอปพลิเคชัน หรือ
-                  ลงทะเบียนผ่านเจ้าหน้าที่ ณ สำนักงานเขตทั่วประเทศ
+                  2. ลงทะเบียนการใช้งาน ThaID ด้วยตนเองผ่านแอปพลิเคชัน หรือ ลงทะเบียนผ่านเจ้าหน้าที่
+                  ณ สำนักงานเขตทั่วประเทศ
                 </div>
               </div>
 
@@ -95,9 +69,9 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-function onThaiIdLogin() {
+function onThaIDLogin() {
   // placeholder: wire to real auth later
-  console.log('thaiid login')
+  console.log('ThaID login')
   // router.push('/auth/callback') // example
 }
 </script>
