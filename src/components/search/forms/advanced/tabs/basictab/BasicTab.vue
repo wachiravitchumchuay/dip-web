@@ -15,7 +15,7 @@
         @remove-group="removeGroup(g.id)"
       />
       <div>
-        <button type="button" class="app-button app-dark-gray border-[1px]" @click="addGroup">
+        <button type="button" class="app-button app-dark-gray border" @click="addGroup">
           <span
             class="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full border border-[#D9D9D9]"
             >+</span

@@ -39,18 +39,6 @@
             <option value="owner">เจ้าของ</option>
             <option value="number">เลขที่</option>
           </select>
-          <svg
-            class="pointer-events-none absolute top-1/2 -translate-y-1/2 right-4 h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.21 8.29a.75.75 0 01.02-1.08z"
-              clip-rule="evenodd"
-            />
-          </svg>
         </div>
 
         <div>
@@ -65,7 +53,7 @@
         </div>
 
         <div class="flex items-center gap-[8px]">
-          <button type="button" class="app-button border-[1px]" @click="emit('add-rule')">
+          <button type="button" class="app-button border" @click="emit('add-rule')">
             <span
               class="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full border border-[#D9D9D9]"
               >+</span

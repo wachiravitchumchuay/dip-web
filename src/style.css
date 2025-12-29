@@ -60,7 +60,7 @@ div {
   min-width: 120px;
 }
 
-.app-button--fit {
+.app-button-fit {
   flex: 0 0 auto;
   width: max-content;
   max-width: none;
@@ -98,6 +98,9 @@ div {
   background-color: #b21f29;
 }
 
+.app-yellow {
+  background-color: #f5af2d;
+}
 .app-green {
   background-color: #1d987c;
 }
