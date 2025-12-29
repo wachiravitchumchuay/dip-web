@@ -48,7 +48,7 @@ import AdvancedSearchTabs from '@/components/search/forms/advanced/AdvancedSearc
 import { useRouter } from 'vue-router'
 import { useLoading } from '@/stores/loading'
 
-const { start } = useLoading()
+const loading = useLoading()
 
 type AdvancedTabKey = 'basic' | 'similarity' | 'trademark-check' | 'high-patent' | 'thai-copyright'
 
@@ -58,7 +58,7 @@ const activeTab = ref<AdvancedTabKey>('basic')
 const router = useRouter()
 
 async function onQuickSearch() {
-  start()
+  loading.start()
   await router.push({ path: '/result', query: { q: keyword.value } })
 }
 

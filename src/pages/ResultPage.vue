@@ -31,23 +31,16 @@ import SearchSummaryBar from '@/components/result/SearchSummaryBar.vue'
 import ResultToolbar from '@/components/result/ResultToolbar.vue'
 import FilterPanel from '@/components/result/FilterPanel.vue'
 import ResultList from '@/components/result/ResultList.vue'
+
 import { useLoading } from '@/stores/loading'
 import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-const { stop } = useLoading()
+const loading = useLoading()
 
-onMounted(async () => {
-  try {
-    const q = String(route.query.q ?? '')
-    setTimeout(function () {
-      stop()
-    }, 2000)
-    // stop()
-  } catch (e) {
-    stop()
-  }
+onMounted(() => {
+  window.setTimeout(() => loading.stop(), 2000)
 })
 
 const mock = [
