@@ -60,7 +60,7 @@ div {
 .app-select {
   border-width: 1px;
   border-style: solid;
-  border-color: var(--app-gray);
+  border-color: black;
   border-radius: var(--app-radius);
 
   height: var(--app-control-h);
@@ -76,14 +76,14 @@ div {
 
   background-repeat: no-repeat;
   background-position: right 16px center;
-  background-size: 16px 16px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5l5 5 5-5' stroke='%23666' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
+  background-image: url("/circle-arrow-down-01.svg");
 }
 
 .app-input {
   border-width: 1px;
   border-style: solid;
-  border-color: var(--app-gray);
+  border-color: black;
   border-radius: var(--app-radius);
 
   height: var(--app-control-h);

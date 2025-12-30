@@ -1,7 +1,6 @@
-<!-- src/components/search/forms/advanced/tabs/SimilarityTab.vue -->
 <template>
   <div class="w-full">
-    <div class="space-y-[12px] app-bg-gray-2 p-[12px]">
+    <div class="space-y-[12px] p-[12px]">
       <ConditionGroup
         v-for="(g, idx) in groups"
         :key="g.id"
@@ -16,18 +15,20 @@
       />
       <div>
         <button type="button" class="app-button app-bg-gray border" @click="addGroup">
-          <span
-            class="inline-flex h-[22px] w-[22px] items-center justify-center rounded-full border border-[#D9D9D9]"
-            >+</span
-          >
-          <span>เพิ่มกลุ่มเงื่อนไข</span>
+          <div class="flex pl-4">
+            <AddCircleIcon />
+            <div class="pl-2">เพิ่มกลุ่มเงื่อนไข</div>
+          </div>
         </button>
       </div>
     </div>
 
     <div class="flex items-center bg-white mt-[12px] flex justify-between">
       <button type="button" class="app-button bg-[#F5A623] text-black" @click="onClear">
-        ล้างเงื่อนไข
+        <div class="flex pl-4">
+          <RedoIcon />
+          <div class="pl-2">ล้างเงื่อนไข</div>
+        </div>
       </button>
 
       <button
@@ -35,7 +36,10 @@
         class="app-button app-bg-green text-white"
         @click="emit('submit', buildPayload())"
       >
-        ค้นหาข้อมูล
+        <div class="flex pl-4">
+          <Search01Icon />
+          <div class="pl-2">ค้นหาข้อมูล</div>
+        </div>
       </button>
     </div>
   </div>
@@ -50,7 +54,10 @@ import type {
   JoinOp,
   ConditionKey,
 } from '@/types/searchConditions'
-
+import AddCircleIcon from '@/assets/icons/add-circle.svg'
+import RedoIcon from '@/assets/icons/redo.svg'
+import Search01Icon from '@/assets/icons/search-01.svg'
+import { R } from 'vue-router/dist/router-CWoNjPRp.mjs'
 const props = defineProps<{
   keyword: string
 }>()

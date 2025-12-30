@@ -24,13 +24,8 @@
         <div class="flex">
           <div>กำหนดเงื่อนไขการค้นหา</div>
           <div class="pl-[26px]">
-            <img
-              v-if="advancedOpen"
-              src="/circle-arrow-up-01.svg"
-              alt=""
-              class="h-[24px] w-[24px]"
-            />
-            <img v-else src="/circle-arrow-down-01-orange.svg" alt="" class="h-[24px] w-[24px]" />
+            <CircleArrowUp01Icon v-if="advancedOpen" />
+            <CircleArrowDown01Icon v-else />
           </div>
         </div>
       </button>
@@ -53,6 +48,8 @@ import { ref } from 'vue'
 import AdvancedSearchTabs from '@/components/search/forms/advanced/AdvancedSearchTabs.vue'
 import { useRouter } from 'vue-router'
 import { useLoading } from '@/stores/loading'
+import CircleArrowUp01Icon from '@/assets/icons/circle-arrow-up-01.svg'
+import CircleArrowDown01Icon from '@/assets/icons/circle-arrow-down-01.svg'
 
 const loading = useLoading()
 

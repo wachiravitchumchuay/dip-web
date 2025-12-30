@@ -9,13 +9,7 @@
 
           <div class="flex">
             <div>
-              <img
-                width="24"
-                height="24"
-                src="/location-09.svg"
-                class="mr-[12px]"
-                alt="location logo"
-              />
+              <PhoneIcon />
             </div>
             <div>
               <div>เลขที่ 563 ถนนนนทบุรี ต.บางกระสอ อ.เมืองนนทบุรี</div>
@@ -27,7 +21,7 @@
         <div class="flex justify-around w-1/2 px-[32px]">
           <div class="flex app-text-red">
             <div classname="flex items-start">
-              <img src="/phone.svg" width="24" height="24" class="mr-[12px]" alt="phone logo" />
+              <Location09Icon />
             </div>
             <div class="flex-col">
               <div>สายด่วน/ติดต่อสอบถาม</div>
@@ -36,13 +30,7 @@
           </div>
           <div class="flex">
             <div>
-              <img
-                width="24"
-                height="24"
-                src="/message-question.svg"
-                class="mr-[12px]"
-                alt="message question logo"
-              />
+              <MessageQuestionIcon />
             </div>
             <div>แบบสอบถามปัญหาการใช้งาน</div>
           </div>
@@ -57,3 +45,8 @@
     </div>
   </footer>
 </template>
+<script lang="ts" setup>
+import Location09Icon from '@/assets/icons/location-09.svg'
+import PhoneIcon from '@/assets/icons/phone.svg'
+import MessageQuestionIcon from '@/assets/icons/message-question.svg'
+</script>

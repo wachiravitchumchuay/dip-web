@@ -45,15 +45,7 @@
       >
         <span class="flex items-center gap-2">
           <span>สืบค้นสิทธิบัตรไทย</span>
-          <LinkSquareIcon />
-
-          <img
-            v-if="tab === 'thai-copyright'"
-            src="/link-square-02.svg"
-            alt=""
-            class="h-[20px] w-[20px]"
-          />
-          <img v-else src="/link-square-01.svg" alt="" class="h-[20px] w-[20px]" />
+          <LinkSquareI01con />
         </span>
       </button>
     </div>
@@ -76,7 +68,7 @@ import SimilarityTab from '@/components/search/forms/advanced/tabs/SimilarityTab
 import TrademarkCheckTab from '@/components/search/forms/advanced/tabs/TrademarkCheckTab.vue'
 import HighPatentTab from '@/components/search/forms/advanced/tabs/HighPatentTab.vue'
 import ThaiCopyrightTab from '@/components/search/forms/advanced/tabs/ThaiCopyrightTab.vue'
-import LinkSquareIcon from '../../../../../../../../../../public/link-square-01.svg'
+import LinkSquareI01con from '@/assets/icons/link-square-01.svg'
 
 type AdvancedTabKey = 'basic' | 'similarity' | 'trademark-check' | 'high-patent' | 'thai-copyright'
 

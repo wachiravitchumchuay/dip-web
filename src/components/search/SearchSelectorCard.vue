@@ -6,7 +6,7 @@
   >
     <div class="flex flex-col gap-[8px] p-4">
       <div class="flex h-12 w-12 items-center justify-center rounded-full! bg-[#B21F29]">
-        <img :src="iconSrc" class="h-8 w-8" alt="" />
+        <component v-if="icon" :is="icon" />
       </div>
 
       <div class="text-18 leading-tight">{{ label }}</div>
@@ -15,10 +15,12 @@
 </template>
 
 <script setup lang="ts">
+import type { Component } from 'vue'
+
 defineProps<{
   label: string
   selected: boolean
-  iconSrc: string
+  icon: Component | string
 }>()
 
 const emit = defineEmits<{

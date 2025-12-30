@@ -14,11 +14,7 @@
           <a href="#" class="px-3 border-r app-border-gray">ตัวช่วยสำหรับคนพิการ</a>
           <div class="flex items-center px-3">
             <div class="flex h-[24px] w-[24px] flex-shrink-0 items-center justify-center">
-              <img
-                src="/phone-fill.svg"
-                class="h-[24px] w-[24px] object-contain"
-                alt="Phone-fill logo"
-              />
+              <PhoneFillIcon />
             </div>
             <div class="app-text-red font-semibold">1368</div>
           </div>
@@ -33,11 +29,7 @@
           <div class="px-3">
             <div class="flex items-center gap-2">
               <div class="flex h-[24px] w-[24px] flex-shrink-0 items-center justify-center">
-                <img
-                  src="/account_circle.svg"
-                  class="h-[24px] w-[24px] object-contain"
-                  alt="account logo"
-                />
+                <AccountCircleIcon />
               </div>
               <div>เข้าสู่ระบบ</div>
             </div>
@@ -47,3 +39,8 @@
     </div>
   </nav>
 </template>
+
+<script setup lang="ts">
+import PhoneFillIcon from '@/assets/icons/phone-fill.svg'
+import AccountCircleIcon from '@/assets/icons/account_circle.svg'
+</script>
