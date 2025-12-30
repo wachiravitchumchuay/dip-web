@@ -1,30 +1,18 @@
 <template>
-  <DialogBase :open="open" :show-close="false" @close="emit('close')">
-    <div class="flex flex-col items-center text-center">
-      <div class="flex h-[84px] w-[84px] items-center justify-center rounded-full bg-[#D9F3EA]">
-        <div
-          class="flex h-[58px] w-[58px] items-center justify-center rounded-full border-[4px] border-[#1B8A6B]"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            class="h-[30px] w-[30px]"
-            fill="none"
-            stroke="#1B8A6B"
-            stroke-width="3"
-          >
-            <path d="M20 6L9 17l-5-5" />
-          </svg>
-        </div>
+  <DialogBase :open="open" :show-close="false" size="md" @close="emit('close')">
+    <div class="flex flex-col items-center text-center app-green">
+      <div class="flex h-[60px] w-[60px] items-center justify-center rounded-full! bg-[#D8FFF6]">
+        <CheckMarkCircle02Icon />
       </div>
 
-      <div class="mt-[18px] font-semibold leading-[1.15] text-[#1B8A6B]">
-        รับคำขอดาวน์โหลดเรียบร้อยแล้ว<br />
-        ข้อมูลจะถูกส่งไปยังอีเมลที่ท่านได้แจ้งไว้
+      <div class="mt-[18px] font-semibold text-24">
+        <div>รับคำขอดาวน์โหลดเรียบร้อยแล้ว</div>
+        <div>ข้อมูลจะถูกส่งไปยังอีเมลที่ท่านได้แจ้งไว้</div>
       </div>
 
       <button
         type="button"
-        class="mt-[46px] h-[90px] w-[420px] bg-[#1B8A6B] font-semibold text-white"
+        class="app-button-fit app-bg-green text-white mt-16"
         @click="emit('close')"
       >
         ปิดหน้าต่างนี้
@@ -35,6 +23,7 @@
 
 <script setup lang="ts">
 import DialogBase from '@/components/ui/DialogBase.vue'
+import CheckMarkCircle02Icon from '@/assets/icons/checkmark-circle-02.svg'
 
 defineProps<{ open: boolean }>()
 

@@ -1,52 +1,32 @@
 <template>
-  <DialogBase :open="open" :show-close="false" @close="emit('close')">
+  <DialogBase :open="open" :show-close="false" size="xl" @close="emit('close')">
     <div class="flex flex-col items-center">
-      <div class="flex h-[84px] w-[84px] items-center justify-center rounded-full bg-[#F9DDE0]">
-        <svg
-          viewBox="0 0 24 24"
-          class="h-15 w-[44px]"
-          fill="none"
-          stroke="#B21F29"
-          stroke-width="2"
-        >
-          <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
-          <path d="M14 2v6h6" />
-          <path d="M12 12v6" />
-          <path d="M9.5 15.5L12 18l2.5-2.5" />
-        </svg>
+      <div class="flex h-[60px] w-[60px] items-center justify-center rounded-full! bg-[#F9DDE0]">
+        <FileDownloadIcon class="app-text-red w-[48px] h-[48px]" />
       </div>
 
-      <div class="mt-[18px] text-center font-semibold leading-[1.15] text-[#333]">
+      <div class="mt-[18px] text-center font-semibold text-24">
         ดาวน์โหลดผลการค้นหาเป็นเอกสารอ้างอิง<br />
         เพื่อใช้การจดทะเบียนเครื่องหมายการค้า
       </div>
 
-      <div class="mt-[28px] w-full max-w-[860px]">
+      <div class="mt-[28px] w-ful">
         <div class="font-semibold text-[#333]">อีเมล</div>
 
         <div class="mt-[10px] flex items-center gap-[14px]">
-          <input
-            v-model="email"
-            type="email"
-            class="h-[86px] w-full border border-[#D9D9D9] px-[18px] outline-none"
-            placeholder="กรอกที่อยู่อีเมล"
-          />
+          <input v-model="email" type="email" class="app-input" placeholder="กรอกที่อยู่อีเมล" />
 
           <button
             type="button"
-            class="h-[86px] w-[220px] bg-[#A50F19] font-semibold text-white"
+            class="app-button app-bg-red text-white"
             @click="emit('send', email)"
           >
             ส่งอีเมล
           </button>
         </div>
 
-        <div class="mt-[22px] flex items-start gap-[12px] text-[#B21F29]">
-          <div
-            class="mt-[4px] flex h-[28px] w-[28px] items-center justify-center rounded-full border-2 border-[#B21F29]"
-          >
-            <span class="text-18 font-semibold">!</span>
-          </div>
+        <div class="mt-[22px] flex app-text-red">
+          <Alert02Icon class="mr-2" />
           <div>
             ระบบจะส่งข้อมูลการค้นหาไปยัง “อีเมล” ที่ระบุไว้ ภายใน 2 -15 นาที ซึ่งระยะเวลาในการส่ง
             นี้ไม่เท่ากันขึ้นอยู่กับจำนวนของข้อมูลที่ต้องการ
@@ -68,6 +48,8 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import DialogBase from '@/components/ui/DialogBase.vue'
+import Alert02Icon from '@/assets/icons/alert-02.svg'
+import FileDownloadIcon from '@/assets/icons/file-download.svg'
 
 const props = defineProps<{ open: boolean }>()
 const emit = defineEmits<{

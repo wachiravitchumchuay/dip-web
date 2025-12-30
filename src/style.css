@@ -57,6 +57,12 @@ div {
   background-color: #fff;
 }
 
+.app-green {
+  border-color: var(--app-green);
+  color: var(--app-green);
+  background-color: #fff;
+}
+
 .app-select {
   border-width: 1px;
   border-style: solid;
@@ -131,6 +137,10 @@ div {
 
 .text-18 {
   font-size: 1.125em;
+}
+
+.text-24 {
+  font-size: 1.5em;
 }
 
 .text-32 {
