@@ -36,6 +36,8 @@ import { useLoading } from '@/stores/loading'
 import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
+
+
 const route = useRoute()
 const loading = useLoading()
 

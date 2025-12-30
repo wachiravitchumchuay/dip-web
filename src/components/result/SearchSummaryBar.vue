@@ -14,12 +14,16 @@
       class="app-button-fit app-text-red app-bg-red-2 app-border-red"
       @click="$emit('edit')"
     >
-      แก้ไขเงื่อนไขการค้นหา
+      <div class="flex pl-2">
+        <Exchange01Icon />
+        <div class="pl-2">แก้ไขเงื่อนไขการค้นหา</div>
+      </div>
     </button>
   </div>
 </template>
 
 <script setup lang="ts">
+import Exchange01Icon from '@/assets/icons/exchange-01.svg'
 const props = defineProps<{
   dataset?: string
   keyword?: string

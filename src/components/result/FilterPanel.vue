@@ -16,13 +16,14 @@
         @click="$emit('apply', x)"
       >
         <span>{{ x }}</span>
-        <span class="text-[#999999]">›</span>
+        <span class="text-[#999999]"><CircleArrowRight01Icon /></span>
       </button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import CircleArrowRight01Icon from '@/assets/icons/circle-arrow-right-01.svg'
 defineEmits<{
   (e: 'apply', payload: unknown): void
   (e: 'clear'): void

@@ -30,11 +30,17 @@
     <div class="mt-[12px] flex flex-wrap items-center justify-between gap-[12px]">
       <div class="flex flex-wrap gap-[8px]">
         <button type="button" class="app-button-fit" @click="$emit('update:sort', 'date')">
-          เรียงตามวันที่
+          <div class="flex">
+            <div class="pr-2">เรียงตามวันที่</div>
+            <CircleArrowDown01Icon />
+          </div>
         </button>
 
         <button type="button" class="app-button-fit" @click="$emit('update:sort', 'name')">
-          เรียงตามตัวอักษร
+          <div class="flex">
+            <div class="pr-2">เรียงตามตัวอักษร</div>
+            <CircleArrowDown01Icon />
+          </div>
         </button>
       </div>
 
@@ -70,7 +76,10 @@
         </div>
 
         <button type="button" class="app-button bg-[#F16522] text-white" @click="$emit('download')">
-          ดาวน์โหลด
+          <div class="flex pl-4">
+            <FileDownloadIcon class="h-[24px] w-[24px]" />
+            <div class="pl-2">ดาวน์โหลด</div>
+          </div>
         </button>
       </div>
     </div>
@@ -87,6 +96,8 @@
 import RequireLoginDialog from '@/components/result/dialogs/RequireLoginDialog.vue'
 import EmailDownloadDialog from '@/components/result/dialogs/EmailDownloadDialog.vue'
 import DownloadRequestedDialog from '@/components/result/dialogs/DownloadRequestedDialog.vue'
+import FileDownloadIcon from '@/assets/icons/file-download.svg'
+import CircleArrowDown01Icon from '@/assets/icons/circle-arrow-down-01.svg'
 
 defineProps<{
   activeTab: string

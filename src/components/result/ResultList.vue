@@ -2,9 +2,12 @@
   <div class="w-full">
     <div v-if="loading" class="border border-[#D9D9D9] bg-white p-[16px]">กำลังโหลด...</div>
     <div v-else>
-      <div class="app-bg-gray-3 py-[16px] pl-[60px]">
-        ข้อมูล สิทธิบัตร/สิทธิบัตรออกแบบ/อนุสิทธิบัตร ที่ตรวจค้น
-        เป็นข้อมูลที่ประกาศโฆษณาแล้วเท่านั้น
+      <div class="flex app-bg-gray-3 py-[16px] pl-[60px]">
+        <InfomationCircleIcon />
+        <div class="pl-2">
+          ข้อมูล สิทธิบัตร/สิทธิบัตรออกแบบ/อนุสิทธิบัตร ที่ตรวจค้น
+          เป็นข้อมูลที่ประกาศโฆษณาแล้วเท่านั้น
+        </div>
       </div>
 
       <div
@@ -24,8 +27,11 @@
             </div>
           </div>
 
-          <button type="button" class="mt-[14px] h-[40px] border border-[#D9D9D9] px-[14px]">
-            รายละเอียด
+          <button type="button" class="app-button-fit">
+            <div class="flex">
+              <ViewIcon />
+              <div class="pl-2">รายละเอียด</div>
+            </div>
           </button>
         </div>
       </div>
@@ -34,6 +40,8 @@
 </template>
 
 <script setup lang="ts">
+import InfomationCircleIcon from '@/assets/icons/information-circle.svg'
+import ViewIcon from '@/assets/icons/view.svg'
 defineProps<{
   loading: boolean
   view: 'grid' | 'list'
