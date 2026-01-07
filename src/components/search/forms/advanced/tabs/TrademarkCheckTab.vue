@@ -36,12 +36,12 @@
         </div>
       </div>
 
-      <div class="mt-[16px] flex items-center justify-between">
-        <button type="button" class="h-15 bg-[#F5A623] px-[18px] text-black" @click="onClear">
+      <div class="mt-[18px] flex items-center justify-between">
+        <button type="button" class="app-button app-bg-yellow" @click="onClear()">
           ล้างเงื่อนไข
         </button>
 
-        <button type="button" class="h-15 bg-[#1B8A6B] px-[18px] text-white" @click="onSubmit">
+        <button type="button" class="app-button app-bg-green text-white" @click="onSubmit()">
           ค้นหาข้อมูล
         </button>
       </div>

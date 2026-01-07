@@ -4,12 +4,12 @@
       <div class="flex w-full h-full items-center justify-between">
         <div class="flex-col w-1/2">
           <div class="pb-[12px]">
-            <img width="215" height="26" src="/dip-logo.png" alt="DIP Logo" />
+            <img width="215" height="26" src="/DIP-Logo.png" alt="DIP Logo" />
           </div>
 
           <div class="flex">
             <div>
-              <PhoneIcon />
+              <Location09Icon />
             </div>
             <div>
               <div>เลขที่ 563 ถนนนนทบุรี ต.บางกระสอ อ.เมืองนนทบุรี</div>
@@ -21,7 +21,7 @@
         <div class="flex justify-around w-1/2 px-[32px]">
           <div class="flex app-text-red">
             <div classname="flex items-start">
-              <Location09Icon />
+              <PhoneIcon />
             </div>
             <div class="flex-col">
               <div>สายด่วน/ติดต่อสอบถาม</div>
@@ -45,6 +45,7 @@
     </div>
   </footer>
 </template>
+
 <script lang="ts" setup>
 import Location09Icon from '@/assets/icons/location-09.svg'
 import PhoneIcon from '@/assets/icons/phone.svg'

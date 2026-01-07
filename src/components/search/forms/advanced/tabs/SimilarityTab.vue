@@ -11,7 +11,7 @@
         "
         @click="mode = 'keyword'"
       >
-        <span>ค้นหาด้วยคำค้นหา</span>
+        <span>เพิ่มจำนวนสินค้า</span>
       </button>
 
       <button
@@ -24,7 +24,7 @@
         "
         @click="mode = 'image'"
       >
-        <span>ค้นหาจากภาพที่ค้นหา</span>
+        <span>ค้นหาจำพวกสินค้าทั้งหมด</span>
       </button>
     </div>
 
@@ -35,8 +35,8 @@
         <div class="flex items-center gap-[8px] text-18">
           <div class="font-semibold">เงื่อนไขคำ</div>
           <span
-            class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-[#B21F29] text-white"
-            >!</span
+            class="flex h-[18px] w-[18px] items-center justify-center rounded-full border-[2px] border-[#FF2D37] font-serif text-[13px] font-black leading-none text-[#FF2D37]"
+            >i</span
           >
         </div>
 
@@ -44,10 +44,6 @@
           <div class="grid-cols-1">
             <div class="mb-[6px] flex items-center">
               <div>เงื่อนไขคำคล้าย</div>
-              <span
-                class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-[#B21F29] text-white"
-                >!</span
-              >
             </div>
 
             <select v-model="keywordCondition" class="app-select appearance-none">
@@ -62,10 +58,6 @@
           <div class="grid-cols-1">
             <div class="mb-[6px] flex items-center">
               <div>คำเหมือนคล้าย</div>
-              <span
-                class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-[#B21F29] text-white"
-                >!</span
-              >
             </div>
 
             <input
@@ -83,8 +75,8 @@
         <div class="mt-[18px] flex items-center gap-[8px] text-18">
           <div class="font-semibold">เงื่อนไขเสียง</div>
           <span
-            class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-[#B21F29] text-white"
-            >!</span
+            class="flex h-[18px] w-[18px] items-center justify-center rounded-full border-[2px] border-[#FF2D37] font-serif text-[13px] font-black leading-none text-[#FF2D37]"
+            >i</span
           >
         </div>
 
@@ -115,8 +107,8 @@
         <div class="mt-[18px] flex items-center gap-[8px] text-18">
           <div class="font-semibold">อักษรและเสียง</div>
           <span
-            class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-[#B21F29] text-white"
-            >!</span
+            class="flex h-[18px] w-[18px] items-center justify-center rounded-full border-[2px] border-[#FF2D37] font-serif text-[13px] font-black leading-none text-[#FF2D37]"
+            >i</span
           >
         </div>
 
@@ -154,8 +146,8 @@
         <div class="mt-[18px] flex items-center gap-[8px] text-18">
           <div class="font-semibold">ประเภทเสียง</div>
           <span
-            class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-[#B21F29] text-white"
-            >!</span
+            class="flex h-[18px] w-[18px] items-center justify-center rounded-full border-[2px] border-[#FF2D37] font-serif text-[13px] font-black leading-none text-[#FF2D37]"
+            >i</span
           >
         </div>
 
@@ -253,8 +245,8 @@
         <div class="mt-[18px] flex items-center gap-[8px] text-18">
           <div class="font-semibold">เครื่องหมายรูป</div>
           <span
-            class="flex h-[16px] w-[16px] items-center justify-center rounded-full bg-[#B21F29] text-white"
-            >!</span
+            class="flex h-[18px] w-[18px] items-center justify-center rounded-full border-[2px] border-[#FF2D37] font-serif text-[13px] font-black leading-none text-[#FF2D37]"
+            >i</span
           >
         </div>
 
@@ -313,10 +305,6 @@ const typeMusicJoin = ref<'and' | 'or'>('and')
 
 const typeOther = ref<boolean>(false)
 const typeOtherJoin = ref<'and' | 'or'>('and')
-
-function addCondition() {
-  // UI-only for now (you’ll wire this later)
-}
 
 function onClear() {
   keywordCondition.value = ''

@@ -35,14 +35,27 @@
           </button>
         </div>
       </div>
+
+      <div class="mt-[24px] flex justify-end">
+        <Pagination
+          :totalItems="totalItems"
+          :itemsPerPage="itemsPerPage"
+          v-model:currentPage="currentPageModel"
+          @change="(p) => $emit('update:page', p)"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue' // [เพิ่มใหม่]
+import Pagination from '@/components/ui/Pagination.vue' // [เพิ่มใหม่]
 import InfomationCircleIcon from '@/assets/icons/information-circle.svg'
 import ViewIcon from '@/assets/icons/view.svg'
-defineProps<{
+
+// แก้ไข Props เพื่อรองรับค่าจาก Pagination
+const props = defineProps<{
   loading: boolean
   view: 'grid' | 'list'
   items: Array<{
@@ -52,5 +65,20 @@ defineProps<{
     title: string
     type: string
   }>
+  // [เพิ่มใหม่]
+  totalItems: number
+  itemsPerPage: number
+  currentPage: number
 }>()
+
+// แก้ไข Emits เพื่อส่งค่าหน้าปัจจุบันกลับไป
+const emit = defineEmits<{
+  (e: 'update:page', v: number): void
+}>()
+
+// [เพิ่มใหม่] สร้างตัวแปรมาคุม currentPage เพื่อใช้กับ v-model ของ Pagination
+const currentPageModel = computed({
+  get: () => props.currentPage,
+  set: (val) => emit('update:page', val)
+})
 </script>

@@ -7,7 +7,7 @@
         :class="tab === 'basic' ? 'bg-[#A50F19] text-white' : ''"
         @click="setTab('basic')"
       >
-        เงื่อนไขแบบทั่วไป
+        เงื่อนไขรูปแบบทั่วไป
       </button>
 
       <button
