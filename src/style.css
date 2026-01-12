@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 
+
 :root {
   /* radius */
   --app-radius: 12px;
@@ -23,6 +24,18 @@
   --app-gray-bg: #e6e6e6;
   --app-gray-bg-2: #f4f4f4;
   --app-gray-bg-3: #ebebeb;
+}
+
+html.dark {
+  --app-page-bg: #0f1115;
+  --app-page-text: #f2f4f8;
+
+  --app-surface-bg: #11131a;
+  --app-border: #2a2f3a;
+}
+
+.bg-app-bg {
+  background-color: var(--app-surface-bg);
 }
 
 html {

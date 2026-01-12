@@ -34,6 +34,7 @@
               <div>เข้าสู่ระบบ</div>
             </div>
           </div>
+          <ThemeToggle />
         </div>
       </div>
     </div>
@@ -43,4 +44,5 @@
 <script setup lang="ts">
 import PhoneFillIcon from '@/assets/icons/phone-fill.svg'
 import AccountCircleIcon from '@/assets/icons/account_circle.svg'
+import ThemeToggle from '@/components/common/ThemeToggle.vue'
 </script>
