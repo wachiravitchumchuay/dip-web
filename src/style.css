@@ -1,7 +1,5 @@
 @import 'tailwindcss';
 
-
-
 :root {
   /* radius */
   --app-radius: 12px;
@@ -421,44 +419,667 @@ div {
   font-display: swap;
 }
 
-
-
-/* .app-select {
-  border-width: 1px;
-  border-radius: 12px;
-  height: 60px;
-  max-height: 60px;
-  width: 100%;
-  flex: 1 1 auto;
-  min-width: 0;
-  padding-left: 24px;
-
-  -webkit-appearance: none;
-  appearance: none;
-
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  background-size: 16px 16px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5l5 5 5-5' stroke='%23666' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+:root {
+  /* เพิ่ม Theme variables สำหรับ Light mode */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --border-color: #d8d8d8;
+  --card-bg: #f6f6f6;
 }
 
-.app-input {
-  border-width: 1px;
-  border-radius: 12px;
-  height: 60px;
-  max-height: 60px;
-  width: 100%;
-  flex: 1 1 auto;
-  min-width: 0;
-  padding-left: 24px;
+/* Dark mode */
+html.dark {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #f5f5f5;
+  --text-secondary: #b0b0b0;
+  --border-color: #404040;
+  --card-bg: #333333;
 }
 
-.app-button {
+/* ให้ body และ html ใช้ variables */
+html {
+  background-color: var(--bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ให้ทุก page เปลี่ยนตาม theme */
+html.dark body,
+html.dark main,
+html.dark .min-h-screen {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ให้ทุกอย่างในหน้าเว็บเปลี่ยนตาม theme */
+html.dark,
+html.dark body,
+html.dark #app,
+html.dark main,
+html.dark header,
+html.dark footer,
+html.dark nav,
+html.dark div,
+html.dark section {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ยกเว้นส่วนที่ต้องมีสีเฉพาะ (ปุ่ม, การ์ด) */
+html.dark .app-bg-red,
+html.dark .app-bg-green,
+html.dark .app-bg-yellow,
+html.dark .app-bg-orange,
+html.dark button,
+html.dark .app-button {
+  background-color: inherit !important;
+}
+
+/* ให้ background ทั่วไปเป็น light theme */
+body {
+  background-color: #f5f5f5 !important;
+}
+
+html.dark body {
+  background-color: #2d2d2d !important;
+}
+
+/* Dark Mode - ไล่แต่งทุกส่วน */
+
+/* NavBar */
+html.dark nav {
+  background-color: #1a1a1a !important;
+  border-color: #404040 !important;
+}
+
+html.dark nav a,
+html.dark nav div {
+  color: #f5f5f5 !important;
+}
+
+/* Footer */
+html.dark footer {
+  background-color: #1a1a1a !important;
+}
+
+html.dark footer .app-bg-gray-2 {
+  background-color: #2d2d2d !important;
+}
+
+html.dark footer div {
+  color: #f5f5f5 !important;
+}
+
+/* Banner และ Header */
+html.dark header,
+html.dark .relative {
+  background-color: transparent !important;
+}
+
+html.dark .app-text-red {
+  color: #ff6b7a !important;
+}
+
+/* Cards และ Boxes */
+html.dark .border,
+html.dark .app-bg-gray-2,
+html.dark .app-bg-gray-3 {
+  background-color: #333333 !important;
+  border-color: #404040 !important;
+  color: #f5f5f5 !important;
+}
+
+/* Input และ Select */
+html.dark .app-input,
+html.dark .app-select {
+  background-color: #2d2d2d !important;
+  border-color: #404040 !important;
+  color: #f5f5f5 !important;
+}
+
+html.dark .app-input::placeholder {
+  color: #b0b0b0 !important;
+}
+
+/* Buttons - ยกเว้นปุ่มสี */
+html.dark .app-button:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange) {
+  background-color: #2d2d2d !important;
+  border-color: #404040 !important;
+  color: #f5f5f5 !important;
+}
+
+html.dark .app-button-fit:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange):not(.app-text-red):not(.app-text-orange) {
+  background-color: #2d2d2d !important;
+  border-color: #404040 !important;
+  color: #f5f5f5 !important;
+}
+
+/* Result Page */
+html.dark .bg-white {
+  background-color: #2d2d2d !important;
+}
+
+/* Tables */
+html.dark table,
+html.dark thead,
+html.dark tbody,
+html.dark tr,
+html.dark td,
+html.dark th {
+  background-color: #2d2d2d !important;
+  border-color: #404040 !important;
+  color: #f5f5f5 !important;
+}
+
+/* Pagination */
+html.dark .bg-white.border.border-gray-300 {
+  background-color: #2d2d2d !important;
+  border-color: #404040 !important;
+}
+
+/* เงา */
+html.dark .shadow-sm,
+html.dark .shadow,
+html.dark .shadow-md,
+html.dark .shadow-lg,
+html.dark .shadow-xl {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Dark Mode - เปลี่ยนสีข้อความและกรอบเป็นสีเหลือง */
+
+/* หัวข้อหลัก */
+html.dark .app-text-red,
+html.dark .text-32,
+html.dark h1,
+html.dark h2 {
+  color: #FFD700 !important;
+}
+
+/* ข้อความทั่วไป */
+html.dark .text-18,
+html.dark .text-16,
+html.dark p,
+html.dark span,
+html.dark div {
+  color: #FFD700 !important;
+}
+
+
+/* NavBar links */
+html.dark nav a,
+html.dark nav div {
+  color: #FFD700 !important;
+}
+
+/* Footer */
+html.dark footer div,
+html.dark footer span {
+  color: #FFD700 !important;
+}
+
+/* ข้อความใน Input และ Select */
+html.dark .app-input,
+html.dark .app-select,
+html.dark input,
+html.dark select {
+  color: #FFD700 !important;
+}
+
+html.dark .app-input::placeholder {
+  color: #FFD700 !important;
+  opacity: 0.7;
+}
+
+/* ข้อความใน Banner */
+html.dark header div,
+html.dark header span {
+  color: #FFD700 !important;
+}
+
+/* ข้อความใน Cards ค้นหา */
+html.dark .text-left,
+html.dark .leading-tight {
+  color: #FFD700 !important;
+}
+
+/* ปุ่มที่ไม่มีสีเฉพาะ */
+html.dark .app-button:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange),
+html.dark .app-button-fit:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange) {
+  color: #FFD700 !important;
+  border-color: #FFD700 !important;
+}
+
+/* ยกเว้น: ข้อความในปุ่มที่มีสีพื้นหลังเฉพาะให้ยังเป็นสีขาว */
+html.dark .app-bg-red,
+html.dark .app-bg-green,
+html.dark .app-bg-yellow,
+html.dark .app-bg-orange {
+  color: #ffffff !important;
+}
+
+html.dark .app-bg-red *,
+html.dark .app-bg-green *,
+html.dark .app-bg-yellow *,
+html.dark .app-bg-orange * {
+  color: #ffffff !important;
+}
+/* Dark Mode - เปลี่ยนสีข้อความและกรอบเป็นสีเหลือง */
+
+/* หัวข้อหลัก */
+html.dark .app-text-red,
+html.dark .text-32,
+html.dark h1,
+html.dark h2 {
+  color: #FFD700 !important;
+}
+
+/* ข้อความทั่วไป */
+html.dark .text-18,
+html.dark .text-16,
+html.dark .text-24,
+html.dark p,
+html.dark span:not(.text-white):not(.app-bg-red *):not(.app-bg-green *):not(.app-bg-yellow *):not(.app-bg-orange *),
+html.dark div:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange):not(.fixed) {
+  color: #FFD700 !important;
+}
+
+/* กรอบการ์ด */
+html.dark .border,
+html.dark .border-\[\#B21F29\],
+html.dark .border-\[\#D9D9D9\],
+html.dark .border-2,
+html.dark .app-border-gray,
+html.dark .app-border-gray-2 {
+  border-color: #FFD700 !important;
+}
+
+/* Cards ที่มีกรอบสีแดง */
+html.dark .w-full.border.border-\[\#B21F29\],
+html.dark .border.border-\[\#B21F29\] {
+  background-color: #2d2d2d !important;
+  border-color: #FFD700 !important;
+  color: #FFD700 !important;
+}
+
+/* ไอคอนและข้อความใน Cards */
+html.dark .w-full.border.border-\[\#B21F29\] div:not(.app-bg-red):not(.bg-\[\#B21F29\]),
+html.dark .w-full.border.border-\[\#B21F29\] span {
+  color: #FFD700 !important;
+}
+
+/* NavBar links และไอคอน */
+html.dark nav a,
+html.dark nav div:not(.app-bg-red):not(.app-text-red) {
+  color: #FFD700 !important;
+}
+
+html.dark nav svg {
+  stroke: #FFD700 !important;
+  fill: #FFD700 !important;
+}
+
+/* Footer */
+html.dark footer div:not(.app-bg-red),
+html.dark footer span {
+  color: #FFD700 !important;
+}
+
+html.dark footer svg {
+  stroke: #FFD700 !important;
+  fill: #FFD700 !important;
+}
+
+/* ข้อความใน Input และ Select */
+html.dark .app-input,
+html.dark .app-select,
+html.dark input:not([type="checkbox"]),
+html.dark select,
+html.dark textarea {
+  color: #FFD700 !important;
+  background-color: #2d2d2d !important;
+  border-color: #FFD700 !important;
+}
+
+html.dark .app-input::placeholder,
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #FFD700 !important;
+  opacity: 0.6;
+}
+
+html.dark select option {
+  background-color: #2d2d2d !important;
+  color: #FFD700 !important;
+}
+
+/* Text Colors ทั่วไป */
+html.dark .text-\[\#333\],
+html.dark .text-\[\#333333\],
+html.dark .text-black,
+html.dark .text-\[\#666\],
+html.dark .text-\[\#666666\],
+html.dark .text-\[\#444\],
+html.dark .text-white:not(.app-bg-red *):not(.app-bg-green *):not(.app-bg-yellow *):not(.app-bg-orange *),
+html.dark .text-gray-400,
+html.dark .text-gray-600 {
+  color: #FFD700 !important;
+}
+
+/* ข้อความใน Banner */
+html.dark header div:not(.app-bg-red),
+html.dark header span {
+  color: #FFD700 !important;
+}
+
+/* ข้อความใน Cards ค้นหา */
+html.dark .text-left,
+html.dark .leading-tight,
+html.dark .leading-relaxed {
+  color: #FFD700 !important;
+}
+
+/* Labels */
+html.dark label,
+html.dark .mb-\[6px\],
+html.dark .mb-\[8px\] {
+  color: #FFD700 !important;
+}
+
+/* Dropdown และ Menu */
+html.dark .absolute.left-0.top-full,
+html.dark .shadow-lg.z-20,
+html.dark .shadow-lg.z-10 {
+  background-color: #2d2d2d !important;
+  border-color: #FFD700 !important;
+}
+
+html.dark .hover\:bg-\[\#10B981\]:hover,
+html.dark .hover\:bg-\[\#F59E0B\]:hover {
+  background-color: #3d3d3d !important;
+}
+
+/* SVG Icons */
+html.dark svg:not(.app-bg-red svg):not(.app-bg-green svg):not(.app-bg-yellow svg):not(.app-bg-orange svg) {
+  stroke: #FFD700 !important;
+}
+
+html.dark svg path:not(.app-bg-red path):not(.app-bg-green path):not(.app-bg-yellow path):not(.app-bg-orange path) {
+  stroke: #FFD700 !important;
+}
+
+/* ปุ่มที่ไม่มีสีเฉพาะ */
+html.dark .app-button:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange):not(.text-white),
+html.dark .app-button-fit:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange):not(.text-white) {
+  color: #FFD700 !important;
+  border-color: #FFD700 !important;
+  background-color: #2d2d2d !important;
+}
+
+html.dark .app-button:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange) svg,
+html.dark .app-button-fit:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange) svg {
+  stroke: #FFD700 !important;
+}
+
+/* ปุ่มที่มีพื้นหลังขาว */
+html.dark .bg-white:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange) {
+  background-color: #2d2d2d !important;
+  color: #FFD700 !important;
+}
+
+/* Tabs ที่ไม่ได้ active */
+html.dark .border-\[\#D9D9D9\].bg-white {
+  background-color: #2d2d2d !important;
+  border-color: #FFD700 !important;
+  color: #FFD700 !important;
+}
+
+/* Info boxes และ Alert boxes */
+html.dark .app-bg-gray-3,
+html.dark .bg-\[\#F8D7DA\],
+html.dark .border-\[\#E08A8A\] {
+  background-color: #3d3d3d !important;
+  border-color: #FFD700 !important;
+}
+
+/* Pagination */
+html.dark .flex.items-center.gap-3 {
+  color: #FFD700 !important;
+}
+
+html.dark .flex.items-center.gap-3 svg {
+  stroke: #FFD700 !important;
+}
+
+/* Checkbox */
+html.dark input[type="checkbox"] {
+  border-color: #FFD700 !important;
+  background-color: #2d2d2d !important;
+}
+
+html.dark input[type="checkbox"]:checked {
+  background-color: #FFD700 !important;
+}
+
+/* File upload area */
+html.dark .border-dashed {
+  border-color: #FFD700 !important;
+}
+
+/* Rounded backgrounds */
+html.dark .rounded-full,
+html.dark .rounded-full\! {
+  border-color: #FFD700 !important;
+}
+
+html.dark .bg-\[\#F9DDE0\],
+html.dark .bg-\[\#D8FFF6\] {
+  background-color: #3d3d3d !important;
+}
+
+/* ยกเว้น: ข้อความในปุ่มที่มีสีพื้นหลังเฉพาะให้ยังเป็นสีขาว */
+html.dark .app-bg-red,
+html.dark .app-bg-green,
+html.dark .app-bg-yellow,
+html.dark .app-bg-orange,
+html.dark .bg-\[\#B21F29\],
+html.dark .bg-\[\#1d987c\],
+html.dark .bg-\[\#f5af2d\],
+html.dark .bg-\[\#FE572F\] {
+  color: #ffffff !important;
+}
+
+html.dark .app-bg-red *,
+html.dark .app-bg-green *,
+html.dark .app-bg-yellow *,
+html.dark .app-bg-orange *,
+html.dark .bg-\[\#B21F29\] *,
+html.dark .bg-\[\#1d987c\] *,
+html.dark .bg-\[\#f5af2d\] *,
+html.dark .bg-\[\#FE572F\] * {
+  color: #ffffff !important;
+}
+
+html.dark .app-bg-red svg,
+html.dark .app-bg-green svg,
+html.dark .app-bg-yellow svg,
+html.dark .app-bg-orange svg {
+  stroke: #ffffff !important;
+}
+
+/* Loading Overlay text */
+html.dark .font-semibold.text-\[\#B21F29\] {
+  color: #FFD700 !important;
+}
+
+/* Link colors */
+html.dark a:not(.app-bg-red a):not(.app-bg-green a) {
+  color: #FFD700 !important;
+}
+
+html.dark .underline {
+  text-decoration-color: #FFD700 !important;
+}
+
+/* Dark Mode - เปลี่ยนสีข้อความและกรอบเป็นสีเหลือง */
+
+/* หัวข้อหลัก */
+html.dark .app-text-red,
+html.dark .text-32,
+html.dark h1,
+html.dark h2 {
+  color: #FFD700 !important;
+}
+
+/* ข้อความทั่วไป */
+html.dark .text-18,
+html.dark .text-16,
+html.dark .text-24,
+html.dark p,
+html.dark span:not(.text-white):not(.app-bg-red *):not(.app-bg-green *):not(.app-bg-yellow *):not(.app-bg-orange *),
+html.dark div:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange):not(.fixed) {
+  color: #FFD700 !important;
+}
+
+/* กรอบการ์ด */
+html.dark .border,
+html.dark .border-\[\#B21F29\],
+html.dark .border-\[\#D9D9D9\],
+html.dark .border-2,
+html.dark .app-border-gray,
+html.dark .app-border-gray-2 {
+  border-color: #FFD700 !important;
+}
+
+/* Banner Images - ทำให้เป็น Grayscale และมี Overlay */
+html.dark header img,
+html.dark .relative img[src*="Banner"] {
+  filter: grayscale(100%) brightness(0.3) !important;
+}
+
+html.dark .relative[style*="background-image"] {
+  position: relative;
+}
+
+html.dark .relative[style*="background-image"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(29, 29, 29, 0.85) !important;
+  z-index: 1;
   border-radius: 12px;
-  height: 60px;
-  max-height: 60px;
-  flex: 0 1 160px;
-  width: 160px;
-  max-width: 160px;
-  min-width: 120px;
-} */
+}
+
+html.dark .relative[style*="background-image"] > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Banner Container Background */
+html.dark .h-\[200px\].rounded-2xl,
+html.dark .min-h-\[680px\] {
+  background-color: #2d2d2d !important;
+}
+
+/* Dark Mode - เปลี่ยนสีข้อความและกรอบเป็นสีเหลือง */
+
+/* หัวข้อหลัก */
+html.dark .app-text-red,
+html.dark .text-32,
+html.dark h1,
+html.dark h2 {
+  color: #FFD700 !important;
+}
+
+/* ข้อความทั่วไป */
+html.dark .text-18,
+html.dark .text-16,
+html.dark .text-24,
+html.dark p,
+html.dark span:not(.text-white):not(.app-bg-red *):not(.app-bg-green *):not(.app-bg-yellow *):not(.app-bg-orange *),
+html.dark div:not(.app-bg-red):not(.app-bg-green):not(.app-bg-yellow):not(.app-bg-orange):not(.fixed) {
+  color: #FFD700 !important;
+}
+
+/* กรอบการ์ด */
+html.dark .border,
+html.dark .border-\[\#B21F29\],
+html.dark .border-\[\#D9D9D9\],
+html.dark .border-2,
+html.dark .app-border-gray,
+html.dark .app-border-gray-2 {
+  border-color: #FFD700 !important;
+}
+
+/* ===== DARK MODE: BANNER FIXES ===== */
+
+/* แก้ไข Banner ทุกประเภท - ให้ยังเห็นรูปแต่โทนสีเข้มลง */
+html.dark header img[src="/Banner.png"],
+html.dark header img[src*="Banner"],
+html.dark img[src="/Banner.png"],
+html.dark img[src*="Banner"] {
+  filter: brightness(0.6) contrast(1.1) saturate(0.8) !important;
+  opacity: 1 !important;
+}
+
+/* Banner Container with Background Image - ให้เห็นรูปชัดเจน */
+html.dark div[style*="background-image"][style*="Banner"] {
+  position: relative !important;
+  filter: brightness(0.7) contrast(1.1) !important;
+}
+
+html.dark div[style*="background-image"][style*="Banner"]::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(to right, rgba(26, 26, 26, 0.6), transparent 50%) !important;
+  z-index: 1 !important;
+  border-radius: 24px !important;
+  pointer-events: none !important;
+}
+
+html.dark div[style*="background-image"][style*="Banner"] > * {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Banner Container Backgrounds - ไม่ให้กลืนไปกับพื้นหลัง */
+html.dark .h-\[200px\],
+html.dark .min-h-\[680px\] {
+  background-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark header .relative,
+html.dark .rounded-2xl,
+html.dark .rounded-\[24px\] {
+  border: 1px solid rgba(255, 215, 0, 0.2) !important;
+}
+
+/* แก้ Overlay ที่ทับ Banner - ให้โปร่งใสมากขึ้น */
+html.dark .absolute.inset-0.flex.items-center,
+html.dark header .absolute.inset-0 {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent 60%) !important;
+  z-index: 10 !important;
+}
+
+/* ข้อความบน Banner */
+html.dark .absolute.inset-0 .text-white,
+html.dark .absolute.inset-0 div,
+html.dark .absolute.inset-0 span {
+  color: #FFD700 !important;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.7) !important;
+}

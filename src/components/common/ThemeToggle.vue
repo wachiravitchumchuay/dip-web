@@ -1,5 +1,3 @@
-File: src/components/common/ThemeToggle.vue
-
 <template>
   <button class="theme-toggle" type="button" @click="toggleTheme">
     <span class="label">{{ themeLabel }}</span>
@@ -70,6 +68,11 @@ watch(theme, (newTheme) => {
   background: var(--card-bg, #f6f6f6);
   color: var(--text-color, #111);
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
 }
 
 .label {

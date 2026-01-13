@@ -1,10 +1,8 @@
 <template>
   <main class="max-w-[2000px] mx-auto px-10">
     <header class="w-full">
-
       <div class="relative w-full overflow-hidden mb-[32px]">
         <img src="/Banner.png" class="h-[200px] w-full rounded-2xl object-cover" alt="Banner" />
-
         <div class="absolute inset-0 flex items-center pl-[97px] text-white bg-black/10 rounded-2xl">
           <div class="flex-col">
             <div class="text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
@@ -127,11 +125,11 @@
                 />
               </div>
 
-              <div class="col-span-4">
+              <div class="col-span-4 relative">
                 <button
                   type="button"
                   class="app-button border border-[#D9D9D9] bg-white w-full h-[42px] hover:bg-gray-50 transition-colors"
-                  @click="addCondition"
+                  @click="toggleRowDropdown(index)"
                 >
                   <div class="flex items-center gap-[8px] justify-center">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -140,8 +138,32 @@
                     <span>เพิ่มเงื่อนไข</span>
                   </div>
                 </button>
+
+                <div v-if="activeDropdownIndex === index" class="absolute left-0 top-full mt-1 w-full bg-white border border-[#D9D9D9] rounded-lg shadow-lg z-20 overflow-hidden py-1">
+                   <button
+                    type="button"
+                    class="w-full text-left px-4 py-2 text-[#333] hover:bg-[#10B981] hover:text-white transition-colors"
+                    @click="selectRowOption('และ', index)"
+                  >
+                    และ
+                  </button>
+                  <button
+                    type="button"
+                    class="w-full text-left px-4 py-2 text-[#333] hover:bg-[#10B981] hover:text-white transition-colors"
+                    @click="selectRowOption('หรือ', index)"
+                  >
+                    หรือ
+                  </button>
+                  <button
+                    type="button"
+                    class="w-full text-left px-4 py-2 text-[#333] hover:bg-[#10B981] transition-colors"
+                    @click="selectRowOption('ไม่เอา', index)"
+                  >
+                    ไม่เอา
+                  </button>
+                </div>
               </div>
-            </div>
+              </div>
 
             <div v-if="conditions.length > 1" class="mt-[12px] flex justify-end">
               <button
@@ -156,7 +178,46 @@
               </button>
             </div>
           </div>
-        </div>
+
+          <div class="mt-[20px] relative">
+            <button
+              type="button"
+              class="app-button border border-[#FF4D4F] text-[#FF4D4F] bg-white rounded-md px-4 py-2 w-auto hover:bg-red-50 transition-colors"
+              @click="toggleGroupDropdown"
+            >
+              <div class="flex items-center gap-[8px] justify-center">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>เพิ่มเงื่อนไข</span>
+              </div>
+            </button>
+
+            <div v-if="showGroupDropdown" class="absolute left-0 top-full mt-2 w-[160px] bg-white border border-[#D9D9D9] rounded-lg shadow-lg z-10 overflow-hidden py-1">
+              <button
+                type="button"
+                class="w-full text-left px-4 py-2 text-[#333] hover:bg-[#F59E0B] hover:text-white transition-colors"
+                @click="selectGroupOption('และ')"
+              >
+                และ
+              </button>
+              <button
+                type="button"
+                class="w-full text-left px-4 py-2 text-[#333] hover:bg-[#F59E0B] hover:text-white transition-colors"
+                @click="selectGroupOption('หรือ')"
+              >
+                หรือ
+              </button>
+              <button
+                type="button"
+                class="w-full text-left px-4 py-2 text-[#333] hover:bg-[#F59E0B] transition-colors"
+                @click="selectGroupOption('ไม่เอา')"
+              >
+                ไม่เอา
+              </button>
+            </div>
+          </div>
+          </div>
 
         <div class="flex items-center justify-between mb-[40px]">
           <button
@@ -197,6 +258,12 @@ const router = useRouter()
 const keyword = ref('')
 const activeTab = ref<'basic' | 'similarity' | 'trademark'>('basic')
 
+// State สำหรับ Dropdown ของปุ่มใหม่ (ข้างล่าง)
+const showGroupDropdown = ref(false)
+
+// State สำหรับ Dropdown ของปุ่มเดิม (ในแถว)
+const activeDropdownIndex = ref<number | null>(null)
+
 interface Condition {
   type: string
   value: string
@@ -224,6 +291,23 @@ function onQuickSearch() {
   }
 }
 
+// ฟังก์ชันเปิด/ปิด Dropdown ของปุ่มเดิมในแต่ละแถว
+function toggleRowDropdown(index: number) {
+  if (activeDropdownIndex.value === index) {
+    activeDropdownIndex.value = null
+  } else {
+    activeDropdownIndex.value = index
+  }
+}
+
+// ฟังก์ชันเมื่อเลือกตัวเลือกจากปุ่มเดิม (และ/หรือ/ไม่เอา) -> เพิ่มแถวใหม่
+function selectRowOption(option: string, index: number) {
+  // ตรงนี้คุณอาจจะเอาค่า option ไปใช้ต่อได้ แต่ตอนนี้ผมสั่งให้เพิ่มเงื่อนไขเหมือนเดิม
+  console.log(`Selected option for row ${index}: ${option}`)
+  addCondition()
+  activeDropdownIndex.value = null
+}
+
 function addCondition() {
   conditions.value.push({ type: '', value: '' })
 }
@@ -236,6 +320,17 @@ function removeCondition(index: number) {
 
 function clearAllConditions() {
   conditions.value = [{ type: '', value: '' }]
+}
+
+// ฟังก์ชันเปิด/ปิด Dropdown ของปุ่มใหม่ (กลุ่มเงื่อนไข)
+function toggleGroupDropdown() {
+  showGroupDropdown.value = !showGroupDropdown.value
+}
+
+// ฟังก์ชันเมื่อเลือกตัวเลือกจากปุ่มใหม่
+function selectGroupOption(option: string) {
+  console.log('Selected group option:', option)
+  showGroupDropdown.value = false
 }
 
 function onSearch() {
