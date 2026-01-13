@@ -1,6 +1,22 @@
 <template>
   <main>
-    <HeroBannerComponent />
+    <header class="w-full mb-[24px]">
+      <div class="relative w-full overflow-hidden rounded-2xl">
+        <img src="/Banner.png" class="h-[200px] w-full object-cover" alt="Banner" />
+        <div class="absolute inset-0 flex items-center pl-[60px] md:pl-[97px] text-white bg-black/10">
+          <div class="flex-col">
+            <div class="text-24 md:text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
+            <div class="text-14 md:text-18 font-light max-w-[600px]">
+              <div>
+                บริการนี้เป็นบริการช่วยตรวจสอบหรือค้นหาเครื่องหมายการค้าที่ผู้ใช้งาน<br class="hidden md:block" />
+                สามารถเข้าถึงข้อมูลได้ด้วยตนเองจากกรมทรัพย์สินทางปัญญา
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <SearchSummaryBar dataset="สิทธิบัตรการประดิษฐ์" keyword="บ้าน" @edit="() => {}" />
 
     <div class="mt-[12px]">
@@ -26,7 +42,6 @@
 </template>
 
 <script setup lang="ts">
-import HeroBannerComponent from '@/components/common/HeroBanner.vue'
 import SearchSummaryBar from '@/components/result/SearchSummaryBar.vue'
 import ResultToolbar from '@/components/result/ResultToolbar.vue'
 import FilterPanel from '@/components/result/FilterPanel.vue'
@@ -34,11 +49,7 @@ import ResultList from '@/components/result/ResultList.vue'
 
 import { useLoading } from '@/stores/loading'
 import { onMounted } from 'vue'
-import { useRoute } from 'vue-router'
 
-
-
-const route = useRoute()
 const loading = useLoading()
 
 onMounted(() => {

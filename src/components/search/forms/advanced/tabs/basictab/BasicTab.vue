@@ -57,7 +57,6 @@ import type {
 import AddCircleIcon from '@/assets/icons/add-circle.svg'
 import RedoIcon from '@/assets/icons/redo.svg'
 import Search01Icon from '@/assets/icons/search-01.svg'
-import { R } from 'vue-router/dist/router-CWoNjPRp.mjs'
 const props = defineProps<{
   keyword: string
 }>()

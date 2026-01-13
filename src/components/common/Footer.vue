@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <footer class="w-full text-18 mt-[60px]">
     <div class="w-full h-[182px] px-20 app-bg-gray-2">

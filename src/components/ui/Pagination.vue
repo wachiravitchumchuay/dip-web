@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="flex items-center gap-3 font-sans text-sm text-gray-600">
 

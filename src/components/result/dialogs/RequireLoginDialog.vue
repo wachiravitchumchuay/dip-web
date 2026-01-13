@@ -32,7 +32,6 @@
 import DialogBase from '@/components/ui/DialogBase.vue'
 import LinkSquare01Icon from '@/assets/icons/link-square-01.svg'
 import AlertDiamondIcon from '@/assets/icons/alert-diamond.svg'
-import { setDevtoolsHook } from 'vue'
 
 defineProps<{ open: boolean }>()
 

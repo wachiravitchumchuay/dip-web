@@ -224,7 +224,7 @@ onMounted(() => {
 })
 
 function onQuickSearch() {
-  if (keyword.value.trim()) router.push({ path: '/result', query: { q: keyword.value } })
+   if (keyword.value.trim()) router.push({ path: '/result', query: { q: keyword.value } })
 }
 
 function handleAddCondition(gIndex: number, iIndex: number, option: string) {
