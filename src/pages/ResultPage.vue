@@ -5,8 +5,8 @@
         <img src="/Banner.png" class="h-[200px] w-full object-cover" alt="Banner" />
         <div class="absolute inset-0 flex items-center pl-[60px] md:pl-[97px] text-white bg-black/10">
           <div class="flex-col">
-            <div class="text-24 md:text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
-            <div class="text-14 md:text-18 font-light max-w-[600px]">
+            <div class="text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
+            <div class="text-18 ">
               <div>
                 บริการนี้เป็นบริการช่วยตรวจสอบหรือค้นหาเครื่องหมายการค้าที่ผู้ใช้งาน<br class="hidden md:block" />
                 สามารถเข้าถึงข้อมูลได้ด้วยตนเองจากกรมทรัพย์สินทางปัญญา

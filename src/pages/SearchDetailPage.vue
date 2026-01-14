@@ -6,8 +6,8 @@
         <img src="/Banner.png" class="h-[200px] w-full object-cover" alt="Banner" />
         <div class="absolute inset-0 flex items-center pl-[60px] md:pl-[97px] text-white bg-black/20">
           <div class="flex-col">
-            <div class="text-24 md:text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
-            <div class="text-14 md:text-18 font-light max-w-[600px]">
+            <div class="text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
+            <div class="text-18">
               <div>
                 บริการนี้เป็นบริการช่วยตรวจสอบหรือค้นหาเครื่องหมายการค้าที่ผู้ใช้งาน<br class="hidden md:block" />
                 สามารถเข้าถึงข้อมูลได้ด้วยตนเองจากกรมทรัพย์สินทางปัญญา
@@ -105,67 +105,74 @@
         </div>
 
         <div class="border border-[#E0E0E0] rounded-b-xl rounded-tr-xl p-[32px] bg-white shadow-sm mb-[32px]">
-          <div class="flex items-center gap-[8px] mb-[24px] border-b border-[#E0E0E0] pb-4">
-            <span class="text-18 font-bold text-[#333]">เครื่องหมายการค้า</span>
-            <span class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#999] font-serif text-[12px] font-black leading-none text-[#999] cursor-help" title="ข้อมูลเพิ่มเติม">i</span>
-          </div>
 
-          <div v-for="(group, gIndex) in conditionGroups" :key="gIndex">
+          <div v-show="activeTab !== 'trademark'">
+            <div class="flex items-center gap-[8px] mb-[24px] border-b border-[#E0E0E0] pb-4">
+              <span class="text-18 font-bold text-[#333]">เครื่องหมายการค้า</span>
+              <span class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#999] font-serif text-[12px] font-black leading-none text-[#999] cursor-help" title="ข้อมูลเพิ่มเติม">i</span>
+            </div>
 
-            <div v-if="gIndex > 0" class="relative py-8">
-              <div class="absolute inset-0 flex items-center">
-                <div class="w-full border-t border-[#E0E0E0]"></div>
+            <div v-for="(group, gIndex) in conditionGroups" :key="gIndex">
+
+              <div v-if="gIndex > 0" class="relative py-8">
+                <div class="absolute inset-0 flex items-center">
+                  <div class="w-full border-t border-[#E0E0E0]"></div>
+                </div>
+                <div class="relative flex justify-center">
+                  <span class="bg-[#F5A623] text-white px-10 py-2 rounded-md text-sm font-medium shadow-sm">
+                    {{ group.groupOperator }}
+                  </span>
+                </div>
               </div>
-              <div class="relative flex justify-center">
-                <span class="bg-[#F5A623] text-white px-10 py-2 rounded-md text-sm font-medium shadow-sm">
-                  {{ group.groupOperator }}
-                </span>
+
+              <div v-if="gIndex > 0" class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-bold text-[#333]">กลุ่มเงื่อนไขที่ - {{ gIndex + 1 }}</h3>
+                <button
+                  type="button"
+                  class="bg-[#FFECEB] text-[#FF5C39] hover:bg-[#FFD1CD] px-4 py-2 rounded-md text-sm flex items-center gap-2 border border-[#FF5C39]/20"
+                  @click="removeGroup(gIndex)"
+                >
+                  ลบกลุ่มเงื่อนไขนี้
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+              </div>
+
+              <div class="bg-[#F8F9FA] rounded-lg p-6 mb-6">
+                <SearchConditionItem
+                  v-for="(condition, index) in group.items"
+                  :key="index"
+                  :condition="condition"
+                  :can-remove="group.items.length > 1"
+                  :is-last="index === group.items.length - 1"
+                  @add-condition="(op) => handleAddCondition(gIndex, index, op)"
+                  @remove="removeCondition(gIndex, index)"
+                />
               </div>
             </div>
 
-            <div v-if="gIndex > 0" class="flex justify-between items-center mb-4">
-              <h3 class="text-lg font-bold text-[#333]">กลุ่มเงื่อนไขที่ - {{ gIndex + 1 }}</h3>
+            <div class="mb-4 relative">
               <button
                 type="button"
-                class="bg-[#FFECEB] text-[#FF5C39] hover:bg-[#FFD1CD] px-4 py-2 rounded-md text-sm flex items-center gap-2 border border-[#FF5C39]/20"
-                @click="removeGroup(gIndex)"
+                class="flex items-center gap-2 text-[#FF5C39] hover:text-[#D14022] font-medium transition-colors"
+                @click="toggleGroupDropdown"
               >
-                ลบกลุ่มเงื่อนไขนี้
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>เพิ่มกลุ่มเงื่อนไข</span>
               </button>
-            </div>
 
-            <div class="bg-[#F8F9FA] rounded-lg p-6 mb-6">
-              <SearchConditionItem
-                v-for="(condition, index) in group.items"
-                :key="index"
-                :condition="condition"
-                :can-remove="group.items.length > 1"
-                :is-last="index === group.items.length - 1"
-                @add-condition="(op) => handleAddCondition(gIndex, index, op)"
-                @remove="removeCondition(gIndex, index)"
-              />
+              <div v-if="showGroupDropdown" class="absolute left-0 top-full mt-2 w-[160px] bg-white border border-[#E0E0E0] rounded-lg shadow-lg z-10 overflow-hidden py-1">
+                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('และ')">และ</button>
+                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('หรือ')">หรือ</button>
+                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('ไม่เอา')">ไม่เอา</button>
+              </div>
             </div>
           </div>
 
-          <div class="mb-4 relative">
-             <button
-              type="button"
-              class="flex items-center gap-2 text-[#FF5C39] hover:text-[#D14022] font-medium transition-colors"
-              @click="toggleGroupDropdown"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>เพิ่มกลุ่มเงื่อนไข</span>
-            </button>
-
-             <div v-if="showGroupDropdown" class="absolute left-0 top-full mt-2 w-[160px] bg-white border border-[#E0E0E0] rounded-lg shadow-lg z-10 overflow-hidden py-1">
-              <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('และ')">และ</button>
-              <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('หรือ')">หรือ</button>
-              <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('ไม่เอา')">ไม่เอา</button>
-            </div>
+          <div v-show="activeTab === 'trademark'">
+            <TrademarkUploadSection ref="uploadSectionRef" @file-selected="onFileSelected" />
           </div>
         </div>
 
@@ -176,7 +183,8 @@
             @click="clearAllConditions"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
-            <span>ล้างการค้นหา</span>
+            <span v-if="activeTab === 'trademark'">ล้างเงื่อนไข</span>
+            <span v-else>ล้างการค้นหา</span>
           </button>
 
           <button
@@ -200,6 +208,7 @@
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import SearchConditionItem from './SearchConditionItem.vue'
+import TrademarkUploadSection from '../components/search/forms/advanced/tabs/TrademarkUploadSection.vue' // Import ไฟล์ใหม่เข้ามาแทน
 import LoadingOverlay from '../components/ui/LoadingOverlay.vue'
 
 const route = useRoute()
@@ -210,7 +219,14 @@ const activeTab = ref<'basic' | 'similarity' | 'trademark'>('basic')
 const showGroupDropdown = ref(false)
 const isSearching = ref(false)
 
-// Data Structure (คงเดิม)
+// เปลี่ยนชื่อ Ref ให้สื่อความหมายถึงไฟล์ใหม่
+const uploadSectionRef = ref<InstanceType<typeof TrademarkUploadSection> | null>(null)
+
+// ตัวแปรสำหรับ Image Search
+const selectedFile = ref<File | null>(null)
+const selectedFileName = ref('')
+
+// Data Structure
 const conditionGroups = ref([
   {
     groupOperator: '',
@@ -225,6 +241,12 @@ onMounted(() => {
 
 function onQuickSearch() {
    if (keyword.value.trim()) router.push({ path: '/result', query: { q: keyword.value } })
+}
+
+// รับค่าจาก Component ลูก (Logic เดิม)
+function onFileSelected(file: File | null, fileName: string) {
+  selectedFile.value = file
+  selectedFileName.value = fileName
 }
 
 function handleAddCondition(gIndex: number, iIndex: number, option: string) {
@@ -255,7 +277,14 @@ function removeGroup(index: number) {
 }
 
 function clearAllConditions() {
-  conditionGroups.value = [{ groupOperator: '', items: [{ type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' }] }]
+  if (activeTab.value === 'trademark') {
+    // สั่งให้ Component ใหม่เคลียร์ค่า
+    uploadSectionRef.value?.clear()
+    selectedFile.value = null
+    selectedFileName.value = ''
+  } else {
+    conditionGroups.value = [{ groupOperator: '', items: [{ type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' }] }]
+  }
 }
 
 function toggleGroupDropdown() {
@@ -268,12 +297,19 @@ function onSearch() {
   setTimeout(() => {
     const conditions = JSON.stringify(conditionGroups.value)
 
+    const queryParams: any = {
+      mode: activeTab.value,
+      data: conditions
+    }
+
+    // ถ้าเป็นโหมดรูปภาพ ส่งชื่อไฟล์ไปด้วย
+    if (activeTab.value === 'trademark' && selectedFileName.value) {
+      queryParams.fileName = selectedFileName.value
+    }
+
     router.push({
       path: '/result',
-      query: {
-        mode: activeTab.value,
-        data: conditions
-      }
+      query: queryParams
     })
 
     isSearching.value = false
