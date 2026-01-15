@@ -18,7 +18,7 @@
             v-model="keyword"
             type="text"
             class="app-input flex-1 border border-gray-300 rounded-md px-4 py-2"
-            placeholder="กรอกคำที่ต้องการค้นหาหรือเลือกไฟล์รูป"
+            placeholder="กรอกคำที่ต้องการค้นหาข้อมูลทั้งหมด"
           />
           <button
             type="button"
@@ -47,17 +47,19 @@
         <div class="relative z-10 w-[440px] flex flex-col gap-[16px]">
           <h2 class="text-white text-[36px] font-bold mb-1">เมนูการค้นหา</h2>
 
-          <div class="bg-[#8B1F1F]/90 backdrop-blur-md rounded-[16px] p-[24px] text-white border border-white/10 shadow-xl">
+          <div class="bg-white rounded-[16px] p-[24px] text-black shadow-xl">
             <div class="flex justify-between items-start mb-1">
               <span class="text-[22px] font-bold">ค้นหารูปแบบทั่วไป</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <div  class="text-[#B21F29]">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              </div>
             </div>
-            <p class="text-[14px] text-white/80 mb-5 leading-tight font-light">
+            <p class="text-[14px] text-gray-400 mb-5 leading-tight font-light">
               วิธีการตรวจสอบเบื้องต้นง่ายๆ และสะดวกรวดเร็ว<br/>โดยผลที่ได้จะไม่ละเอียดเท่ากับการค้นหาแบบอื่นๆ
             </p>
-            <button @click="goToBasicSearch" class="w-full bg-white text-black rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold hover:bg-gray-100 transition-colors">
+            <button @click="goToBasicSearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold hover:bg-[#80171d] transition-colors shadow-md">
               เริ่มการค้นหา
-              <div class="w-5 h-5 rounded-full border border-black flex items-center justify-center text-[10px]">→</div>
+              <div class="w-5 h-5 rounded-full border flex items-center justify-center text-[10px]">→</div>
             </button>
           </div>
 
