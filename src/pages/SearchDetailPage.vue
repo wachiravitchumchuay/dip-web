@@ -240,7 +240,7 @@ onMounted(() => {
 })
 
 function onQuickSearch() {
-   if (keyword.value.trim()) router.push({ path: '/result', query: { q: keyword.value } })
+   if (keyword.value.trim()) router.push({ path: '/result1', query: { q: keyword.value } })
 }
 
 // รับค่าจาก Component ลูก (Logic เดิม)
@@ -308,7 +308,7 @@ function onSearch() {
     }
 
     router.push({
-      path: '/result',
+      path: '/result-1',
       query: queryParams
     })
 

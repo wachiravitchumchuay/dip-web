@@ -28,6 +28,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/pages/AuthPage.vue'),
     meta: { layout: 'auth' },
   },
+  {
+    path: '/result-1',
+    name: 'ResultPage1',
+    component: () => import('@/pages/ResultPage1.vue'),
+  },
 ]
 
 export default createRouter({
