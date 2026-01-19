@@ -419,38 +419,31 @@ div {
   font-display: swap;
 }
 
-:root {
-  /* เพิ่ม Theme variables สำหรับ Light mode */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f5;
-  --text-primary: #111111;
-  --text-secondary: #666666;
-  --border-color: #d8d8d8;
-  --card-bg: #f6f6f6;
-}
-
 /* ==========================================================================
    VARIABLES & BASE STYLES
    ========================================================================== */
 html.dark {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --text-primary: #f5f5f5;
-  --text-secondary: #b0b0b0;
-  --border-color: #404040;
-  --card-bg: #333333;
+  /* 1. โครงสร้างหลัก (Main Structure) -> ดำ/เหลือง */
+  --bg-primary: #000000;      /* เป๊ะ */
+  --bg-secondary: #000000;    /* เป๊ะ */
+  --text-primary: #FFD700;    /* เป๊ะ */
+  --text-secondary: #FFD700;  /* เป๊ะ */
+  --border-color: #FFD700;    /* เป๊ะ */
+  --card-bg: #000000;         /* เป๊ะ */
 
-  /* Palette Override for Dark Mode */
-  --app-red: #ff6b7a;
-  --app-red-2: #4d2529;
-  --app-orange: #ff7a50;
-  --app-orange-bg: #3d2419;
-  --app-green: #34d399;
-  --app-gray: #4a4a4a;
-  --app-gray-2: #5a5a5a;
-  --app-gray-bg: #2d2d2d;
-  --app-gray-bg-2: #333333;
-  --app-gray-bg-3: #3a3a3a;
+  /* 2. Palette Override (ล้างสีทิ้ง -> เป็นเหลืองให้หมด) */
+  --app-red: #FFD700;
+  --app-red-2: #FFD700;
+  --app-orange: #FFD700;
+  --app-orange-bg: #000000;
+  --app-green: #FFD700;
+
+  /* 3. Gray Palette (ล้างสีเทาทิ้ง -> เป็นเหลือง/ดำ) */
+  --app-gray: #FFD700;
+  --app-gray-2: #FFD700;
+  --app-gray-bg: #000000;
+  --app-gray-bg-2: #000000;
+  --app-gray-bg-3: #000000;
 }
 
 /* Base Transitions */
@@ -469,16 +462,16 @@ html.dark footer,
 html.dark nav,
 html.dark section,
 html.dark .bg-white {
-  background-color: #2d2d2d !important;
+  background-color: #000000 !important; /* แก้: #2d2d2d -> #000000 (ดำสนิท) */
   color: var(--text-primary) !important;
 }
 
-/* Light Mode Defaults */
+/* Light Mode Defaults (อันนี้ของเดิม ไม่แตะ) */
 body {
   background-color: #ffffff !important;
 }
 html.dark body {
-  background-color: #2d2d2d !important;
+  background-color: #000000 !important; /* แก้: #2d2d2d -> #000000 */
 }
 
 /* ==========================================================================
@@ -504,7 +497,7 @@ html.dark .underline {
 /* Exception: Text inside specific colored badges/buttons will be handled separately */
 html.dark span.text-white,
 html.dark div.text-white {
-   color: #FFD700 !important; /* Default to yellow unless overridden */
+   color: #FFD700 !important;
 }
 
 /* Global Borders - Force Yellow */
@@ -532,8 +525,8 @@ html.dark svg path {
 /* NavBar & Footer */
 html.dark nav,
 html.dark footer {
-  background-color: #1a1a1a !important;
-  border-color: #404040 !important;
+  background-color: #000000 !important; /* แก้: #1a1a1a -> #000000 */
+  border-color: #FFD700 !important; /* แก้: #404040 -> #FFD700 */
 }
 
 /* Inputs, Selects & Textareas */
@@ -542,23 +535,24 @@ html.dark .app-select,
 html.dark input:not([type="checkbox"]),
 html.dark select,
 html.dark textarea {
-  background-color: #262626 !important;
+  background-color: #000000 !important; /* แก้: #262626 -> #000000 */
   border-color: #FFD700 !important;
-  color: #ffffff !important; /* Input text white for readability */
+  color: #FFD700 !important; /* แก้: #ffffff -> #FFD700 (ห้ามมีสีขาว) */
 }
 
 html.dark input::placeholder,
 html.dark textarea::placeholder {
-  color: #888 !important;
+  color: rgba(255, 215, 0, 0.5) !important; /* แก้: #888 -> เหลืองจางๆ */
 }
 
 html.dark .app-select {
+  /* แก้สีลูกศรใน SVG เป็น #FFD700 แล้ว */
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFD700' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") !important;
 }
 
 html.dark input[type="checkbox"] {
   border-color: #FFD700 !important;
-  background-color: #2d2d2d !important;
+  background-color: #000000 !important; /* แก้: #2d2d2d -> #000000 */
 }
 html.dark input[type="checkbox"]:checked {
   background-color: #FFD700 !important;
@@ -567,7 +561,7 @@ html.dark input[type="checkbox"]:checked {
 /* Cards */
 html.dark .w-full.border,
 html.dark .border {
-  background-color: #2d2d2d !important;
+  background-color: #000000 !important; /* แก้: #2d2d2d -> #000000 */
 }
 
 /* Shadows */
@@ -576,62 +570,64 @@ html.dark .shadow,
 html.dark .shadow-md,
 html.dark .shadow-lg,
 html.dark .shadow-xl {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: none !important; /* ลบเงาออก เพราะพื้นดำเงาจะมองไม่เห็น หรือถ้าจะเอาก็ต้องเป็นเส้นขอบ */
+  border: 1px solid #FFD700 !important; /* ใช้ขอบเหลืองแทนเงา เพื่อให้เห็นชัด */
 }
 
 /* Scrollbars */
 html.dark ::-webkit-scrollbar {
   width: 12px;
-  background-color: #2d2d2d;
+  background-color: #000000; /* แก้: #2d2d2d -> #000000 */
 }
 html.dark ::-webkit-scrollbar-thumb {
   background-color: #FFD700;
   border-radius: 6px;
-  border: 2px solid #2d2d2d;
+  border: 2px solid #000000; /* แก้: #2d2d2d -> #000000 */
 }
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background-color: #e5c100;
+  background-color: #FFD700; /* แก้: #e5c100 -> #FFD700 (อย่าให้สีเพี้ยน) */
 }
 html.dark ::-webkit-scrollbar-track {
-  background-color: #1a1a1a;
+  background-color: #000000; /* แก้: #1a1a1a -> #000000 */
 }
 html.dark ::selection {
   background-color: #FFD700;
-  color: #1a1a1a;
+  color: #000000; /* แก้: #1a1a1a -> #000000 */
 }
 
 /* ==========================================================================
-   BANNER FIXES
+   BANNER FIXES (โซนยกเว้น: ให้มีสีเทาได้)
    ========================================================================== */
 html.dark header img[src="/Banner.png"],
 html.dark header img[src*="Banner"],
 html.dark img[src="/Banner.png"],
 html.dark img[src*="Banner"] {
-  filter: brightness(0.6) contrast(1.1) saturate(0.8) !important;
+  filter: grayscale(100%) !important; /* บังคับเทา */
   opacity: 1 !important;
 }
 
 html.dark div[style*="background-image"][style*="Banner"] {
   position: right center !important;
-  filter: brightness(0.7) contrast(1.1) !important;
+  filter: grayscale(100%) !important; /* บังคับเทา */
 }
 
 html.dark div[style*="background-image"][style*="Banner"]::after {
   content: "" !important;
   position: right center !important;
   inset: 0 !important;
-  background: linear-gradient(to right, rgba(26, 26, 26, 0.6), transparent 50%) !important;
+  /* แก้: gradient ต้องไล่จาก ดำ (#000000) ไปใส เพื่อให้เนียน */
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent 50%) !important;
   z-index: 1 !important;
   border-radius: 24px !important;
   pointer-events: none !important;
 }
 
-/* Image Filters (non-banner) */
+/* Image Filters (non-banner) -> รูปอื่นที่ไม่ใช่ Banner */
 html.dark img:not([src*="Banner"]):not([src*="DIP-Logo"]):not([src*="TH-Flag"]) {
-  filter: brightness(0.9) contrast(1.1) !important;
+  filter: none !important; /* ปล่อยปกติ หรือจะ grayscale ก็ได้ แต่นายบอกเทาเฉพาะ banner */
 }
 html.dark img[src*="DIP-Logo"] {
-  filter: brightness(1.2) contrast(1.1) !important;
+  filter: none !important;
 }
 
 /* ==========================================================================
@@ -667,6 +663,7 @@ html.dark .app-bg-gray-2 button.app-button-fit div {
 
 /* 3. ปุ่มทั่วไปที่เป็น Active หรือ ปุ่มหลัก (Primary) -> พื้นเหลือง / ตัวหนังสือดำ */
 html.dark .app-button,
+html.dark .app-button-fit,
 html.dark button[type="submit"],
 html.dark button.bg-black,
 html.dark button.bg-\[\#FCE8EA\],
@@ -679,13 +676,22 @@ html.dark .bg-primary {
   font-weight: 600 !important;
 }
 
-/* ไอคอนและข้อความในปุ่ม Active ต้องเป็นสีดำ */
+/* [สำคัญมาก] บังคับ "ไส้ใน" (ไอคอน/ตัวหนังสือ) ของปุ่มพวกนี้ให้เป็นสีดำ */
 html.dark .app-button *,
+html.dark .app-button-fit *,
+html.dark button[type="submit"] *,
 html.dark button.bg-\[\#FCE8EA\] *,
+html.dark button.bg-\[\#F9DDE0\] *,
 html.dark button.bg-\[\#FF542B\] *,
 html.dark .bg-primary * {
-    color: #000000 !important;
+  color: #000000 !important;
+  stroke: #000000 !important;
+  fill: #000000 !important;
+  border-color: #000000 !important;
+  background-color: transparent !important;
 }
+
+/* ไอคอนและข้อความในปุ่ม Active ต้องเป็นสีดำ (ย้ำอีกรอบ) */
 html.dark .app-button svg,
 html.dark .app-button svg path,
 html.dark button.bg-black svg,
@@ -697,7 +703,7 @@ html.dark button.bg-black svg path {
 html.dark button.bg-white,
 html.dark button.app-button-fit.bg-white,
 html.dark button.app-button-fit.border-\[\#D9D9D9\] {
-    background-color: transparent !important;
+    background-color: transparent !important; /* หรือ #000000 */
     border: 1px solid #FFD700 !important;
     color: #FFD700 !important;
 }
@@ -708,20 +714,20 @@ html.dark button.bg-white svg path {
 
 /* 5. Badges/Chips (จำนวนตัวเลข) -> สีดำ */
 html.dark span.text-\[\#B21F29\] {
-    color: #000000 !important;
+    color: #000000 !important; /* อยู่บนพื้นเหลือง ต้องเป็นดำ */
 }
 
-/* 6. Divider (เส้นคั่น) -> สีเหลืองจางๆ */
+/* 6. Divider (เส้นคั่น) -> สีเหลือง */
 html.dark .border-l {
     border-color: #FFD700 !important;
     opacity: 0.5;
 }
 
-/* 7. Dialogs (Alerts) -> พื้นดำ หรือ เทาเข้ม / ขอบเหลือง */
+/* 7. Dialogs (Alerts) -> พื้นดำ / ขอบเหลือง */
 html.dark .bg-\[\#D8FFF6\],
 html.dark .app-bg-gray-3,
 html.dark .bg-\[\#F8D7DA\] {
-    background-color: #333333 !important;
-    border-color: #FFD700 !important;
+    background-color: #000000 !important; /* แก้: #333333 -> #000000 */
+    border: 1px solid #FFD700 !important;
     color: #FFD700 !important;
 }
