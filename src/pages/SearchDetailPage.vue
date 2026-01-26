@@ -30,7 +30,7 @@
           />
           <button
             type="button"
-            class="bg-[#FF5C39] hover:bg-[#E04F30] text-white px-8 py-3 rounded-lg flex items-center gap-2 font-medium transition-colors"
+            class="bg-[#B21F29] hover:bg-[#E04F30] text-white px-8 py-3 rounded-lg flex items-center gap-2 font-medium transition-colors"
             @click="onQuickSearch"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@
             class="px-[24px] py-[12px] rounded-t-lg flex items-center gap-2 transition-all relative top-[1px] whitespace-nowrap"
             :class="
               activeTab === 'basic'
-                ? 'bg-[#FFECEB] text-[#FF5C39] font-bold border-b-4 border-[#FF5C39]'
+                ? 'bg-[#FFECEB] text-[#B21F29] font-bold border-b-4 border-[#FF5C39]'
                 : 'bg-transparent text-[#888] hover:bg-gray-50'
             "
             @click="activeTab = 'basic'"
@@ -72,7 +72,7 @@
             class="px-[24px] py-[12px] rounded-t-lg flex items-center gap-2 transition-all relative top-[1px] whitespace-nowrap"
             :class="
               activeTab === 'similarity'
-                ? 'bg-[#FFECEB] text-[#FF5C39] font-bold border-b-4 border-[#FF5C39]'
+                ? 'bg-[#FFECEB] text-[#B21F29] font-bold border-b-4 border-[#FF5C39]'
                 : 'bg-transparent text-[#888] hover:bg-gray-50'
             "
             @click="activeTab = 'similarity'"
@@ -90,7 +90,7 @@
             class="px-[24px] py-[12px] rounded-t-lg flex items-center gap-2 transition-all relative top-[1px] whitespace-nowrap"
             :class="
               activeTab === 'trademark'
-                ? 'bg-[#FFECEB] text-[#FF5C39] font-bold border-b-4 border-[#FF5C39]'
+                ? 'bg-[#FFECEB] text-[#B21F29] font-bold border-b-4 border-[#FF5C39]'
                 : 'bg-transparent text-[#888] hover:bg-gray-50'
             "
             @click="activeTab = 'trademark'"
@@ -129,7 +129,7 @@
                 <h3 class="text-lg font-bold text-[#333]">กลุ่มเงื่อนไขที่ - {{ gIndex + 1 }}</h3>
                 <button
                   type="button"
-                  class="bg-[#FFECEB] text-[#FF5C39] hover:bg-[#FFD1CD] px-4 py-2 rounded-md text-sm flex items-center gap-2 border border-[#FF5C39]/20"
+                  class="bg-[#FFECEB] text-[#B21F29] hover:bg-[#FFD1CD] px-4 py-2 rounded-md text-sm flex items-center gap-2 border border-[#FF5C39]/20"
                   @click="removeGroup(gIndex)"
                 >
                   ลบกลุ่มเงื่อนไขนี้
@@ -153,7 +153,7 @@
             <div class="mb-4 relative">
               <button
                 type="button"
-                class="flex items-center gap-2 text-[#FF5C39] hover:text-[#D14022] font-medium transition-colors"
+                class="flex items-center gap-2 text-[#B21F29] hover:text-[#D14022] font-medium transition-colors"
                 @click="toggleGroupDropdown"
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -164,9 +164,9 @@
               </button>
 
               <div v-if="showGroupDropdown" class="absolute left-0 top-full mt-2 w-[160px] bg-white border border-[#E0E0E0] rounded-lg shadow-lg z-10 overflow-hidden py-1">
-                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('และ')">และ</button>
-                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('หรือ')">หรือ</button>
-                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-gray-100" @click="addNewGroup('ไม่เอา')">ไม่เอา</button>
+                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0" @click="addNewGroup('และ')">และ</button>
+                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0" @click="addNewGroup('หรือ')">หรือ</button>
+                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0" @click="addNewGroup('ไม่เอา')">ไม่เอา</button>
               </div>
             </div>
           </div>
@@ -189,7 +189,7 @@
 
           <button
             type="button"
-            class="bg-[#E03A3E] hover:bg-[#C0272D] text-white px-10 py-3 rounded-lg flex items-center gap-2 font-medium shadow-sm transition-colors"
+            class="bg-[#B21F29] hover:bg-[#C0272D] text-white px-10 py-3 rounded-lg flex items-center gap-2 font-medium shadow-sm transition-colors"
             @click="onSearch"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>

@@ -57,7 +57,7 @@
             <p class="text-[14px] text-gray-400 mb-5 leading-tight font-light">
               วิธีการตรวจสอบเบื้องต้นง่ายๆ และสะดวกรวดเร็ว<br/>โดยผลที่ได้จะไม่ละเอียดเท่ากับการค้นหาแบบอื่นๆ
             </p>
-            <button @click="goToBasicSearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold hover:bg-[#80171d] transition-colors shadow-md">
+            <button @click="goToBasicSearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold  transition-colors shadow-md">
               เริ่มการค้นหา
               <div class="w-5 h-5 rounded-full border flex items-center justify-center text-[10px]">→</div>
             </button>
@@ -73,7 +73,7 @@
             <p class="text-[14px] text-gray-400 mb-5 leading-tight font-light">
               วิธีการตรวจสอบโดยกำหนดเงื่อนไขที่มีความละเอียด<br/>เพิ่มมากขึ้นตามเงื่อนไขที่กำหนด
             </p>
-            <button @click="goToSimilaritySearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold hover:bg-[#80171d] transition-colors shadow-md">
+            <button @click="goToSimilaritySearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold  transition-colors shadow-md">
               เริ่มการค้นหา
               <div class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[12px]">→</div>
             </button>
@@ -89,7 +89,7 @@
             <p class="text-[14px] text-gray-400 mb-5 leading-tight font-light">
               วิธีการตรวจสอบด้วยรูปภาพของเครื่องหมายการค้า<br/>เพียงอย่างเดียว
             </p>
-            <button @click="goToTrademarkSearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold hover:bg-[#80171d] transition-colors shadow-md">
+            <button @click="goToTrademarkSearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold  transition-colors shadow-md">
               ค้นหาด้วยรูปภาพที่นี่
               <div class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[10px]">→</div>
             </button>

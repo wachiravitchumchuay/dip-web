@@ -523,10 +523,47 @@ html.dark svg path {
    ========================================================================== */
 
 /* NavBar & Footer */
-html.dark nav,
+html.dark nav {
+  background-color: #000000 !important;
+  border-color: #FFD700 !important;
+}
+
 html.dark footer {
-  background-color: #000000 !important; /* แก้: #1a1a1a -> #000000 */
-  border-color: #FFD700 !important; /* แก้: #404040 -> #FFD700 */
+  background-color: #000000 !important;
+  color: #FFD700 !important;
+  border: none !important;
+}
+
+/* บังคับทุกอย่างใน footer เป็นสีทอง */
+html.dark footer *,
+html.dark footer div,
+html.dark footer span,
+html.dark footer a,
+html.dark footer p {
+  color: #FFD700 !important;
+}
+
+/* SVG/ไอคอนใน footer ต้องเป็นสีทอง */
+html.dark footer svg,
+html.dark footer svg *,
+html.dark footer svg path,
+html.dark footer svg circle {
+  stroke: #FFD700 !important;
+  fill: #FFD700 !important;
+}
+
+html.dark footer .app-bg-gray-2 {
+  background-color: #000000 !important;
+  border: none !important;
+}
+
+html.dark footer .app-bg-red {
+  background-color: #000000 !important;
+  border: none !important;
+}
+
+html.dark footer .app-text-red {
+  color: #FFD700 !important;
 }
 
 /* Inputs, Selects & Textareas */
@@ -636,7 +673,7 @@ html.dark img[src*="DIP-Logo"] {
 
 /* 1. แถบเงื่อนไขการค้นหา (Summary Bar) -> พื้นเหลือง / ตัวหนังสือดำ */
 html.dark .app-bg-gray-2 {
-    background-color: #FFD700 !important;
+    background-color: #000000 !important;
     border: 1px solid #FFD700 !important;
 }
 /* บังคับตัวหนังสือข้างในแถบนี้ให้เป็นดำ */
@@ -644,7 +681,7 @@ html.dark .app-bg-gray-2 *,
 html.dark .app-bg-gray-2 .font-semibold,
 html.dark .app-bg-gray-2 span,
 html.dark .app-bg-gray-2 div {
-    color: #000000 !important;
+    color: #FFD700 !important;
 }
 
 /* 2. ปุ่ม "แก้ไขเงื่อนไข" (Edit Button) -> พื้นดำ / ตัวหนังสือเหลือง */
@@ -730,4 +767,403 @@ html.dark .bg-\[\#F8D7DA\] {
     background-color: #000000 !important; /* แก้: #333333 -> #000000 */
     border: 1px solid #FFD700 !important;
     color: #FFD700 !important;
+}
+
+/* ============================================================================
+   ADDITIONAL DARK MODE FIXES - COMPREHENSIVE
+   ============================================================================ */
+
+/* Dialog & Modal backgrounds */
+html.dark .bg-white {
+  background-color: #000000 !important;
+}
+
+html.dark .text-\[\#111\] {
+  color: #FFD700 !important;
+}
+
+/* Loading Overlay */
+html.dark .bg-\[\#D9D9D9\] {
+  background-color: #FFD700 !important;
+}
+
+html.dark .bg-\[\#B21F29\] {
+  background-color: #FFD700 !important;
+}
+
+html.dark .text-\[\#B21F29\] {
+  color: #FFD700 !important;
+}
+
+/* Pagination */
+html.dark .text-gray-600 {
+  color: #FFD700 !important;
+}
+
+html.dark .text-gray-400 {
+  color: rgba(255, 215, 0, 0.7) !important;
+}
+
+html.dark .border-gray-300 {
+  border-color: #FFD700 !important;
+}
+
+html.dark .text-red-700 {
+  color: #FFD700 !important;
+}
+
+html.dark svg[stroke="\#b91c1c"] {
+  stroke: #FFD700 !important;
+}
+
+/* Search Cards */
+html.dark .border-\[\#B21F29\] {
+  border-color: #FFD700 !important;
+}
+
+/* ไอคอนวงกลมใน Search Cards ต้องเป็นพื้นทองกับไอคอนสีดำ */
+html.dark .h-12.w-12.rounded-full {
+  background-color: #FFD700 !important;
+}
+
+html.dark .h-12.w-12.rounded-full svg,
+html.dark .h-12.w-12.rounded-full svg *,
+html.dark .h-12.w-12.rounded-full svg path,
+html.dark .h-12.w-12.rounded-full svg circle {
+  stroke: #000000 !important;
+  fill: #000000 !important;
+}
+
+/* ไอคอนที่มีพื้นหลังสีแดง (bg-[#B21F29]) ให้เป็นพื้นทองแทน */
+html.dark .bg-\[\#B21F29\].rounded-full,
+html.dark .flex.h-12.w-12.items-center.justify-center.rounded-full {
+  background-color: #FFD700 !important;
+}
+
+/* Notice/Alert Boxes */
+html.dark .border-\[\#FFC5C5\],
+html.dark .border-\[\#E08A8A\] {
+  border-color: #FFD700 !important;
+}
+
+html.dark .bg-\[\#FFECEB\],
+html.dark .bg-\[\#F8D7DA\] {
+  background-color: #000000 !important;
+}
+
+html.dark .text-\[\#D12E2E\],
+html.dark .text-\[\#C0272D\] {
+  color: #FFD700 !important;
+}
+
+/* File Upload Area */
+html.dark .border-\[\#BDBDBD\] {
+  border-color: #FFD700 !important;
+}
+
+html.dark .text-\[\#333\] {
+  color: #FFD700 !important;
+}
+
+html.dark .bg-\[\#E8F5E9\] {
+  background-color: #000000 !important;
+  border-color: #FFD700 !important;
+}
+
+html.dark .text-\[\#1B8A6B\] {
+  color: #FFD700 !important;
+}
+
+/* Tab Buttons */
+html.dark .bg-\[\#E6E6E6\] {
+  background-color: #000000 !important;
+}
+
+html.dark .bg-\[\#A50F19\] {
+  background-color: #FFD700 !important;
+  color: #000000 !important;
+}
+
+html.dark .border-\[\#FE572F\] {
+  border-color: #FFD700 !important;
+}
+
+html.dark .bg-\[\#FFEFEB\] {
+  background-color: #000000 !important;
+}
+
+html.dark .text-\[\#FE572F\] {
+  color: #FFD700 !important;
+}
+
+/* Result Cards & Text Colors */
+html.dark .text-\[\#666666\] {
+  color: rgba(255, 215, 0, 0.7) !important;
+}
+
+html.dark .text-\[\#333333\] {
+  color: #FFD700 !important;
+}
+
+html.dark .text-\[\#999999\] {
+  color: rgba(255, 215, 0, 0.7) !important;
+}
+
+html.dark .border-\[\#D9D9D9\] {
+  border-color: #FFD700 !important;
+}
+
+/* Button Variants */
+html.dark .bg-\[\#F16522\] {
+  background-color: #FFD700 !important;
+  color: #000000 !important;
+}
+
+html.dark .bg-\[\#FF542B\] {
+  background-color: #FFD700 !important;
+  color: #000000 !important;
+}
+
+html.dark .text-\[\#555\] {
+  color: rgba(255, 215, 0, 0.7) !important;
+}
+
+html.dark .bg-\[\#FCE8EA\] {
+  background-color: #000000 !important;
+  border-color: #FFD700 !important;
+}
+
+/* Additional Text Colors */
+html.dark .text-\[\#888\] {
+  color: rgba(255, 215, 0, 0.7) !important;
+}
+
+html.dark .text-black {
+  color: #FFD700 !important;
+}
+
+/* Info Icons */
+html.dark .border-\[\#FF2D37\] {
+  border-color: #FFD700 !important;
+}
+
+html.dark .text-\[\#FF2D37\] {
+  color: #FFD700 !important;
+}
+
+/* SVG Colors */
+html.dark svg[stroke="#FF5C39"] {
+  stroke: #FFD700 !important;
+}
+
+/* Image Search Modal */
+html.dark .bg-\[\#222\] {
+  background-color: #000000 !important;
+}
+
+html.dark .text-gray-800 {
+  color: #FFD700 !important;
+}
+
+html.dark .text-gray-500 {
+  color: rgba(255, 215, 0, 0.7) !important;
+}
+
+html.dark .hover\:text-gray-600:hover {
+  color: #FFD700 !important;
+}
+
+html.dark .hover\:text-\[\#FF5C39\]:hover {
+  color: #FFD700 !important;
+}
+
+html.dark .hover\:bg-\[\#FFF0ED\]:hover {
+  background-color: rgba(255, 215, 0, 0.1) !important;
+}
+
+html.dark .hover\:border-\[\#FF5C39\/20\]:hover {
+  border-color: #FFD700 !important;
+}
+
+html.dark .bg-\[\#1B8A6B\] {
+  background-color: #FFD700 !important;
+  color: #000000 !important;
+}
+
+html.dark .hover\:bg-\[\#157056\]:hover {
+  background-color: #FFD700 !important;
+  color: #000000 !important;
+}
+
+/* Gray backgrounds */
+html.dark .bg-gray-50,
+html.dark .bg-gray-100 {
+  background-color: #000000 !important;
+}
+
+/* Hero Banner override (keep gray) */
+html.dark .bg-gray-400,
+html.dark .bg-gray-500,
+html.dark .bg-gray-600 {
+  background-color: #1a1a1a !important;
+}
+
+/* ============================================================================
+   FIX: ปัญหาที่เจอจากรูป (เพิ่มเข้ามาใหม่)
+   ============================================================================ */
+
+/* 1. แก้ปุ่มแดง "เริ่มการค้นหา" ให้เป็นพื้นทอง ตัวหนังสือดำ */
+html.dark button.bg-\[\#B21F29\]:not(.rounded-full),
+html.dark .app-bg-red:not(.rounded-full),
+html.dark .bg-\[\#B21F29\]:not(.rounded-full) {
+  background-color: #FFD700 !important;
+  border-color: #FFD700 !important;
+}
+
+html.dark button.bg-\[\#B21F29\]:not(.rounded-full) *,
+html.dark .app-bg-red:not(.rounded-full) *,
+html.dark .bg-\[\#B21F29\]:not(.rounded-full) * {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* 2. แก้ Tab Active (bg-[#A50F19]) ให้เป็นพื้นทอง */
+html.dark .bg-\[\#A50F19\],
+html.dark button.bg-\[\#A50F19\] {
+  background-color: #FFD700 !important;
+  color: #000000 !important;
+  border-color: #FFD700 !important;
+}
+
+html.dark .bg-\[\#A50F19\] *,
+html.dark button.bg-\[\#A50F19\] * {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* 3. แก้ Tab Container (bg-[#E6E6E6]) ให้เป็นพื้นดำ */
+html.dark .bg-\[\#E6E6E6\] {
+  background-color: #000000 !important;
+  border: 1px solid #FFD700 !important;
+}
+
+/* 4. แก้กล่องสีขาวตรงกลาง */
+html.dark .bg-white {
+  background-color: #000000 !important;
+  border-color: #FFD700 !important;
+}
+
+/* 5. แก้ไอคอนวงกลม - ให้ SVG เป็นสีดำ (override global SVG rule) */
+html.dark .bg-\[\#B21F29\].rounded-full svg,
+html.dark .bg-\[\#B21F29\].rounded-full svg *,
+html.dark .bg-\[\#B21F29\].rounded-full svg path,
+html.dark .h-12.w-12.rounded-full svg,
+html.dark .h-12.w-12.rounded-full svg *,
+html.dark .h-12.w-12.rounded-full svg path,
+html.dark .flex.h-12.w-12.items-center.justify-center.rounded-full svg,
+html.dark .flex.h-12.w-12.items-center.justify-center.rounded-full svg *,
+html.dark .flex.h-12.w-12.items-center.justify-center.rounded-full svg path {
+  stroke: #000000 !important;
+  fill: #000000 !important;
+  color: #000000 !important;
+}
+
+/* 6. แก้ไอคอนที่มี fill (ถ้ามี) */
+html.dark .bg-\[\#B21F29\].rounded-full svg rect,
+html.dark .bg-\[\#B21F29\].rounded-full svg circle,
+html.dark .h-12.w-12.rounded-full svg rect,
+html.dark .h-12.w-12.rounded-full svg circle {
+  fill: transparent !important;
+}
+
+/* 7. แก้ปุ่ม app-button-fit ทั่วไป */
+html.dark .app-button,
+html.dark .app-button-fit {
+  background-color: #FFD700 !important;
+  color: #000000 !important;
+  border-color: #FFD700 !important;
+}
+
+html.dark .app-button *,
+html.dark .app-button-fit *,
+html.dark .app-button svg,
+html.dark .app-button-fit svg {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* 8. แก้ปุ่ม inactive (bg-white) */
+html.dark button.bg-white {
+  background-color: transparent !important;
+  border: 1px solid #FFD700 !important;
+  color: #FFD700 !important;
+}
+
+html.dark button.bg-white svg,
+html.dark button.bg-white svg path {
+  stroke: #FFD700 !important;
+}
+
+/* 9. แก้ Footer - ไม่มี border */
+html.dark footer {
+  background-color: #000000 !important;
+  color: #FFD700 !important;
+}
+
+html.dark footer *,
+html.dark footer div,
+html.dark footer span,
+html.dark footer a,
+html.dark footer p {
+  color: #FFD700 !important;
+}
+
+html.dark footer svg,
+html.dark footer svg path,
+html.dark footer svg circle {
+  stroke: #FFD700 !important;
+  fill: #FFD700 !important;
+}
+
+html.dark footer .app-bg-gray-2,
+html.dark footer .app-bg-red {
+  background-color: #000000 !important;
+}
+
+/* ==========================================================================
+   FINAL NUCLEAR FIX: HIGH CONTRAST (BLACK & GOLD)
+   แก้ไขไอคอนหาย + ล้างสีแดงทุกเฉดแบบถอนรากถอนโคน
+   ========================================================================== */
+
+/* 1. จัดการปุ่มแดงเจ้าปัญหา (#9B1C24) และปุ่มแดงอื่นๆ ทั้งหมด */
+html.dark body [class*="bg-[#9B1C24]"],       /* จับ Class สีนี้โดยเฉพาะ */
+html.dark body [class*="bg-app-red"],         /* จับ Class สีแดงหลัก */
+html.dark body button[class*="bg-[#9B1C24]"],
+html.dark body button.bg-app-red {
+    background-color: #FFD700 !important;      /* บังคับพื้นเหลือง */
+    background-image: none !important;         /* ⚠️ สำคัญ: ลบ Gradient/รูปพื้นหลังทิ้ง */
+    border: 1px solid #FFD700 !important;      /* ขอบเหลือง */
+    color: #000000 !important;                 /* ตัวหนังสือดำ */
+    box-shadow: none !important;               /* ลบเงาที่อาจกวนตา */
+}
+
+/* 2. กู้ชีพไอคอนที่หายไป (แก้ fill: transparent) */
+html.dark body [class*="bg-[#9B1C24]"] *,
+html.dark body button[class*="bg-[#9B1C24]"] *,
+html.dark body .bg-app-red * {
+    color: #FFD700 !important;            /* ตัวหนังสือดำ */
+    stroke: #FFD700 !important;           /* เส้นไอคอนดำ */
+    fill: transparent !important;             /* ⚠️ แก้: เทสีไอคอนดำ (ห้าม transparent) */
+    border-color: #FFD700 !important;     /* ขอบข้างในดำ */
+}
+
+/* 3. เก็บตกไอคอนที่อาจจะใช้ stroke อย่างเดียว (กันเหนียว) */
+html.dark body [class*="bg-[#9B1C24]"] svg path,
+html.dark body button[class*="bg-[#9B1C24]"] svg path {
+    stroke: #000000 !important;
+    fill: #000000 !important;
+}
+
+html.dark .bg-\[\#F8F9FA\] {
+    background-color: #2d2d2d;
 }
