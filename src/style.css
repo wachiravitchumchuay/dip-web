@@ -1022,7 +1022,6 @@ html.dark .bg-\[\#B21F29\]:not(.rounded-full) {
 }
 
 html.dark button.bg-\[\#B21F29\]:not(.rounded-full) *,
-html.dark .app-bg-red:not(.rounded-full) *,
 html.dark .bg-\[\#B21F29\]:not(.rounded-full) * {
   color: #000000 !important;
   stroke: #000000 !important;
@@ -1168,4 +1167,10 @@ html.dark body button[class*="bg-[#9B1C24]"] svg path {
 
 html.dark .bg-\[\#F8F9FA\] {
     background-color: #2d2d2d;
+}
+
+html.dark .app-bg-red:not(.rounded-full),
+html.dark .app-bg-red:not(.rounded-full) {
+    background-color: #000000 !important;
+    color: #FFD700 !important;
 }
