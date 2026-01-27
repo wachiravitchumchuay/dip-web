@@ -402,7 +402,6 @@ html.dark div[style*="background-image"][style*="Banner"]::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 40%, transparent 70%);
   z-index: 1;
   border-radius: 24px;
   pointer-events: none;
