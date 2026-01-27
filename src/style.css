@@ -422,8 +422,7 @@ html.dark .app-bg-gray-2 {
 }
 
 html.dark .app-bg-gray-2 *,
-html.dark .app-bg-gray-2 span,
-html.dark .app-bg-gray-2 div {
+html.dark .app-bg-gray-2 span {
   color: #FFD700;
 }
 
