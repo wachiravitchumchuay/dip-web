@@ -106,7 +106,7 @@
 
         <div class="border border-[#E0E0E0] rounded-b-xl rounded-tr-xl p-[32px] bg-white shadow-sm mb-[32px]">
 
-          <div v-show="activeTab !== 'trademark'">
+          <div v-show="activeTab === 'basic'">
             <div class="flex items-center gap-[8px] mb-[24px] px-8 py-4 border  border-[#E0E0E0] pb-4">
               <span class="text-18 font-bold text-[#333]">เครื่องหมายการค้า</span>
               <span class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#999] font-serif text-[12px] font-black leading-none text-[#999] cursor-help" title="ข้อมูลเพิ่มเติม">i</span>
@@ -171,12 +171,19 @@
             </div>
           </div>
 
+          <div v-show="activeTab === 'similarity'">
+            <SimilarityTab
+              :keyword="keyword"
+              @submit="onSimilaritySubmit"
+            />
+          </div>
+
           <div v-show="activeTab === 'trademark'">
             <TrademarkUploadSection ref="uploadSectionRef" @file-selected="onFileSelected" />
           </div>
         </div>
 
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center" v-if="activeTab !== 'similarity'">
           <button
             type="button"
             class="flex items-center gap-2 text-gray-500 hover:text-gray-700 px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
@@ -208,7 +215,8 @@
 import { ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import SearchConditionItem from './SearchConditionItem.vue'
-import TrademarkUploadSection from '../components/search/forms/advanced/tabs/TrademarkUploadSection.vue' // Import ไฟล์ใหม่เข้ามาแทน
+import TrademarkUploadSection from '../components/search/forms/advanced/tabs/TrademarkUploadSection.vue'
+import SimilarityTab from '../components/search/forms/advanced/tabs/SimilarityTab.vue' // Import ไฟล์นี้เพิ่มเข้ามา
 import LoadingOverlay from '../components/ui/LoadingOverlay.vue'
 
 const route = useRoute()
@@ -312,6 +320,21 @@ function onSearch() {
       query: queryParams
     })
 
+    isSearching.value = false
+  }, 2000)
+}
+
+// ฟังก์ชันสำหรับรับค่า Submit จาก SimilarityTab (เพิ่มเข้ามาใหม่)
+function onSimilaritySubmit(payload: any) {
+  isSearching.value = true
+  setTimeout(() => {
+    router.push({
+      path: '/result-1',
+      query: {
+        mode: 'similarity',
+        data: JSON.stringify(payload)
+      }
+    })
     isSearching.value = false
   }, 2000)
 }
