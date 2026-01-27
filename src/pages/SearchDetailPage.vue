@@ -48,7 +48,7 @@
         <div class="flex gap-[8px] mb-0 border-b border-[#E0E0E0] pb-0 overflow-x-auto">
           <button
             type="button"
-            class="px-[24px] py-[12px] rounded-t-lg flex items-center gap-2 transition-all relative top-[1px] whitespace-nowrap"
+            class="px-6 py-2 border border-gray-300 rounded-lg rounded-t-lg flex items-center gap-2 transition-all relative top-[1px] whitespace-nowrap"
             :class="
               activeTab === 'basic'
                 ? 'bg-[#FFECEB] text-[#B21F29] font-bold border-b-4 border-[#FF5C39]'
@@ -69,7 +69,7 @@
 
           <button
             type="button"
-            class="px-[24px] py-[12px] rounded-t-lg flex items-center gap-2 transition-all relative top-[1px] whitespace-nowrap"
+            class="px-8 py-4 border border-gray-300 rounded-lg rounded-t-lg flex items-center gap-2 transition-all relative top-[1px] whitespace-nowrap"
             :class="
               activeTab === 'similarity'
                 ? 'bg-[#FFECEB] text-[#B21F29] font-bold border-b-4 border-[#FF5C39]'
@@ -87,7 +87,7 @@
 
           <button
             type="button"
-            class="px-[24px] py-[12px] rounded-t-lg flex items-center gap-2 transition-all relative top-[1px] whitespace-nowrap"
+            class="rounded-t-lg flex items-center gap-2 transition-all px-8 py-4 border border-gray-300 rounded-lg relative top-[1px] whitespace-nowrap"
             :class="
               activeTab === 'trademark'
                 ? 'bg-[#FFECEB] text-[#B21F29] font-bold border-b-4 border-[#FF5C39]'
@@ -107,7 +107,7 @@
         <div class="border border-[#E0E0E0] rounded-b-xl rounded-tr-xl p-[32px] bg-white shadow-sm mb-[32px]">
 
           <div v-show="activeTab !== 'trademark'">
-            <div class="flex items-center gap-[8px] mb-[24px] border-b border-[#E0E0E0] pb-4">
+            <div class="flex items-center gap-[8px] mb-[24px] px-8 py-4 border  border-[#E0E0E0] pb-4">
               <span class="text-18 font-bold text-[#333]">เครื่องหมายการค้า</span>
               <span class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#999] font-serif text-[12px] font-black leading-none text-[#999] cursor-help" title="ข้อมูลเพิ่มเติม">i</span>
             </div>
@@ -153,12 +153,12 @@
             <div class="mb-4 relative">
               <button
                 type="button"
-                class="flex items-center gap-2 text-[#B21F29] hover:text-[#D14022] font-medium transition-colors"
+                class="flex items-center gap-2 text-[#B21F29] hover:text-[#D14022] px-6 py-2 border border-gray-300 rounded-lg font-medium transition-colors"
                 @click="toggleGroupDropdown"
               >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" circle cx="12" cy="12" r="11"/>
                 </svg>
                 <span>เพิ่มกลุ่มเงื่อนไข</span>
               </button>
