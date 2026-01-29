@@ -14,7 +14,7 @@ const STORAGE_KEY = 'theme'
 const theme = ref<Theme>('light')
 
 const themeLabel = computed(() => {
-  return theme.value === 'dark' ? 'Dark' : 'Light'
+  return theme.value === 'dark' ? 'โหมดผู้พิการทางสายตา' : 'โหมดปกติ'
 })
 
 function readThemeFromLocalStorage(): Theme | null {
