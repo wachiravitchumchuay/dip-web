@@ -32,7 +32,7 @@
 
       <div
         class="relative w-full rounded-[24px] overflow-hidden min-h-[680px] flex items-center justify-end p-[40px]"
-        style="background-color: #B21F29;"
+        style="background-color: #b21f29"
       >
         <div
           class="absolute inset-0 w-full h-full"
@@ -50,48 +50,106 @@
           <div class="bg-white rounded-[16px] p-[24px] text-black shadow-xl">
             <div class="flex justify-between items-start mb-1">
               <span class="text-[22px] font-bold">ค้นหารูปแบบทั่วไป</span>
-              <div  class="text-[#B21F29]">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+              <div class="text-[#B21F29]">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                  ></path>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                </svg>
               </div>
             </div>
             <p class="text-[14px] text-gray-400 mb-5 leading-tight font-light">
-              วิธีการตรวจสอบเบื้องต้นง่ายๆ และสะดวกรวดเร็ว<br/>โดยผลที่ได้จะไม่ละเอียดเท่ากับการค้นหาแบบอื่นๆ
+              วิธีการตรวจสอบเบื้องต้นง่ายๆ และสะดวกรวดเร็ว<br />โดยผลที่ได้จะไม่ละเอียดเท่ากับการค้นหาแบบอื่นๆ
             </p>
-            <button @click="goToBasicSearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold  transition-colors shadow-md">
+            <button
+              @click="goToBasicSearch"
+              class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold transition-colors shadow-md"
+            >
               เริ่มการค้นหา
-              <div class="w-5 h-5 rounded-full border flex items-center justify-center text-[10px]">→</div>
+              <div class="w-5 h-5 rounded-full border flex items-center justify-center text-[10px]">
+                →
+              </div>
             </button>
           </div>
 
           <div class="bg-white rounded-[16px] p-[24px] text-black shadow-xl">
             <div class="flex justify-between items-start mb-1">
-              <span class="text-[22px] font-bold leading-tight">ตรวจสอบความเหมือนคล้าย<br/>ของเครื่องหมายการค้า</span>
+              <span class="text-[22px] font-bold leading-tight"
+                >ตรวจสอบความเหมือนคล้าย<br />ของเครื่องหมายการค้า</span
+              >
               <div class="text-[#B21F29]">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                  ></path>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                </svg>
               </div>
             </div>
             <p class="text-[14px] text-gray-400 mb-5 leading-tight font-light">
-              วิธีการตรวจสอบโดยกำหนดเงื่อนไขที่มีความละเอียด<br/>เพิ่มมากขึ้นตามเงื่อนไขที่กำหนด
+              วิธีการตรวจสอบโดยกำหนดเงื่อนไขที่มีความละเอียด<br />เพิ่มมากขึ้นตามเงื่อนไขที่กำหนด
             </p>
-            <button @click="goToSimilaritySearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold  transition-colors shadow-md">
+            <button
+              @click="goToSimilaritySearch"
+              class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold transition-colors shadow-md"
+            >
               เริ่มการค้นหา
-              <div class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[12px]">→</div>
+              <div
+                class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[12px]"
+              >
+                →
+              </div>
             </button>
           </div>
 
           <div class="bg-white rounded-[16px] p-[24px] text-black shadow-xl">
             <div class="flex justify-between items-start mb-1">
-              <span class="text-[22px] font-bold leading-tight">ตรวจสอบรูปเครื่องหมาย<br/>การค้า</span>
+              <span class="text-[22px] font-bold leading-tight"
+                >ตรวจสอบรูปเครื่องหมาย<br />การค้า</span
+              >
               <div class="text-[#B21F29]">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
               </div>
             </div>
             <p class="text-[14px] text-gray-400 mb-5 leading-tight font-light">
-              วิธีการตรวจสอบด้วยรูปภาพของเครื่องหมายการค้า<br/>เพียงอย่างเดียว
+              วิธีการตรวจสอบด้วยรูปภาพของเครื่องหมายการค้า<br />เพียงอย่างเดียว
             </p>
-            <button @click="goToTrademarkSearch" class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold  transition-colors shadow-md">
+            <button
+              @click="goToTrademarkSearch"
+              class="w-full bg-[#9B1C24] text-white rounded-[12px] py-2.5 flex items-center justify-center gap-2 font-bold transition-colors shadow-md"
+            >
               ค้นหาด้วยรูปภาพที่นี่
-              <div class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[10px]">→</div>
+              <div
+                class="w-5 h-5 rounded-full border border-white flex items-center justify-center text-[10px]"
+              >
+                →
+              </div>
             </button>
           </div>
         </div>
@@ -112,11 +170,19 @@ function onQuickSearch() {
     router.push({ path: '/search-detail', query: { q: keyword.value, mode: 'quick' } })
   }
 }
-function goToBasicSearch() { router.push({ path: '/search-detail', query: { mode: 'basic' } }) }
-function goToSimilaritySearch() { router.push({ path: '/search-detail', query: { mode: 'similarity' } }) }
-function goToTrademarkSearch() { router.push({ path: '/search-detail', query: { mode: 'trademark' } }) }
+function goToBasicSearch() {
+  router.push({ path: '/search-detail', query: { mode: 'basic' } })
+}
+function goToSimilaritySearch() {
+  router.push({ path: '/search-detail', query: { mode: 'similarity' } })
+}
+function goToTrademarkSearch() {
+  router.push({ path: '/search-detail', query: { mode: 'trademark' } })
+}
 </script>
 
 <style scoped>
-.app-text-red { color: #B21F29; }
+.app-text-red {
+  color: #b21f29;
+}
 </style>

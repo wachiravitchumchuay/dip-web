@@ -12,7 +12,7 @@
 
   /* Light Mode Palette */
   --app-red: #b21f29;
-  --app-red-2: #ffCDD1;
+  --app-red-2: #ffcdd1;
   --app-orange: #fe572f;
   --app-orange-bg: #ffefeb;
   --app-green: #1d987c;
@@ -31,19 +31,19 @@ html.dark {
   /* Structure Colors */
   --bg-primary: #000000;
   --bg-secondary: #000000;
-  --text-primary: #FFD700;
-  --text-secondary: #FFD700;
-  --border-color: #FFD700;
+  --text-primary: #ffd700;
+  --text-secondary: #ffd700;
+  --border-color: #ffd700;
   --card-bg: #000000;
 
   /* Palette Override */
-  --app-red: #FFD700;
-  --app-red-2: #FFD700;
-  --app-orange: #FFD700;
+  --app-red: #ffd700;
+  --app-red-2: #ffd700;
+  --app-orange: #ffd700;
   --app-orange-bg: #000000;
-  --app-green: #FFD700;
-  --app-gray: #FFD700;
-  --app-gray-2: #FFD700;
+  --app-green: #ffd700;
+  --app-gray: #ffd700;
+  --app-gray-2: #ffd700;
   --app-gray-bg: #000000;
   --app-gray-bg-2: #000000;
   --app-gray-bg-3: #000000;
@@ -70,12 +70,14 @@ html {
 
 body {
   background-color: #ffffff;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 html.dark body {
   background-color: #000000;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 footer {
@@ -91,10 +93,18 @@ div {
    ============================================================================ */
 
 /* Text Sizes */
-.text-16 { font-size: 1em; }
-.text-18 { font-size: 1.125em; }
-.text-24 { font-size: 1.5em; }
-.text-32 { font-size: 2em; }
+.text-16 {
+  font-size: 1em;
+}
+.text-18 {
+  font-size: 1.125em;
+}
+.text-24 {
+  font-size: 1.5em;
+}
+.text-32 {
+  font-size: 2em;
+}
 
 /* Combined Utilities */
 .app-orange {
@@ -129,9 +139,15 @@ html.dark .app-green {
 }
 
 /* Text Colors */
-.app-text-red { color: #b21f29; }
-.app-text-red-2 { color: #FFCDD1; }
-.app-text-orange { color: #FE572F; }
+.app-text-red {
+  color: #b21f29;
+}
+.app-text-red-2 {
+  color: #ffcdd1;
+}
+.app-text-orange {
+  color: #fe572f;
+}
 
 html.dark .app-text-red,
 html.dark .app-text-red-2,
@@ -140,20 +156,44 @@ html.dark .app-text-orange {
 }
 
 /* Background Colors */
-.app-bg-yellow { background-color: #f5af2d; }
-.app-bg-red { background-color: #b21f29; }
-.app-bg-red-2 { background-color: #FFCDD1; }
-.app-bg-green { background-color: #1d987c; }
-.app-bg-gray { background-color: #e6e6e6; }
-.app-bg-gray-2 { background-color: #f4f4f4; }
-.app-bg-gray-3 { background-color: #EBEBEB; }
-.app-bg-orange { background-color: #FFEFEB; }
+.app-bg-yellow {
+  background-color: #f5af2d;
+}
+.app-bg-red {
+  background-color: #b21f29;
+}
+.app-bg-red-2 {
+  background-color: #ffcdd1;
+}
+.app-bg-green {
+  background-color: #1d987c;
+}
+.app-bg-gray {
+  background-color: #e6e6e6;
+}
+.app-bg-gray-2 {
+  background-color: #f4f4f4;
+}
+.app-bg-gray-3 {
+  background-color: #ebebeb;
+}
+.app-bg-orange {
+  background-color: #ffefeb;
+}
 
 /* Border Colors */
-.app-border-gray { border-color: #d9d9d9; }
-.app-border-gray-2 { border-color: #A0A0A0; }
-.app-border-red { border-color: #B21F29; }
-.app-border-orange { border-color: #FE572F; }
+.app-border-gray {
+  border-color: #d9d9d9;
+}
+.app-border-gray-2 {
+  border-color: #a0a0a0;
+}
+.app-border-red {
+  border-color: #b21f29;
+}
+.app-border-orange {
+  border-color: #fe572f;
+}
 
 /* ============================================================================
    FORM CONTROLS
@@ -174,13 +214,13 @@ html.dark .app-text-orange {
   background-repeat: no-repeat;
   background-position: right 16px center;
   background-size: 24px 24px;
-  background-image: url("/circle-arrow-down-01.svg");
+  background-image: url('/circle-arrow-down-01.svg');
 }
 
 html.dark .app-select {
   background-color: #000000;
-  border-color: #FFD700;
-  color: #FFD700;
+  border-color: #ffd700;
+  color: #ffd700;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FFD700' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
 }
 
@@ -201,12 +241,12 @@ html.dark .app-select {
 }
 
 html.dark .app-input,
-html.dark input:not([type="checkbox"]),
+html.dark input:not([type='checkbox']),
 html.dark select,
 html.dark textarea {
   background-color: #000000;
-  border-color: #FFD700;
-  color: #FFD700;
+  border-color: #ffd700;
+  color: #ffd700;
 }
 
 html.dark .app-input::placeholder,
@@ -253,7 +293,7 @@ html.dark #app,
 html.dark header,
 html.dark section {
   background-color: #000000;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 /* Text Elements */
@@ -265,23 +305,23 @@ html.dark span,
 html.dark div,
 html.dark label,
 html.dark a {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 /* Borders */
 html.dark .border,
 html.dark .border-dashed,
 html.dark .rounded-full {
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 /* SVG Icons */
 html.dark svg {
-  stroke: #FFD700;
+  stroke: #ffd700;
 }
 
 html.dark svg path {
-  stroke: #FFD700;
+  stroke: #ffd700;
 }
 
 /* Cards & White Backgrounds */
@@ -296,17 +336,17 @@ html.dark .shadow-md,
 html.dark .shadow-lg,
 html.dark .shadow-xl {
   box-shadow: none;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
 
 /* Checkboxes */
-html.dark input[type="checkbox"] {
-  border-color: #FFD700;
+html.dark input[type='checkbox'] {
+  border-color: #ffd700;
   background-color: #000000;
 }
 
-html.dark input[type="checkbox"]:checked {
-  background-color: #FFD700;
+html.dark input[type='checkbox']:checked {
+  background-color: #ffd700;
 }
 
 /* Scrollbars */
@@ -316,13 +356,13 @@ html.dark ::-webkit-scrollbar {
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background-color: #FFD700;
+  background-color: #ffd700;
   border-radius: 6px;
   border: 2px solid #000000;
 }
 
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background-color: #FFD700;
+  background-color: #ffd700;
 }
 
 html.dark ::-webkit-scrollbar-track {
@@ -330,7 +370,7 @@ html.dark ::-webkit-scrollbar-track {
 }
 
 html.dark ::selection {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: #000000;
 }
 
@@ -340,12 +380,12 @@ html.dark ::selection {
 
 html.dark nav {
   background-color: #000000;
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 html.dark footer {
   background-color: #000000;
-  color: #FFD700;
+  color: #ffd700;
   border: none;
 }
 
@@ -354,13 +394,13 @@ html.dark footer div,
 html.dark footer span,
 html.dark footer a,
 html.dark footer p {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 html.dark footer svg,
 html.dark footer svg path {
-  stroke: #FFD700;
-  fill: #FFD700;
+  stroke: #ffd700;
+  fill: #ffd700;
 }
 
 html.dark footer .app-bg-gray-2,
@@ -375,31 +415,31 @@ html.dark .app-bg-gray,
 html.dark .app-bg-gray-2,
 html.dark .app-bg-gray-3 {
   background-color: #000000;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
 
 html.dark .app-bg-red,
 html.dark .app-bg-red-2 {
   background-color: #000000;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
 
 /* ============================================================================
    BANNER
    ============================================================================ */
 
-html.dark header img[src*="Banner"],
-html.dark img[src*="Banner"] {
+html.dark header img[src*='Banner'],
+html.dark img[src*='Banner'] {
   filter: grayscale(100%) brightness(0.6);
   opacity: 1;
 }
 
-html.dark div[style*="background-image"][style*="Banner"] {
+html.dark div[style*='background-image'][style*='Banner'] {
   filter: grayscale(100%);
 }
 
-html.dark div[style*="background-image"][style*="Banner"]::after {
-  content: "";
+html.dark div[style*='background-image'][style*='Banner']::after {
+  content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -407,8 +447,8 @@ html.dark div[style*="background-image"][style*="Banner"]::after {
   pointer-events: none;
 }
 
-html.dark img[src*="DIP-Logo"],
-html.dark img[src*="TH-Flag"] {
+html.dark img[src*='DIP-Logo'],
+html.dark img[src*='TH-Flag'] {
   filter: none;
 }
 
@@ -418,24 +458,24 @@ html.dark img[src*="TH-Flag"] {
 
 html.dark .app-bg-gray-2 {
   background-color: #000000;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
 
 html.dark .app-bg-gray-2 *,
 html.dark .app-bg-gray-2 span {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 /* ปุ่ม "แก้ไขเงื่อนไข" ภายใน Summary Bar */
 html.dark .app-bg-gray-2 button.app-button-fit {
   background-color: #000000;
-  border-color: #FFD700;
-  color: #FFD700;
+  border-color: #ffd700;
+  color: #ffd700;
 }
 
 html.dark .app-bg-gray-2 button.app-button-fit svg,
 html.dark .app-bg-gray-2 button.app-button-fit svg path {
-  stroke: #FFD700;
+  stroke: #ffd700;
 }
 
 /* ============================================================================
@@ -444,11 +484,11 @@ html.dark .app-bg-gray-2 button.app-button-fit svg path {
 
 /* Primary Buttons (พื้นเหลือง ข้อความดำ) */
 html.dark .app-button,
-html.dark button[type="submit"],
+html.dark button[type='submit'],
 html.dark button.bg-black {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: #000000;
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 html.dark .app-button *,
@@ -462,15 +502,15 @@ html.dark .app-button svg path {
 html.dark .app-button-fit,
 html.dark button.bg-white {
   background-color: transparent;
-  border: 1px solid #FFD700;
-  color: #FFD700;
+  border: 1px solid #ffd700;
+  color: #ffd700;
 }
 
 html.dark .app-button-fit svg,
 html.dark .app-button-fit svg path,
 html.dark button.bg-white svg,
 html.dark button.bg-white svg path {
-  stroke: #FFD700;
+  stroke: #ffd700;
 }
 
 /* ============================================================================
@@ -479,9 +519,9 @@ html.dark button.bg-white svg path {
 
 /* RED COLORS */
 html.dark .bg-\[\#B21F29\]:not(.rounded-full) {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: #000000;
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 html.dark .bg-\[\#B21F29\]:not(.rounded-full) * {
@@ -490,45 +530,45 @@ html.dark .bg-\[\#B21F29\]:not(.rounded-full) * {
 }
 
 html.dark .text-\[\#B21F29\] {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 html.dark .border-\[\#B21F29\] {
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 /* ORANGE COLORS */
 html.dark .bg-\[\#F16522\],
 html.dark .bg-\[\#FF542B\] {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: #000000;
 }
 
 html.dark .text-\[\#FE572F\],
 html.dark .text-\[\#FF2D37\] {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 html.dark .border-\[\#FE572F\],
 html.dark .border-\[\#FF2D37\] {
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 /* GREEN COLORS */
 html.dark .bg-\[\#1B8A6B\],
 html.dark .bg-\[\#10B981\] {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: #000000;
 }
 
 html.dark .text-\[\#1B8A6B\],
 html.dark .text-\[\#10B981\] {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 /* YELLOW COLORS */
 html.dark .bg-\[\#F5A623\] {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: #000000;
 }
 
@@ -536,7 +576,7 @@ html.dark .bg-\[\#F5A623\] {
 html.dark .bg-\[\#E6E6E6\],
 html.dark .bg-\[\#F8F9FA\] {
   background-color: #000000;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
 
 html.dark .bg-\[\#F9DDE0\],
@@ -545,18 +585,18 @@ html.dark .bg-\[\#FFECEB\],
 html.dark .bg-\[\#D8FFF6\],
 html.dark .bg-\[\#F8D7DA\] {
   background-color: #000000;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
 
 html.dark .bg-\[\#FFEFEB\] {
   background-color: #000000;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
 
 /* TEXT COLORS */
 html.dark .text-\[\#333\],
 html.dark .text-\[\#333333\] {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 html.dark .text-\[\#666666\],
@@ -568,11 +608,11 @@ html.dark .text-\[\#555\] {
 
 html.dark .text-\[\#D12E2E\],
 html.dark .text-\[\#C0272D\] {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 html.dark .text-black {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 html.dark .text-gray-400,
@@ -582,30 +622,30 @@ html.dark .text-gray-600 {
 }
 
 html.dark .text-gray-800 {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 /* BORDERS */
 html.dark .border-\[\#D9D9D9\],
 html.dark .border-\[\#E0E0E0\],
 html.dark .border-\[\#BDBDBD\] {
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 html.dark .border-\[\#FFC5C5\],
 html.dark .border-\[\#E08A8A\] {
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 html.dark .border-gray-300 {
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 /* TAB BUTTONS */
 html.dark .bg-\[\#A50F19\] {
-  background-color: #FFD700;
+  background-color: #ffd700;
   color: #000000;
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 html.dark .bg-\[\#A50F19\] * {
@@ -615,17 +655,17 @@ html.dark .bg-\[\#A50F19\] * {
 
 /* PAGINATION */
 html.dark .text-red-700 {
-  color: #FFD700;
+  color: #ffd700;
 }
 
-html.dark svg[stroke="#b91c1c"] {
-  stroke: #FFD700;
+html.dark svg[stroke='#b91c1c'] {
+  stroke: #ffd700;
 }
 
 /* ICON CIRCLES (วงกลมไอคอน) */
 html.dark .h-12.w-12.rounded-full,
 html.dark .bg-\[\#B21F29\].rounded-full {
-  background-color: #FFD700;
+  background-color: #ffd700;
 }
 
 html.dark .h-12.w-12.rounded-full svg,
@@ -643,7 +683,7 @@ html.dark .text-\[\#888\] {
 
 html.dark .bg-\[\#E8F5E9\] {
   background-color: #000000;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
 }
 
 /* HOVER STATES */
@@ -652,12 +692,12 @@ html.dark .hover\:bg-\[\#157056\]:hover,
 html.dark .hover\:bg-\[\#80171d\]:hover,
 html.dark .hover\:bg-\[\#D14022\]:hover {
   background-color: #000000;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 html.dark .hover\:text-\[\#FF5C39\]:hover,
 html.dark .hover\:text-gray-600:hover {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 html.dark .hover\:bg-\[\#FFF0ED\]:hover {
@@ -665,21 +705,21 @@ html.dark .hover\:bg-\[\#FFF0ED\]:hover {
 }
 
 html.dark .hover\:border-\[\#FF5C39\/20\]:hover {
-  border-color: #FFD700;
+  border-color: #ffd700;
 }
 
 /* SPECIAL BUTTONS (เช่น ปุ่มในการ์ด) */
-html.dark [class*="bg-[#9B1C24]"],
-html.dark button[class*="bg-[#9B1C24]"] {
-  background-color: #FFD700;
+html.dark [class*='bg-[#9B1C24]'],
+html.dark button[class*='bg-[#9B1C24]'] {
+  background-color: #ffd700;
   background-image: none;
-  border: 1px solid #FFD700;
+  border: 1px solid #ffd700;
   color: #000000;
   box-shadow: none;
 }
 
-html.dark [class*="bg-[#9B1C24]"] *,
-html.dark button[class*="bg-[#9B1C24]"] * {
+html.dark [class*='bg-[#9B1C24]'] *,
+html.dark button[class*='bg-[#9B1C24]'] * {
   color: #000000;
   stroke: #000000;
 }

@@ -79,6 +79,6 @@ const emit = defineEmits<{
 // [เพิ่มใหม่] สร้างตัวแปรมาคุม currentPage เพื่อใช้กับ v-model ของ Pagination
 const currentPageModel = computed({
   get: () => props.currentPage,
-  set: (val) => emit('update:page', val)
+  set: (val) => emit('update:page', val),
 })
 </script>

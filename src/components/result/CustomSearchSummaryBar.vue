@@ -5,7 +5,7 @@
     <div>
       <div class="font-semibold">เงื่อนไขในการค้นหา</div>
       <div>
-        ค้นหาด้วย : {{ datasetLabel }}<span v-if="keyword"> /  {{ keyword }}</span>
+        ค้นหาด้วย : {{ datasetLabel }}<span v-if="keyword"> / {{ keyword }}</span>
       </div>
     </div>
 

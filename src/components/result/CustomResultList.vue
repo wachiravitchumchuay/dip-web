@@ -19,12 +19,8 @@
 
           <div class="mt-[10px] leading-relaxed text-[#333333]">
             <div><span class="text-[#666666]">เจ้าของ :</span> {{ item.owner }}</div>
-            <div class="mt-[6px]">
-              <span class="text-[#666666]">จำพวก :</span> {{ item.title }}
-            </div>
-            <div class="mt-[6px]">
-              <span class="text-[#666666]">สถานะ :</span> {{ item.type }}
-            </div>
+            <div class="mt-[6px]"><span class="text-[#666666]">จำพวก :</span> {{ item.title }}</div>
+            <div class="mt-[6px]"><span class="text-[#666666]">สถานะ :</span> {{ item.type }}</div>
           </div>
 
           <button type="button" class="app-button-fit">
@@ -75,6 +71,6 @@ const emit = defineEmits<{
 
 const currentPageModel = computed({
   get: () => props.currentPage,
-  set: (val) => emit('update:page', val)
+  set: (val) => emit('update:page', val),
 })
 </script>

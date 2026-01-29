@@ -1,15 +1,18 @@
 <template>
   <main class="max-w-[1440px] mx-auto px-4 md:px-10 py-8 relative">
-
     <header class="w-full mb-[32px]">
       <div class="relative w-full overflow-hidden rounded-2xl">
         <img src="/Banner.png" class="h-[200px] w-full object-cover" alt="Banner" />
-        <div class="absolute inset-0 flex items-center pl-[60px] md:pl-[97px] text-white bg-black/20">
+        <div
+          class="absolute inset-0 flex items-center pl-[60px] md:pl-[97px] text-white bg-black/20"
+        >
           <div class="flex-col">
             <div class="text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
             <div class="text-18">
               <div>
-                บริการนี้เป็นบริการช่วยตรวจสอบหรือค้นหาเครื่องหมายการค้าที่ผู้ใช้งาน<br class="hidden md:block" />
+                บริการนี้เป็นบริการช่วยตรวจสอบหรือค้นหาเครื่องหมายการค้าที่ผู้ใช้งาน<br
+                  class="hidden md:block"
+                />
                 สามารถเข้าถึงข้อมูลได้ด้วยตนเองจากกรมทรัพย์สินทางปัญญา
               </div>
             </div>
@@ -33,9 +36,27 @@
             class="bg-[#B21F29] hover:bg-[#E04F30] text-white px-8 py-3 rounded-lg flex items-center gap-2 font-medium transition-colors"
             @click="onQuickSearch"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21 21L16.65 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M21 21L16.65 16.65"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
             ค้นหา
           </button>
@@ -56,13 +77,55 @@
             "
             @click="activeTab = 'basic'"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M8 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M8 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3 6H3.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3 12H3.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3 18H3.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 6H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 12H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 18H21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3 6H3.01"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3 12H3.01"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3 18H3.01"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
             ค้นหารูปแบบทั่วไป
           </button>
@@ -77,10 +140,31 @@
             "
             @click="activeTab = 'similarity'"
           >
-             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-              <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/>
-              <path d="M21 15L16 10L5 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="3"
+                y="3"
+                width="18"
+                height="18"
+                rx="2"
+                ry="2"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
+              <path
+                d="M21 15L16 10L5 21"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
             ตรวจสอบความเหมือนคล้ายของเครื่องหมาย
           </button>
@@ -95,31 +179,57 @@
             "
             @click="activeTab = 'trademark'"
           >
-             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-              <path d="M8 10V8H16V10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M12 8V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+              <path
+                d="M8 10V8H16V10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 8V16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
             ตรวจสอบรูปเครื่องหมายการค้า
           </button>
         </div>
 
-        <div class="border border-[#E0E0E0] rounded-b-xl rounded-tr-xl p-[32px] bg-white shadow-sm mb-[32px]">
-
+        <div
+          class="border border-[#E0E0E0] rounded-b-xl rounded-tr-xl p-[32px] bg-white shadow-sm mb-[32px]"
+        >
           <div v-show="activeTab === 'basic'">
-            <div class="flex items-center gap-[8px] mb-[24px] px-8 py-4 border  border-[#E0E0E0] pb-4">
+            <div
+              class="flex items-center gap-[8px] mb-[24px] px-8 py-4 border border-[#E0E0E0] pb-4"
+            >
               <span class="text-18 font-bold text-[#333]">เครื่องหมายการค้า</span>
-              <span class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#999] font-serif text-[12px] font-black leading-none text-[#999] cursor-help" title="ข้อมูลเพิ่มเติม">i</span>
+              <span
+                class="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#999] font-serif text-[12px] font-black leading-none text-[#999] cursor-help"
+                title="ข้อมูลเพิ่มเติม"
+                >i</span
+              >
             </div>
 
             <div v-for="(group, gIndex) in conditionGroups" :key="gIndex">
-
               <div v-if="gIndex > 0" class="relative py-8">
                 <div class="absolute inset-0 flex items-center">
                   <div class="w-full border-t border-[#E0E0E0]"></div>
                 </div>
                 <div class="relative flex justify-center">
-                  <span class="bg-[#F5A623] text-white px-10 py-2 rounded-md text-sm font-medium shadow-sm">
+                  <span
+                    class="bg-[#F5A623] text-white px-10 py-2 rounded-md text-sm font-medium shadow-sm"
+                  >
                     {{ group.groupOperator }}
                   </span>
                 </div>
@@ -133,7 +243,16 @@
                   @click="removeGroup(gIndex)"
                 >
                   ลบกลุ่มเงื่อนไขนี้
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M18 6L6 18M6 6l12 12" />
+                  </svg>
                 </button>
               </div>
 
@@ -156,26 +275,60 @@
                 class="flex items-center gap-2 text-[#B21F29] hover:text-[#D14022] px-6 py-2 border border-gray-300 rounded-lg font-medium transition-colors"
                 @click="toggleGroupDropdown"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/>
-                  <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" circle cx="12" cy="12" r="11"/>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5" />
+                  <path
+                    d="M12 7V17M7 12H17"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    circle
+                    cx="12"
+                    cy="12"
+                    r="11"
+                  />
                 </svg>
                 <span>เพิ่มกลุ่มเงื่อนไข</span>
               </button>
 
-              <div v-if="showGroupDropdown" class="absolute left-0 top-full mt-2 w-[160px] bg-white border border-[#E0E0E0] rounded-lg shadow-lg z-10 overflow-hidden py-1">
-                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0" @click="addNewGroup('และ')">และ</button>
-                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0" @click="addNewGroup('หรือ')">หรือ</button>
-                <button type="button" class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0" @click="addNewGroup('ไม่เอา')">ไม่เอา</button>
+              <div
+                v-if="showGroupDropdown"
+                class="absolute left-0 top-full mt-2 w-[160px] bg-white border border-[#E0E0E0] rounded-lg shadow-lg z-10 overflow-hidden py-1"
+              >
+                <button
+                  type="button"
+                  class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0"
+                  @click="addNewGroup('และ')"
+                >
+                  และ
+                </button>
+                <button
+                  type="button"
+                  class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0"
+                  @click="addNewGroup('หรือ')"
+                >
+                  หรือ
+                </button>
+                <button
+                  type="button"
+                  class="w-full text-left px-4 py-2 text-sm text-[#333] hover:bg-[#F5A623] hover:text-white transition-colors border-b border-gray-100 last:border-0"
+                  @click="addNewGroup('ไม่เอา')"
+                >
+                  ไม่เอา
+                </button>
               </div>
             </div>
           </div>
 
           <div v-show="activeTab === 'similarity'">
-            <SimilarityTab
-              :keyword="keyword"
-              @submit="onSimilaritySubmit"
-            />
+            <SimilarityTab :keyword="keyword" @submit="onSimilaritySubmit" />
           </div>
 
           <div v-show="activeTab === 'trademark'">
@@ -189,7 +342,19 @@
             class="flex items-center gap-2 text-gray-500 hover:text-gray-700 px-6 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
             @click="clearAllConditions"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M15 9l-6 6M9 9l6 6" />
+            </svg>
             <span v-if="activeTab === 'trademark'">ล้างเงื่อนไข</span>
             <span v-else>ล้างการค้นหา</span>
           </button>
@@ -199,7 +364,19 @@
             class="bg-[#B21F29] hover:bg-[#C0272D] text-white px-10 py-3 rounded-lg flex items-center gap-2 font-medium shadow-sm transition-colors"
             @click="onSearch"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="M21 21l-4.35-4.35" />
+            </svg>
             <span>ค้นหาข้อมูล</span>
           </button>
         </div>
@@ -207,7 +384,6 @@
     </div>
 
     <LoadingOverlay :show="isSearching" />
-
   </main>
 </template>
 
@@ -238,8 +414,8 @@ const selectedFileName = ref('')
 const conditionGroups = ref([
   {
     groupOperator: '',
-    items: [{ type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' }]
-  }
+    items: [{ type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' }],
+  },
 ])
 
 onMounted(() => {
@@ -248,7 +424,7 @@ onMounted(() => {
 })
 
 function onQuickSearch() {
-   if (keyword.value.trim()) router.push({ path: '/result1', query: { q: keyword.value } })
+  if (keyword.value.trim()) router.push({ path: '/result1', query: { q: keyword.value } })
 }
 
 // รับค่าจาก Component ลูก (Logic เดิม)
@@ -259,7 +435,14 @@ function onFileSelected(file: File | null, fileName: string) {
 
 function handleAddCondition(gIndex: number, iIndex: number, option: string) {
   conditionGroups.value[gIndex].items[iIndex].connective = option
-  conditionGroups.value[gIndex].items.push({ type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' })
+  conditionGroups.value[gIndex].items.push({
+    type: '',
+    value: '',
+    operator: 'like',
+    startDate: '',
+    endDate: '',
+    connective: '',
+  })
 }
 
 function removeCondition(gIndex: number, iIndex: number) {
@@ -267,7 +450,7 @@ function removeCondition(gIndex: number, iIndex: number) {
   if (group.items.length > 1) {
     group.items.splice(iIndex, 1)
     if (iIndex === group.items.length && iIndex > 0) {
-       group.items[iIndex - 1].connective = ''
+      group.items[iIndex - 1].connective = ''
     }
   }
 }
@@ -275,7 +458,7 @@ function removeCondition(gIndex: number, iIndex: number) {
 function addNewGroup(operator: string) {
   conditionGroups.value.push({
     groupOperator: operator,
-    items: [{ type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' }]
+    items: [{ type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' }],
   })
   showGroupDropdown.value = false
 }
@@ -291,7 +474,14 @@ function clearAllConditions() {
     selectedFile.value = null
     selectedFileName.value = ''
   } else {
-    conditionGroups.value = [{ groupOperator: '', items: [{ type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' }] }]
+    conditionGroups.value = [
+      {
+        groupOperator: '',
+        items: [
+          { type: '', value: '', operator: 'like', startDate: '', endDate: '', connective: '' },
+        ],
+      },
+    ]
   }
 }
 
@@ -307,7 +497,7 @@ function onSearch() {
 
     const queryParams: any = {
       mode: activeTab.value,
-      data: conditions
+      data: conditions,
     }
 
     // ถ้าเป็นโหมดรูปภาพ ส่งชื่อไฟล์ไปด้วย
@@ -317,7 +507,7 @@ function onSearch() {
 
     router.push({
       path: '/result-1',
-      query: queryParams
+      query: queryParams,
     })
 
     isSearching.value = false
@@ -332,8 +522,8 @@ function onSimilaritySubmit(payload: any) {
       path: '/result-1',
       query: {
         mode: 'similarity',
-        data: JSON.stringify(payload)
-      }
+        data: JSON.stringify(payload),
+      },
     })
     isSearching.value = false
   }, 2000)
@@ -341,8 +531,16 @@ function onSimilaritySubmit(payload: any) {
 </script>
 
 <style scoped>
-.text-24 { font-size: 24px; }
-.text-32 { font-size: 32px; }
-.text-14 { font-size: 14px; }
-.text-18 { font-size: 18px; }
+.text-24 {
+  font-size: 24px;
+}
+.text-32 {
+  font-size: 32px;
+}
+.text-14 {
+  font-size: 14px;
+}
+.text-18 {
+  font-size: 18px;
+}
 </style>

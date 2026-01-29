@@ -4,7 +4,6 @@
 
     <div class="mt-[12px] flex flex-wrap items-center justify-between gap-[12px]">
       <div class="flex flex-wrap items-center gap-[8px]">
-
         <button
           type="button"
           class="app-button-fit border-[#D9D9D9] bg-white"
@@ -17,9 +16,9 @@
           type="button"
           class="app-button-fit border-[#B21F29] bg-[#FCE8EA] text-[#B21F29]"
           @click="$emit('update:activeTab', 'dataset')"
-          >
-            เครื่องหมายการค้า (2058)
-          </button>
+        >
+          เครื่องหมายการค้า (2058)
+        </button>
       </div>
 
       <div class="flex items-center gap-[8px]">
@@ -52,7 +51,21 @@
             :class="view === 'grid' ? 'bg-[#FF542B] text-white' : 'bg-white text-[#555]'"
             @click="$emit('update:view', 'grid')"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect></svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="3" width="7" height="7" rx="1.5"></rect>
+              <rect x="14" y="14" width="7" height="7" rx="1.5"></rect>
+              <rect x="3" y="14" width="7" height="7" rx="1.5"></rect>
+            </svg>
           </button>
 
           <button
@@ -61,7 +74,23 @@
             :class="view === 'list' ? 'bg-[#FF542B] text-white' : 'bg-white text-[#555]'"
             @click="$emit('update:view', 'list')"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
           </button>
 
           <button
@@ -70,7 +99,21 @@
             :class="view === 'table' ? 'bg-[#FF542B] text-white' : 'bg-white text-[#555]'"
             @click="$emit('update:view', 'table')"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line><path d="M11 12h2"></path></svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+              <path d="M11 12h2"></path>
+            </svg>
           </button>
         </div>
 

@@ -3,12 +3,16 @@
     <header class="w-full mb-[24px]">
       <div class="relative w-full overflow-hidden rounded-2xl">
         <img src="/Banner.png" class="h-[200px] w-full object-cover" alt="Banner" />
-        <div class="absolute inset-0 flex items-center pl-[60px] md:pl-[97px] text-white bg-black/10">
+        <div
+          class="absolute inset-0 flex items-center pl-[60px] md:pl-[97px] text-white bg-black/10"
+        >
           <div class="flex-col">
             <div class="text-32 font-semibold pb-[8px]">บริการค้นหาข้อมูลทรัพย์สินทางปัญญา</div>
-            <div class="text-18 ">
+            <div class="text-18">
               <div>
-                บริการนี้เป็นบริการช่วยตรวจสอบหรือค้นหาเครื่องหมายการค้าที่ผู้ใช้งาน<br class="hidden md:block" />
+                บริการนี้เป็นบริการช่วยตรวจสอบหรือค้นหาเครื่องหมายการค้าที่ผู้ใช้งาน<br
+                  class="hidden md:block"
+                />
                 สามารถเข้าถึงข้อมูลได้ด้วยตนเองจากกรมทรัพย์สินทางปัญญา
               </div>
             </div>
@@ -28,9 +32,9 @@
         :activeTab="currentTab"
         :sort="currentSort"
         :view="currentView"
-        @update:activeTab="(val) => currentTab = val"
-        @update:sort="(val) => currentSort = val"
-        @update:view="(val) => currentView = val"
+        @update:activeTab="(val) => (currentTab = val)"
+        @update:sort="(val) => (currentSort = val)"
+        @update:view="(val) => (currentView = val)"
         @download="() => {}"
       />
 
@@ -39,13 +43,13 @@
 
         <div class="flex-1">
           <CustomResultList
-             :loading="false"
-             :view="currentView === 'table' ? 'list' : currentView"
-             :items="mock"
-             :totalItems="100"
-             :itemsPerPage="10"
-             :currentPage="1"
-             @update:page="() => {}"
+            :loading="false"
+            :view="currentView === 'table' ? 'list' : currentView"
+            :items="mock"
+            :totalItems="100"
+            :itemsPerPage="10"
+            :currentPage="1"
+            @update:page="() => {}"
           />
         </div>
       </div>

@@ -17,7 +17,8 @@
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix --cache",
     "lint": "run-s lint:*",
-    "format": "prettier --write --experimental-cli src/"
+    "format": "prettier --write --experimental-cli src/",
+    "sonar": "sonar"
   },
   "dependencies": {
     "cropperjs": "^2.1.0",
@@ -29,12 +30,14 @@
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@prettier/plugin-oxc": "^0.0.5",
+    "@sonar/scan": "^4.3.4",
     "@tailwindcss/vite": "^4.1.18",
     "@tsconfig/node24": "^24.0.3",
     "@types/jsdom": "^27.0.0",
     "@types/node": "^24.10.1",
     "@vitejs/plugin-vue": "^6.0.2",
     "@vitejs/plugin-vue-jsx": "^5.1.2",
+    "@vitest/coverage-v8": "^4.0.16",
     "@vitest/eslint-plugin": "^1.5.0",
     "@vue/compiler-sfc": "^3.5.26",
     "@vue/eslint-config-prettier": "^10.2.0",

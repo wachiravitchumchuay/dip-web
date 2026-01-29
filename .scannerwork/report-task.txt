@@ -1,0 +1,6 @@
+projectKey=dip-web
+serverUrl=http://localhost:9000
+serverVersion=25.11.0.114957
+dashboardUrl=http://localhost:9000/dashboard?id=dip-web
+ceTaskId=5b1349ec-ff96-44e4-b3c1-593e2821e7d4
+ceTaskUrl=http://localhost:9000/api/ce/task?id=5b1349ec-ff96-44e4-b3c1-593e2821e7d4
